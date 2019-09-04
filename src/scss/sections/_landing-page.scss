@@ -1,0 +1,147 @@
+.landing__main {
+  background-color: $grey-landing;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.landing__main-title {
+  @include landing-title-font;
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+.landing__main-text {
+  @include landing-text-font;
+  margin-top: 0;
+  margin-bottom: 17.8px;
+  width: 265px;
+}
+
+.landing__main-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  width: 268px;
+  height: 73.8px;
+  border: solid 1.6px rgba(225, 115, 52, 0.24);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.landing__main-item{
+  display: inline-block;
+  width: 60px;
+  height: 49px;
+}
+
+.landing__list-iconDesign {
+  height: 26px;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: $font-weight-normal;
+}
+
+.landing__list-iconFill {
+  height: 26px;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: $font-weight-normal;
+}
+
+.landing__list-iconShare {
+  height: 26px;
+  font-family: "Font Awesome 5 Pro";
+  color: $dull-orange;
+  font-weight: $font-weight-black;
+}
+
+.landing__main-description {
+  @include landing-list-text-font;
+  margin: 0;
+}
+
+.landing__main-startButton {
+  width: 129px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: $dirty-blue;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 39px;
+  // margin-bottom: 60px;
+    .landing__main-start {
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 129px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include landing-link-font;
+    }
+}
+
+/* MEDIA QUERY TABLET */
+
+@media all and (min-width: 768px){
+  .landing__main{
+    min-height: 400px;
+  }
+  .landing__main-title {
+    @include Landing-Title-tablet;
+    margin-top: 31px;
+  }
+
+  .landing__main-text {
+    @include Landing-text-tablet;
+    width: 331px;
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+
+  .landing__main-list {
+    width: 325px;
+    height: 86px;
+  }
+
+  .landing__main-item{
+    display: inline-block;
+    width: 75px;
+    height: 61px;
+  }
+
+  .landing__list-iconDesign {
+    height: 29px;
+  }
+
+  .landing__list-iconFill {
+    height: 29px;
+  }
+
+  .landing__list-iconShare {
+    height: 29px;
+  }
+
+  .landing__main-description {
+    @include Landing-listText-tablet;
+  }
+
+  .landing__main-image {
+    height: 29px;
+  }
+}
+
+.page-landing{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $grey-landing;
+}

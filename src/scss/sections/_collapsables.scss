@@ -1,0 +1,22 @@
+.collapsed {
+  .form-title::after{
+    transform: none;
+  }
+  .collapsable-container{
+    display: none;
+  }
+}
+
+.form-title::after {
+  content: "\f078";
+  position: absolute;
+  right: 0;
+  top: 13px;
+  width: 16px;
+  height: 18px;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Pro";
+  color: $dark-grey;
+  transform: rotate(180deg);
+}
+
