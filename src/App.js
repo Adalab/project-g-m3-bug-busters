@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page page-landing">
+      <div className="page__flex">
+        <header className="landing__header">
+          <h1 className="landing__title">Awesome profile cards</h1>
+        </header>
+
+        <main className="landing__main">
+          <div className="landing__main-container">
+            <h2 className="landing__main-title">Crea tu tarjeta de visita</h2>
+            <p className="landing__main-text">Crea mejores contactos profesionales de forma fácil y cómoda</p>
+            <ul className="landing__main-list">
+              <li className="landing__main-item main-item1"> <i className="far fa-object-ungroup landing__list-iconDesign"></i>
+                <p className="landing__main-description">Diseña</p>
+              </li>
+              <li className="landing__main-item main-item2"> <i className="far fa-keyboard landing__list-iconFill"></i>
+                <p className="landing__main-description">Rellena</p>
+              </li>
+              <li className="landing__main-item main-item3"> <i className="fas fa-share-alt landing__list-iconShare"></i>
+                <p className="landing__main-description">Comparte</p>
+              </li>
+            </ul>
+          </div>
+          <div className="landing__main-startButton"> <a href="cards.html" className="landing__main-start">Comenzar</a>
+          </div>
+        </main>
+      </div>
+
+      <footer className="footer">
+        <p className="footer__copyright">Awesome profile-cards @2018</p>
+        <div className="footer__logo">
+          <a href="https://adalab.es/" target="__blank" className="footer__logo">
+            <img src="assets/images/logo-adalab.png" alt="Logo Adalab" className="footer__logo-adalab"/>
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
-
+    
 export default App;
