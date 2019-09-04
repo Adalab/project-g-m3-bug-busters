@@ -1,14 +1,14 @@
 import React from 'react';
 import './scss/main.scss';
+import logo from './images/logo-adalab.png';
+import LandingHeader from './components/Landing_header'
+// import awesomeLogo from './images/logo.svg';
 
 function App() {
   return (
     <div className="page page-landing">
       <div className="page__flex">
-        <header className="landing__header">
-          <h1 className="landing__title">Awesome profile cards</h1>
-        </header>
-
+        <LandingHeader />
         <main className="landing__main">
           <div className="landing__main-container">
             <h2 className="landing__main-title">Crea tu tarjeta de visita</h2>
@@ -34,7 +34,7 @@ function App() {
         <p className="footer__copyright">Awesome profile-cards @2018</p>
         <div className="footer__logo">
           <a href="https://adalab.es/" target="__blank" className="footer__logo">
-            <img src="assets/images/logo-adalab.png" alt="Logo Adalab" className="footer__logo-adalab"/>
+            <img src= {logo} alt="Logo Adalab" className="footer__logo-adalab"/>
           </a>
         </div>
       </footer>
