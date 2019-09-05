@@ -1,5 +1,10 @@
 import React from 'react';
 
+
+const imgPreviewStyle = {
+  backgroundImage: "url('https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg')"
+};
+
 class CardsPreview extends React.Component{
   render(){
     return(
@@ -14,7 +19,7 @@ class CardsPreview extends React.Component{
               <p className="section1__career js__job">Front-end developer</p>
             </div>
             <div 
-              // className="section1__image js__profile-image" style="background-image: url()"
+              className="section1__image js__profile-image" style={imgPreviewStyle}
             >
               <img id="img" className="section1__image-img" alt="Nombre Apellido"/>
             </div>

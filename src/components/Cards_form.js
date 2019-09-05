@@ -4,7 +4,6 @@ import CardsFormFill from './Cards_form-fill';
 import CardsFormShare from './Cards_form-share';
 import CardsFormTwitter from './Cards_form-twitter';
 
-
 class CardsForm extends React.Component {
   render() {
     return (
