@@ -1,5 +1,18 @@
 import React from 'react';
 
+const color1Palette1 = {backgroundColor: '#114e4e'};
+const color2Palette1 = {backgroundColor: '#438792'};
+const color3Palette1 = {backgroundColor: '#a2deaf'};
+
+const color1Palette2 = {backgroundColor: '#420101'};
+const color2Palette2 = {backgroundColor: '#bd1010'};
+const color3Palette2 = {backgroundColor: '#e95626'};
+
+const color1Palette3 = {backgroundColor: '#3e5b65'};
+const color2Palette3 = {backgroundColor: '#eab052'};
+const color3Palette3 = {backgroundColor: '#a0c0cf'};
+
+
 class CardsFormDesign extends React.Component {
   render() {
     return (
@@ -21,15 +34,15 @@ class CardsFormDesign extends React.Component {
                 value="1"
               />
               <ul className="colors">
-                {/* <li className="color" style="background-color:#114e4e">
+                <li className="color" style={color1Palette1}>
                   Eden
-          </li>
-                <li className="color" style="background-color:#438792">
-                  Wedgewood
-          </li>
-                <li className="color" style="background-color:#a2deaf">
-                  Celadon
-          </li> */}
+                </li>
+                <li className="color" style={color2Palette1}>
+                        Wedgewood
+                </li>
+                <li className="color" style={color3Palette1}>
+                        Celadon
+                </li>
               </ul>
             </label>
           </div>
@@ -43,15 +56,15 @@ class CardsFormDesign extends React.Component {
                 value="2"
               />
               <ul className="colors">
-                {/* <li className="color" style="background-color: #420101">
+                <li className="color" style={color1Palette2}>
                   Chocolate
-          </li>
-                <li className="color" style="background-color: #bd1010">
+                </li>
+                <li className="color" style={color2Palette2}>
                   Thunderbird
-          </li>
-                <li className="color" style="background-color: #e95626">
+                </li>
+                <li className="color" style={color3Palette2}>
                   Flamingo
-          </li> */}
+                </li>
               </ul>
             </label>
           </div>
@@ -65,15 +78,15 @@ class CardsFormDesign extends React.Component {
                 value="3"
               />
               <ul className="colors">
-                {/* <li className="color" style="background-color: #3e5b65">
+                <li className="color" style={color1Palette3}>
                   Fiord
-          </li>
-                <li className="color" style="background-color: #eab052">
+                </li>
+                <li className="color" style={color2Palette3}>
                   Ronchi
-          </li>
-                <li className="color" style="background-color: #a0c0cf">
+                </li>
+                <li className="color" style={color3Palette3}>
                   Rock Blue
-          </li> */}
+                </li>
               </ul>
             </label>
           </div>
