@@ -11,7 +11,7 @@ class Cards extends React.Component {
     return (
       <div className="page page-cards">
         <CardsHeader />
-        <CardsMain />
+        <CardsMain defaultPreviewName= {this.props.defaultPreviewName}/>
         <Footer />
       </div>
     );

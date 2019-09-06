@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const imgPreviewStyle = {
   backgroundImage: "url('https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg')"
@@ -15,7 +15,9 @@ class CardsPreview extends React.Component{
           </button>
           <div className="section1__card">
             <div className="section1__card__title">
-              <p className="section1__name js__title">Nombre Apellido</p>
+              <p className="section1__name js__title">
+                {this.props.defaultPreviewName}
+              </p>
               <p className="section1__career js__job">Front-end developer</p>
             </div>
             <div 
@@ -52,4 +54,7 @@ class CardsPreview extends React.Component{
   }
 }
 
+CardsPreview.propTypes ={
+  defaultPreviewName: PropTypes.string,
+}
 export default CardsPreview;
