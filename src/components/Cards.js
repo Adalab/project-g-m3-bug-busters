@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import CardsHeader from './Cards_header';
 import CardsMain from './Cards_main';
