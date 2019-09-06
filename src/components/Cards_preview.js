@@ -18,7 +18,9 @@ class CardsPreview extends React.Component{
               <p className="section1__name js__title">
                 {this.props.defaultPreviewName}
               </p>
-              <p className="section1__career js__job">Front-end developer</p>
+              <p className="section1__career js__job">
+                {this.props.defaultPreviewJob}              
+              </p>
             </div>
             <div 
               className="section1__image js__profile-image" style={imgPreviewStyle}
@@ -56,5 +58,6 @@ class CardsPreview extends React.Component{
 
 CardsPreview.propTypes ={
   defaultPreviewName: PropTypes.string,
+  defaultPreviewJob: PropTypes.string,
 }
 export default CardsPreview;

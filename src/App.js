@@ -8,12 +8,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       defaultPreviewName : 'Mariaaa de lo ooooo con paquito el chocolatero XDD',
-    
+      defaultPreviewJob : 'Front-End Developer',
     }
   }
   render() {
     return (
-      <Cards defaultPreviewName= {this.state.defaultPreviewName}/>
+      <Cards defaultPreviewName= {this.state.defaultPreviewName}
+             defaultPreviewJob= {this.state.defaultPreviewJob}
+      />
     );
   }
 }

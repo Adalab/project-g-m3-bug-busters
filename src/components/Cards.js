@@ -11,11 +11,16 @@ class Cards extends React.Component {
     return (
       <div className="page page-cards">
         <CardsHeader />
-        <CardsMain defaultPreviewName= {this.props.defaultPreviewName}/>
+        <CardsMain defaultPreviewName= {this.props.defaultPreviewName}
+                   defaultPreviewJob= {this.props.defaultPreviewJob}/>
         <Footer />
       </div>
     );
   }
 }
 
+Cards.propTypes ={
+  defaultPreviewName: PropTypes.string,
+  defaultPreviewJob: PropTypes.string,
+}
 export default Cards;
