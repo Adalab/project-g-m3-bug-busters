@@ -7,7 +7,7 @@ class CardsMain extends React.Component{
     return(
       <main className="cards__main">
         <div className="cards__container">
-            <CardsPreview />
+            <CardsPreview defaultPreviewName= {this.props.defaultPreviewName}/>
             <CardsForm />   
         </div>
       </main>
