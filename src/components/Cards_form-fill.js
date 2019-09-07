@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class CardsFormFill extends React.Component {
   render() {
@@ -43,7 +44,7 @@ class CardsFormFill extends React.Component {
               required
             />
             <button className="form-photo-button button-addImage js__profile-trigger">
-              Añadir imagen
+              {this.props.fillImageBtn}
             </button>
             <div className="form-photo-preview js__profile-preview"></div>
           </div>
@@ -94,6 +95,11 @@ class CardsFormFill extends React.Component {
       </fieldset>
       )
     }
+  }
+
+  CardsFormFill.propTypes ={
+    formFillTitle: PropTypes.string,
+    fillImageBtn: PropTypes.string,
   }
   
   export default CardsFormFill;

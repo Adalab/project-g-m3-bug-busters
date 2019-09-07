@@ -12,7 +12,9 @@ class CardsForm extends React.Component {
         <div className="wrapper">
           <form id="form" action="" method="POST">
             <CardsFormDesign formDesignTitle={this.props.formDesignTitle} />
-            <CardsFormFill formFillTitle={this.props.formFillTitle} />
+            <CardsFormFill formFillTitle={this.props.formFillTitle} 
+                           fillImageBtn={this.props.fillImageBtn}
+            />
             <CardsFormShare formShareTitle={this.props.formShareTitle} />
           </form>
           <CardsFormTwitter />  
@@ -25,6 +27,7 @@ class CardsForm extends React.Component {
 CardsForm.propTypes ={
   formDesignTitle: PropTypes.string,
   formFillTitle: PropTypes.string,
+  fillImageBtn: PropTypes.string,
   formShareTitle: PropTypes.string,
 }
 

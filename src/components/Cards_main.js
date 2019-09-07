@@ -9,9 +9,13 @@ class CardsMain extends React.Component{
       <main className="cards__main">
         <div className="cards__container">
             <CardsPreview defaultPreviewName= {this.props.defaultPreviewName}
-                          defaultPreviewJob= {this.props.defaultPreviewJob}/>
+                          defaultPreviewJob= {this.props.defaultPreviewJob}
+                          previewResetBtn={this.props.previewResetBtn}
+                          />
+                          
             <CardsForm formDesignTitle={this.props.formDesignTitle} 
                        formFillTitle={this.props.formFillTitle}
+                       fillImageBtn={this.props.fillImageBtn}
                        formShareTitle={this.props.formShareTitle}
             />   
         </div>
@@ -23,8 +27,10 @@ class CardsMain extends React.Component{
 CardsMain.propTypes ={
   defaultPreviewName: PropTypes.string,
   defaultPreviewJob: PropTypes.string,
+  previewResetBtn: PropTypes.string,
   formDesignTitle: PropTypes.string,
   formFillTitle: PropTypes.string,
+  fillImageBtn: PropTypes.string,
   formShareTitle: PropTypes.string,
 }
 

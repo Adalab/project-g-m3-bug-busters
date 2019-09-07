@@ -9,8 +9,10 @@ class App extends React.Component {
     this.state = {
       defaultPreviewName : 'Mariaaa de lo ooooo con paquito el chocolatero XDD',
       defaultPreviewJob : 'Front-End Developer',
+      previewResetBtn: ' RESET',
       formDesignTitle: 'diseña',
       formFillTitle: 'rellena',
+      fillImageBtn:'Añadir imagen',
       formShareTitle: 'comparte',
     }
   }
@@ -18,8 +20,10 @@ class App extends React.Component {
     return (
       <Cards defaultPreviewName= {this.state.defaultPreviewName}
              defaultPreviewJob= {this.state.defaultPreviewJob}
+             previewResetBtn={this.state.previewResetBtn}
              formDesignTitle={this.state.formDesignTitle}
              formFillTitle={this.state.formFillTitle}
+             fillImageBtn={this.state.fillImageBtn}
              formShareTitle={this.state.formShareTitle}
       />
     );
