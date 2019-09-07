@@ -14,6 +14,7 @@ class App extends React.Component {
       formFillTitle: 'rellena',
       fillImageBtn:'Añadir imagen',
       formShareTitle: 'comparte',
+      createCardBtn: 'Crear tarjeta',
     }
   }
   render() {
@@ -25,6 +26,7 @@ class App extends React.Component {
              formFillTitle={this.state.formFillTitle}
              fillImageBtn={this.state.fillImageBtn}
              formShareTitle={this.state.formShareTitle}
+             createCardBtn={this.state.createCardBtn}
       />
     );
   }

@@ -14,7 +14,7 @@ class CardsFormShare extends React.Component {
             type="submit"
             id="submit"
           >
-            Crear tarjeta
+            {this.props.createCardBtn}
           </button>
         </div>
       </div>
@@ -24,6 +24,7 @@ class CardsFormShare extends React.Component {
 
 CardsFormShare.propTypes ={
   formShareTitle: PropTypes.string,
+  createCardBtn: PropTypes.string,
 }
 
 export default CardsFormShare;

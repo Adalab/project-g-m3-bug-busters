@@ -15,7 +15,9 @@ class CardsForm extends React.Component {
             <CardsFormFill formFillTitle={this.props.formFillTitle} 
                            fillImageBtn={this.props.fillImageBtn}
             />
-            <CardsFormShare formShareTitle={this.props.formShareTitle} />
+            <CardsFormShare formShareTitle={this.props.formShareTitle} 
+                            createCardBtn={this.props.createCardBtn}
+            />
           </form>
           <CardsFormTwitter />  
         </div>
@@ -29,6 +31,7 @@ CardsForm.propTypes ={
   formFillTitle: PropTypes.string,
   fillImageBtn: PropTypes.string,
   formShareTitle: PropTypes.string,
+  createCardBtn: PropTypes.string,
 }
 
 export default CardsForm;

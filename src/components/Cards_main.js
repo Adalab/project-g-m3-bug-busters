@@ -17,6 +17,7 @@ class CardsMain extends React.Component{
                        formFillTitle={this.props.formFillTitle}
                        fillImageBtn={this.props.fillImageBtn}
                        formShareTitle={this.props.formShareTitle}
+                       createCardBtn={this.props.createCardBtn}
             />   
         </div>
       </main>
@@ -32,6 +33,7 @@ CardsMain.propTypes ={
   formFillTitle: PropTypes.string,
   fillImageBtn: PropTypes.string,
   formShareTitle: PropTypes.string,
+  createCardBtn: PropTypes.string,
 }
 
 export default CardsMain;
