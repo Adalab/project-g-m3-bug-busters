@@ -1,16 +1,16 @@
 import React from 'react';
 
-const color1Palette1 = {backgroundColor: '#114e4e'};
-const color2Palette1 = {backgroundColor: '#438792'};
-const color3Palette1 = {backgroundColor: '#a2deaf'};
+const palette1Color1 = {backgroundColor: '#114e4e'};
+const palette1Color2 = {backgroundColor: '#438792'};
+const palette1Color3 = {backgroundColor: '#a2deaf'};
 
-const color1Palette2 = {backgroundColor: '#420101'};
-const color2Palette2 = {backgroundColor: '#bd1010'};
-const color3Palette2 = {backgroundColor: '#e95626'};
+const palette2Color1 = {backgroundColor: '#420101'};
+const palette2Color2 = {backgroundColor: '#bd1010'};
+const palette2Color3 = {backgroundColor: '#e95626'};
 
-const color1Palette3 = {backgroundColor: '#3e5b65'};
-const color2Palette3 = {backgroundColor: '#eab052'};
-const color3Palette3 = {backgroundColor: '#a0c0cf'};
+const palette3Color1 = {backgroundColor: '#3e5b65'};
+const palette3Color2 = {backgroundColor: '#eab052'};
+const palette3Color3 = {backgroundColor: '#a0c0cf'};
 
 
 class CardsFormDesign extends React.Component {
@@ -34,13 +34,13 @@ class CardsFormDesign extends React.Component {
                 value="1"
               />
               <ul className="colors">
-                <li className="color" style={color1Palette1}>
+                <li className="color" style={palette1Color1}>
                   Eden
                 </li>
-                <li className="color" style={color2Palette1}>
+                <li className="color" style={palette1Color2}>
                         Wedgewood
                 </li>
-                <li className="color" style={color3Palette1}>
+                <li className="color" style={palette1Color3}>
                         Celadon
                 </li>
               </ul>
@@ -56,13 +56,13 @@ class CardsFormDesign extends React.Component {
                 value="2"
               />
               <ul className="colors">
-                <li className="color" style={color1Palette2}>
+                <li className="color" style={palette2Color1}>
                   Chocolate
                 </li>
-                <li className="color" style={color2Palette2}>
+                <li className="color" style={palette2Color2}>
                   Thunderbird
                 </li>
-                <li className="color" style={color3Palette2}>
+                <li className="color" style={palette2Color3}>
                   Flamingo
                 </li>
               </ul>
@@ -78,13 +78,13 @@ class CardsFormDesign extends React.Component {
                 value="3"
               />
               <ul className="colors">
-                <li className="color" style={color1Palette3}>
+                <li className="color" style={palette3Color1}>
                   Fiord
                 </li>
-                <li className="color" style={color2Palette3}>
+                <li className="color" style={palette3Color2}>
                   Ronchi
                 </li>
-                <li className="color" style={color3Palette3}>
+                <li className="color" style={palette3Color3}>
                   Rock Blue
                 </li>
               </ul>
