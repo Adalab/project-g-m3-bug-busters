@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CardsFormDesign from './Cards_form-design';
 import CardsFormFill from './Cards_form-fill';
 import CardsFormShare from './Cards_form-share';
@@ -10,15 +11,21 @@ class CardsForm extends React.Component {
       <section className="cards__section-2">
         <div className="wrapper">
           <form id="form" action="" method="POST">
-            <CardsFormDesign />
-            <CardsFormFill />
-            <CardsFormShare />
+            <CardsFormDesign formDesignTitle={this.props.formDesignTitle} />
+            <CardsFormFill formFillTitle={this.props.formFillTitle} />
+            <CardsFormShare formShareTitle={this.props.formShareTitle} />
           </form>
           <CardsFormTwitter />  
         </div>
       </section>
     )
   }
+}
+
+CardsForm.propTypes ={
+  formDesignTitle: PropTypes.string,
+  formFillTitle: PropTypes.string,
+  formShareTitle: PropTypes.string,
 }
 
 export default CardsForm;

@@ -12,7 +12,11 @@ class Cards extends React.Component {
       <div className="page page-cards">
         <CardsHeader />
         <CardsMain defaultPreviewName= {this.props.defaultPreviewName}
-                   defaultPreviewJob= {this.props.defaultPreviewJob}/>
+                   defaultPreviewJob= {this.props.defaultPreviewJob}
+                   formDesignTitle={this.props.formDesignTitle}
+                   formFillTitle={this.props.formFillTitle}
+                   formShareTitle={this.props.formShareTitle}
+                   />
         <Footer />
       </div>
     );
@@ -22,5 +26,9 @@ class Cards extends React.Component {
 Cards.propTypes ={
   defaultPreviewName: PropTypes.string,
   defaultPreviewJob: PropTypes.string,
+  formDesignTitle: PropTypes.string,
+  formFillTitle: PropTypes.string,
+  formShareTitle: PropTypes.string,
 }
+
 export default Cards;

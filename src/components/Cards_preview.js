@@ -60,4 +60,5 @@ CardsPreview.propTypes ={
   defaultPreviewName: PropTypes.string,
   defaultPreviewJob: PropTypes.string,
 }
+
 export default CardsPreview;

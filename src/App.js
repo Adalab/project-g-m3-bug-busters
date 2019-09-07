@@ -9,12 +9,18 @@ class App extends React.Component {
     this.state = {
       defaultPreviewName : 'Mariaaa de lo ooooo con paquito el chocolatero XDD',
       defaultPreviewJob : 'Front-End Developer',
+      formDesignTitle: 'diseña',
+      formFillTitle: 'rellena',
+      formShareTitle: 'comparte',
     }
   }
   render() {
     return (
       <Cards defaultPreviewName= {this.state.defaultPreviewName}
              defaultPreviewJob= {this.state.defaultPreviewJob}
+             formDesignTitle={this.state.formDesignTitle}
+             formFillTitle={this.state.formFillTitle}
+             formShareTitle={this.state.formShareTitle}
       />
     );
   }

@@ -10,7 +10,10 @@ class CardsMain extends React.Component{
         <div className="cards__container">
             <CardsPreview defaultPreviewName= {this.props.defaultPreviewName}
                           defaultPreviewJob= {this.props.defaultPreviewJob}/>
-            <CardsForm />   
+            <CardsForm formDesignTitle={this.props.formDesignTitle} 
+                       formFillTitle={this.props.formFillTitle}
+                       formShareTitle={this.props.formShareTitle}
+            />   
         </div>
       </main>
     )
@@ -20,5 +23,9 @@ class CardsMain extends React.Component{
 CardsMain.propTypes ={
   defaultPreviewName: PropTypes.string,
   defaultPreviewJob: PropTypes.string,
+  formDesignTitle: PropTypes.string,
+  formFillTitle: PropTypes.string,
+  formShareTitle: PropTypes.string,
 }
+
 export default CardsMain;

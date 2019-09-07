@@ -8,7 +8,7 @@ class CardsFormFill extends React.Component {
           Completar información
           </legend>
         <div className="form__fill js__collapsable">
-          <h2 className="form__fill-title form-title title-2">Rellena</h2>
+          <h2 className="form__fill-title form-title title-2">{this.props.formFillTitle}</h2>
         </div>
         <div className="form__fill-content fill-container collapsable-container">
           <div className="form__fill-input">
