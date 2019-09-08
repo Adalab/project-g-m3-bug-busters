@@ -15,7 +15,14 @@ class Cards extends React.Component {
                    previewResetBtn={this.props.previewResetBtn}
                    formDesignTitle={this.props.formDesignTitle}
                    formFillTitle={this.props.formFillTitle}
+                   formLabelName={this.props.formLabelName}
+                   formLabelJob={this.props.formLabelJob}
+                   formLabelPhoto={this.props.formLabelPhoto}
                    fillImageBtn={this.props.fillImageBtn}
+                   formLabelEmail={this.props.formLabelEmail}
+                   formLabelTelephone={this.props.formLabelTelephone}
+                   formLabelLinkedin={this.props.formLabelLinkedin}
+                   formLabelGithub={this.props.formLabelGithub}
                    formShareTitle={this.props.formShareTitle}
                    createCardBtn={this.props.createCardBtn}
                    />

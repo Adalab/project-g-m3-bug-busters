@@ -13,7 +13,14 @@ class CardsForm extends React.Component {
           <form id="form" action="" method="POST">
             <CardsFormDesign formDesignTitle={this.props.formDesignTitle} />
             <CardsFormFill formFillTitle={this.props.formFillTitle} 
+                           formLabelName={this.props.formLabelName}
+                           formLabelJob={this.props.formLabelJob}
+                           formLabelPhoto={this.props.formLabelPhoto}
                            fillImageBtn={this.props.fillImageBtn}
+                           formLabelEmail={this.props.formLabelEmail}
+                           formLabelTelephone={this.props.formLabelTelephone}
+                           formLabelLinkedin={this.props.formLabelLinkedin}
+                           formLabelGithub={this.props.formLabelGithub}
             />
             <CardsFormShare formShareTitle={this.props.formShareTitle} 
                             createCardBtn={this.props.createCardBtn}

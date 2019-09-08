@@ -12,7 +12,14 @@ class App extends React.Component {
       previewResetBtn: ' RESET',
       formDesignTitle: 'diseña',
       formFillTitle: 'rellena',
+      formLabelName: 'Nombre completo',
+      formLabelJob: 'Puesto',
+      formLabelPhoto: 'Imagen de perfil',
       fillImageBtn:'Añadir imagen',
+      formLabelEmail:'Email',
+      formLabelTelephone: 'Teléfono',
+      formLabelLinkedin: 'Linkedin',
+      formLabelGithub:'Github',
       formShareTitle: 'comparte',
       createCardBtn: 'Crear tarjeta',
     }
@@ -24,7 +31,14 @@ class App extends React.Component {
              previewResetBtn={this.state.previewResetBtn}
              formDesignTitle={this.state.formDesignTitle}
              formFillTitle={this.state.formFillTitle}
+             formLabelName={this.state.formLabelName}
+             formLabelJob={this.state.formLabelJob}
+             formLabelPhoto={this.state.formLabelPhoto}
              fillImageBtn={this.state.fillImageBtn}
+             formLabelEmail={this.state.formLabelEmail}
+             formLabelTelephone={this.state.formLabelTelephone}
+             formLabelLinkedin={this.state.formLabelLinkedin}
+             formLabelGithub={this.state.formLabelGithub}
              formShareTitle={this.state.formShareTitle}
              createCardBtn={this.state.createCardBtn}
       />
