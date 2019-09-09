@@ -13,8 +13,8 @@ class Cards extends React.Component {
       <div className="page page-cards">
         <CardsHeader />
         <CardsMain inputAction = {inputAction}
-                    form_name= {this.props.form_name}
-                   defaultPreviewJob= {this.props.defaultPreviewJob}
+              			form_name= {this.props.form_name}
+                   form_career= {this.props.form_career}
                    previewResetBtn={this.props.previewResetBtn}
                    formDesignTitle={this.props.formDesignTitle}
                    formFillTitle={this.props.formFillTitle}
@@ -37,7 +37,7 @@ class Cards extends React.Component {
 
 Cards.propTypes ={
   form_name: PropTypes.string.isRequired,
-  defaultPreviewJob: PropTypes.string.isRequired,
+  form_career: PropTypes.string.isRequired,
   previewResetBtn: PropTypes.string.isRequired,
   formDesignTitle: PropTypes.string.isRequired,
   formFillTitle: PropTypes.string.isRequired,

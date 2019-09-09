@@ -10,6 +10,11 @@ class App extends React.Component {
     this.state = {
       form_name : 'Mariaaa de lo ooooo con paquito el chocolatero XDD',
       form_career: 'Front-End Developer',
+			form_photo: 'https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg',
+			form_email: '',
+			form_tel: '',
+			form_linkedin: '',
+			form_github: '',
       previewResetBtn: ' RESET',
       formDesignTitle: 'diseña',
       formFillTitle: 'rellena',
@@ -40,7 +45,7 @@ class App extends React.Component {
     return (
       <Cards inputAction = {this.getInputValue}
              form_name= {this.state.form_name}
-             defaultPreviewJob= {this.state.defaultPreviewJob}
+             form_career= {this.state.form_career}
              previewResetBtn={this.state.previewResetBtn}
              formDesignTitle={this.state.formDesignTitle}
              formFillTitle={this.state.formFillTitle}

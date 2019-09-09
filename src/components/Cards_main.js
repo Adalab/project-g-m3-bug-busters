@@ -10,7 +10,7 @@ class CardsMain extends React.Component{
       <main className="cards__main">
         <div className="cards__container">
             <CardsPreview form_name= {this.props.form_name}
-                          defaultPreviewJob= {this.props.defaultPreviewJob}
+                          form_career= {this.props.form_career}
                           previewResetBtn={this.props.previewResetBtn}
                           />
                           
@@ -37,7 +37,7 @@ class CardsMain extends React.Component{
 
 CardsMain.propTypes ={
   form_name: PropTypes.string.isRequired,
-  defaultPreviewJob: PropTypes.string.isRequired,
+  form_career: PropTypes.string.isRequired,
   previewResetBtn: PropTypes.string.isRequired,
   formDesignTitle: PropTypes.string.isRequired,
   formFillTitle: PropTypes.string.isRequired,

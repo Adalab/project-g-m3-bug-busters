@@ -20,7 +20,7 @@ class CardsPreview extends React.Component{
                 {this.props.form_name}
               </p>
               <p className="section1__career js__job">
-                {this.props.defaultPreviewJob}              
+                {this.props.form_career}              
               </p>
             </div>
             <div 
@@ -59,7 +59,7 @@ class CardsPreview extends React.Component{
 
 CardsPreview.propTypes ={
   form_name: PropTypes.string.isRequired,
-  defaultPreviewJob: PropTypes.string.isRequired,
+  form_career: PropTypes.string.isRequired,
   previewResetBtn: PropTypes.string.isRequired,
 }
 

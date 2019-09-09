@@ -26,7 +26,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form-career" className="form-label">{this.props.formLabelJob}</label>
+            <label htmlFor="form_career" className="form-label">{this.props.formLabelJob}</label>
             <input
               type="text"
               className="form-text js__form-job"
@@ -38,11 +38,11 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form-photo" className="form-label">{this.props.formLabelPhoto}</label>
+            <label htmlFor="form_photo" className="form-label">{this.props.formLabelPhoto}</label>
             <input
               type="file"
               className="form-text form-file hidden js__profile-upload-btn"
-              id="form-photo"
+              id="form_photo"
               name="photo"
               required
               onChange = {inputAction}
@@ -53,11 +53,11 @@ class CardsFormFill extends React.Component {
             <div className="form-photo-preview js__profile-preview"></div>
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form-email" className="form-label">{this.props.formLabelEmail}</label>
+            <label htmlFor="form_email" className="form-label">{this.props.formLabelEmail}</label>
             <input
               type="email"
               className="form-text js__form-mail"
-              id="form-email"
+              id="form_email"
               name="email"
               placeholder="Ej: sally.hill@gmail.com"
               required
@@ -65,22 +65,22 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form-tel" className="form-label">{this.props.formLabelTelephone}</label>
+            <label htmlFor="form_tel" className="form-label">{this.props.formLabelTelephone}</label>
             <input
               type="tel"
               className="form-text js__form-phone"
-              id="form-tel"
+              id="form_tel"
               name="phone"
               placeholder="Ej: 555-55-55-55"
               onChange = {inputAction}
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form-linkedin" className="form-label">{this.props.formLabelLinkedin}</label>
+            <label htmlFor="form_linkedin" className="form-label">{this.props.formLabelLinkedin}</label>
             <input
               type="text"
               className="form-text js__form-linkedin"
-              id="form-linkedin"
+              id="form_linkedin"
               name="linkedin"
               placeholder="Ej: @sally-hill"
               required
@@ -88,11 +88,11 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form-github" className="form-label">{this.props.formLabelGithub}</label>
+            <label htmlFor="form_github" className="form-label">{this.props.formLabelGithub}</label>
             <input
               type="text"
               className="form-text js__form-github"
-              id="form-github"
+              id="form_github"
               name="github"
               placeholder="Ej: @sally-hill"
               required
@@ -115,6 +115,13 @@ class CardsFormFill extends React.Component {
     formLabelTelephone: PropTypes.string.isRequired,
     formLabelLinkedin: PropTypes.string.isRequired,
     formLabelGithub: PropTypes.string.isRequired,
+		form_name: PropTypes.string.isRequired,
+		form_career: PropTypes.string.isRequired,
+		form_photo: PropTypes.string.isRequired,
+		form_email: PropTypes.string.isRequired,
+		form_tel: PropTypes.number,
+		form_linkedin: PropTypes.string.isRequired,
+		form_github: PropTypes.string.isRequired,
   }
   
   export default CardsFormFill;
