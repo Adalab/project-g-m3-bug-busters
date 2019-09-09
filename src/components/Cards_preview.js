@@ -8,7 +8,7 @@ const imgPreviewStyle = {
 class CardsPreview extends React.Component{
   render(){
     return(
-      <section1 className="section1">
+      <section className="section1">
         <div className="section1__container">
           <button type="reset" className="section1__button button-reset js__button" form="form">
             <i className="far fa-trash-alt"></i> 
@@ -17,7 +17,7 @@ class CardsPreview extends React.Component{
           <div className="section1__card">
             <div className="section1__card__title">
               <p className="section1__name js__title">
-                {this.props.defaultPreviewName}
+                {this.props.form_name}
               </p>
               <p className="section1__career js__job">
                 {this.props.defaultPreviewJob}              
@@ -52,13 +52,13 @@ class CardsPreview extends React.Component{
             </ul>
           </div>
         </div>
-      </section1>
+      </section>
     );
   }
 }
 
 CardsPreview.propTypes ={
-  defaultPreviewName: PropTypes.string.isRequired,
+  form_name: PropTypes.string.isRequired,
   defaultPreviewJob: PropTypes.string.isRequired,
   previewResetBtn: PropTypes.string.isRequired,
 }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 class CardsFormFill extends React.Component {
   render() {
+    const inputAction = this.props.inputAction;
     return (
       <fieldset className="form__fieldset collapsed">
         <legend className="form__fielset-legend">
@@ -13,18 +14,19 @@ class CardsFormFill extends React.Component {
         </div>
         <div className="form__fill-content fill-container collapsable-container">
           <div className="form__fill-input">
-            <label for="form-name" className="form-label">{this.props.formLabelName}</label>
+            <label htmlFor="form_name" className="form-label">{this.props.formLabelName}</label>
             <input
               type="text"
               className="form-text js__form-name"
-              id="form-name"
+              id="form_name"
               name="name"
               placeholder="Ej: Sally Jill"
               required
+              onChange = {inputAction}
             />
           </div>
           <div className="form__fill-input">
-            <label for="form-career" className="form-label">{this.props.formLabelJob}</label>
+            <label htmlFor="form-career" className="form-label">{this.props.formLabelJob}</label>
             <input
               type="text"
               className="form-text js__form-job"
@@ -35,7 +37,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label for="form-photo" className="form-label">{this.props.formLabelPhoto}</label>
+            <label htmlFor="form-photo" className="form-label">{this.props.formLabelPhoto}</label>
             <input
               type="file"
               className="form-text form-file hidden js__profile-upload-btn"
@@ -49,7 +51,7 @@ class CardsFormFill extends React.Component {
             <div className="form-photo-preview js__profile-preview"></div>
           </div>
           <div className="form__fill-input">
-            <label for="form-email" className="form-label">{this.props.formLabelEmail}</label>
+            <label htmlFor="form-email" className="form-label">{this.props.formLabelEmail}</label>
             <input
               type="email"
               className="form-text js__form-mail"
@@ -60,7 +62,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label for="form-tel" className="form-label">{this.props.formLabelTelephone}</label>
+            <label htmlFor="form-tel" className="form-label">{this.props.formLabelTelephone}</label>
             <input
               type="tel"
               className="form-text js__form-phone"
@@ -70,7 +72,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label for="form-linkedin" className="form-label">{this.props.formLabelLinkedin}</label>
+            <label htmlFor="form-linkedin" className="form-label">{this.props.formLabelLinkedin}</label>
             <input
               type="text"
               className="form-text js__form-linkedin"
@@ -81,7 +83,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label for="form-github" className="form-label">{this.props.formLabelGithub}</label>
+            <label htmlFor="form-github" className="form-label">{this.props.formLabelGithub}</label>
             <input
               type="text"
               className="form-text js__form-github"

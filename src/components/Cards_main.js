@@ -5,26 +5,29 @@ import CardsForm from './Cards_form';
 
 class CardsMain extends React.Component{
   render(){
+    const inputAction = this.props.inputAction;
     return(
       <main className="cards__main">
         <div className="cards__container">
-            <CardsPreview defaultPreviewName= {this.props.defaultPreviewName}
+            <CardsPreview form_name= {this.props.form_name}
                           defaultPreviewJob= {this.props.defaultPreviewJob}
                           previewResetBtn={this.props.previewResetBtn}
                           />
                           
-            <CardsForm formDesignTitle={this.props.formDesignTitle} 
-                       formFillTitle={this.props.formFillTitle}
-                       formLabelName={this.props.formLabelName}
-                       formLabelJob={this.props.formLabelJob}
-                       formLabelPhoto={this.props.formLabelPhoto}
-                       fillImageBtn={this.props.fillImageBtn}
-                       formLabelEmail={this.props.formLabelEmail}
-                       formLabelTelephone={this.props.formLabelTelephone}
-                       formLabelLinkedin={this.props.formLabelLinkedin}
-                       formLabelGithub={this.props.formLabelGithub}
-                       formShareTitle={this.props.formShareTitle}
-                       createCardBtn={this.props.createCardBtn}
+            <CardsForm 
+              inputAction = {inputAction}
+              formDesignTitle={this.props.formDesignTitle} 
+              formFillTitle={this.props.formFillTitle}
+              formLabelName={this.props.formLabelName}
+              formLabelJob={this.props.formLabelJob}
+              formLabelPhoto={this.props.formLabelPhoto}
+              fillImageBtn={this.props.fillImageBtn}
+              formLabelEmail={this.props.formLabelEmail}
+              formLabelTelephone={this.props.formLabelTelephone}
+              formLabelLinkedin={this.props.formLabelLinkedin}
+              formLabelGithub={this.props.formLabelGithub}
+              formShareTitle={this.props.formShareTitle}
+              createCardBtn={this.props.createCardBtn}
             />   
         </div>
       </main>
@@ -33,7 +36,7 @@ class CardsMain extends React.Component{
 }
 
 CardsMain.propTypes ={
-  defaultPreviewName: PropTypes.string.isRequired,
+  form_name: PropTypes.string.isRequired,
   defaultPreviewJob: PropTypes.string.isRequired,
   previewResetBtn: PropTypes.string.isRequired,
   formDesignTitle: PropTypes.string.isRequired,

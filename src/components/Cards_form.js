@@ -7,12 +7,15 @@ import CardsFormTwitter from './Cards_form-twitter';
 
 class CardsForm extends React.Component {
   render() {
+    const inputAction = this.props.inputAction;
     return (
       <section className="cards__section-2">
         <div className="wrapper">
           <form id="form" action="" method="POST">
             <CardsFormDesign formDesignTitle={this.props.formDesignTitle} />
-            <CardsFormFill formFillTitle={this.props.formFillTitle} 
+            <CardsFormFill 
+              inputAction = {inputAction}
+              formFillTitle={this.props.formFillTitle} 
                            formLabelName={this.props.formLabelName}
                            formLabelJob={this.props.formLabelJob}
                            formLabelPhoto={this.props.formLabelPhoto}

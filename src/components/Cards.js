@@ -6,11 +6,14 @@ import Footer from './Footer';
 
 
 class Cards extends React.Component {
+  
   render() {
+    const inputAction = this.props.inputAction;
     return (
       <div className="page page-cards">
         <CardsHeader />
-        <CardsMain defaultPreviewName= {this.props.defaultPreviewName}
+        <CardsMain inputAction = {inputAction}
+                    form_name= {this.props.form_name}
                    defaultPreviewJob= {this.props.defaultPreviewJob}
                    previewResetBtn={this.props.previewResetBtn}
                    formDesignTitle={this.props.formDesignTitle}
@@ -33,7 +36,7 @@ class Cards extends React.Component {
 }
 
 Cards.propTypes ={
-  defaultPreviewName: PropTypes.string.isRequired,
+  form_name: PropTypes.string.isRequired,
   defaultPreviewJob: PropTypes.string.isRequired,
   previewResetBtn: PropTypes.string.isRequired,
   formDesignTitle: PropTypes.string.isRequired,

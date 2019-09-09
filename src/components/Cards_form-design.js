@@ -26,7 +26,7 @@ class CardsFormDesign extends React.Component {
         <h3 className="form-colors-text">Colores:</h3>
         <div className="theme-container">
           <div className="theme">
-            <label for="t1" className="theme__row">
+            <label htmlFor="t1" className="theme__row">
               <input
                 type="radio"
                 className="theme__radio theme__radio1 js__theme__radio"
@@ -48,7 +48,7 @@ class CardsFormDesign extends React.Component {
             </label>
           </div>
           <div className="theme">
-            <label for="t2" className="theme__row">
+            <label htmlFor="t2" className="theme__row">
               <input
                 type="radio"
                 className="theme__radio theme__radio2 js__theme__radio"
@@ -70,7 +70,7 @@ class CardsFormDesign extends React.Component {
             </label>
           </div>
           <div className="theme">
-            <label for="t3" className="theme__row">
+            <label htmlFor="t3" className="theme__row">
               <input
                 type="radio"
                 className="theme__radio theme__radio3 js__theme__radio"
