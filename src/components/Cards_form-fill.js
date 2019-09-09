@@ -98,8 +98,8 @@ class CardsFormFill extends React.Component {
   }
 
   CardsFormFill.propTypes ={
-    formFillTitle: PropTypes.string,
-    fillImageBtn: PropTypes.string,
+    formFillTitle: PropTypes.string.isRequired,
+    fillImageBtn: PropTypes.string.isRequired,
   }
   
   export default CardsFormFill;

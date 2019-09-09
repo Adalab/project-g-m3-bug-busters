@@ -34,11 +34,11 @@ class CardsForm extends React.Component {
 }
 
 CardsForm.propTypes ={
-  formDesignTitle: PropTypes.string,
-  formFillTitle: PropTypes.string,
-  fillImageBtn: PropTypes.string,
-  formShareTitle: PropTypes.string,
-  createCardBtn: PropTypes.string,
+  formDesignTitle: PropTypes.string.isRequired,
+  formFillTitle: PropTypes.string.isRequired,
+  fillImageBtn: PropTypes.string.isRequired,
+  formShareTitle: PropTypes.string.isRequired,
+  createCardBtn: PropTypes.string.isRequired,
 }
 
 export default CardsForm;
