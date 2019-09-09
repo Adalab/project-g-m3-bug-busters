@@ -107,7 +107,14 @@ class CardsFormFill extends React.Component {
 
   CardsFormFill.propTypes ={
     formFillTitle: PropTypes.string.isRequired,
+    formLabelName: PropTypes.string.isRequired,
+    formLabelJob: PropTypes.string.isRequired,
+    formLabelPhoto: PropTypes.string.isRequired,
     fillImageBtn: PropTypes.string.isRequired,
+    formLabelEmail: PropTypes.string.isRequired,
+    formLabelTelephone: PropTypes.string.isRequired,
+    formLabelLinkedin: PropTypes.string.isRequired,
+    formLabelGithub: PropTypes.string.isRequired,
   }
   
   export default CardsFormFill;

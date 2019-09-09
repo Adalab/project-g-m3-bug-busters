@@ -39,7 +39,14 @@ class CardsForm extends React.Component {
 CardsForm.propTypes ={
   formDesignTitle: PropTypes.string.isRequired,
   formFillTitle: PropTypes.string.isRequired,
+  formLabelName: PropTypes.string.isRequired,
+  formLabelJob: PropTypes.string.isRequired,
+  formLabelPhoto: PropTypes.string.isRequired,
   fillImageBtn: PropTypes.string.isRequired,
+  formLabelEmail: PropTypes.string.isRequired,
+  formLabelTelephone: PropTypes.string.isRequired,
+  formLabelLinkedin: PropTypes.string.isRequired,
+  formLabelGithub: PropTypes.string.isRequired,
   formShareTitle: PropTypes.string.isRequired,
   createCardBtn: PropTypes.string.isRequired,
 }
