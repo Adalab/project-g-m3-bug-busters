@@ -9,7 +9,7 @@ class App extends React.Component {
     this.getInputValue = this.getInputValue.bind(this);
     this.state = {
       form_name : 'Mariaaa de lo ooooo con paquito el chocolatero XDD',
-      defaultPreviewJob : 'Front-End Developer',
+      form_career: 'Front-End Developer',
       previewResetBtn: ' RESET',
       formDesignTitle: 'diseña',
       formFillTitle: 'rellena',
@@ -25,17 +25,16 @@ class App extends React.Component {
       createCardBtn: 'Crear tarjeta',
     }
   }
+
   getInputValue(event){
     const targetId = event.currentTarget.id;
     const targetValue = event.currentTarget.value;
-    console.log(targetId);
 
     const obj= {};
+
     obj[targetId] = targetValue;
 
     this.setState(obj);
-      console.log(event.currentTarget.value);
-      console.log(event.currentTarget.id);
     }
   render() {
     return (

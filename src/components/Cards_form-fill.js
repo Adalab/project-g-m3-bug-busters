@@ -30,10 +30,11 @@ class CardsFormFill extends React.Component {
             <input
               type="text"
               className="form-text js__form-job"
-              id="form-career"
+              id="form_career"
               name="job"
               placeholder="Ej: Front-end unicorn"
               required
+              onChange = {inputAction}
             />
           </div>
           <div className="form__fill-input">
@@ -44,6 +45,7 @@ class CardsFormFill extends React.Component {
               id="form-photo"
               name="photo"
               required
+              onChange = {inputAction}
             />
             <button className="form-photo-button button-addImage js__profile-trigger">
               {this.props.fillImageBtn}
@@ -59,6 +61,7 @@ class CardsFormFill extends React.Component {
               name="email"
               placeholder="Ej: sally.hill@gmail.com"
               required
+              onChange = {inputAction}
             />
           </div>
           <div className="form__fill-input">
@@ -69,6 +72,7 @@ class CardsFormFill extends React.Component {
               id="form-tel"
               name="phone"
               placeholder="Ej: 555-55-55-55"
+              onChange = {inputAction}
             />
           </div>
           <div className="form__fill-input">
@@ -80,6 +84,7 @@ class CardsFormFill extends React.Component {
               name="linkedin"
               placeholder="Ej: @sally-hill"
               required
+              onChange = {inputAction}
             />
           </div>
           <div className="form__fill-input">
@@ -91,6 +96,7 @@ class CardsFormFill extends React.Component {
               name="github"
               placeholder="Ej: @sally-hill"
               required
+              onChange = {inputAction}
             />
           </div>
         </div>
