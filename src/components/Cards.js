@@ -26,14 +26,14 @@ class Cards extends React.Component {
 }
 
 Cards.propTypes ={
-  defaultPreviewName: PropTypes.string,
-  defaultPreviewJob: PropTypes.string,
-  previewResetBtn: PropTypes.string,
-  formDesignTitle: PropTypes.string,
-  formFillTitle: PropTypes.string,
-  fillImageBtn: PropTypes.string,
-  formShareTitle: PropTypes.string,
-  createCardBtn: PropTypes.string,
+  defaultPreviewName: PropTypes.string.isRequired,
+  defaultPreviewJob: PropTypes.string.isRequired,
+  previewResetBtn: PropTypes.string.isRequired,
+  formDesignTitle: PropTypes.string.isRequired,
+  formFillTitle: PropTypes.string.isRequired,
+  fillImageBtn: PropTypes.string.isRequired,
+  formShareTitle: PropTypes.string.isRequired,
+  createCardBtn: PropTypes.string.isRequired,
 }
 
 export default Cards;

@@ -99,7 +99,8 @@ class CardsFormDesign extends React.Component {
 }
 
 CardsFormDesign.propTypes ={
-  formDesignTitle: PropTypes.string,
+  formDesignTitle: PropTypes.string.isRequired,
+  
 }
 
 export default CardsFormDesign;

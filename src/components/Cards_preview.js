@@ -58,9 +58,9 @@ class CardsPreview extends React.Component{
 }
 
 CardsPreview.propTypes ={
-  defaultPreviewName: PropTypes.string,
-  defaultPreviewJob: PropTypes.string,
-  previewResetBtn: PropTypes.string,
+  defaultPreviewName: PropTypes.string.isRequired,
+  defaultPreviewJob: PropTypes.string.isRequired,
+  previewResetBtn: PropTypes.string.isRequired,
 }
 
 export default CardsPreview;

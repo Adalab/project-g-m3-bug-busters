@@ -23,8 +23,8 @@ class CardsFormShare extends React.Component {
 }
 
 CardsFormShare.propTypes ={
-  formShareTitle: PropTypes.string,
-  createCardBtn: PropTypes.string,
+  formShareTitle: PropTypes.string.isRequired,
+  createCardBtn: PropTypes.string.isRequired,
 }
 
 export default CardsFormShare;
