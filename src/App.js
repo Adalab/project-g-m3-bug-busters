@@ -17,7 +17,7 @@ class App extends React.Component {
       form_github: '',
     }
   }
-  
+
   getInputValue(event){
     const targetId = event.currentTarget.id;
     const targetName = event.currentTarget.name;
