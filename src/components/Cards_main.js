@@ -5,11 +5,11 @@ import CardsForm from './Cards_form';
 
 class CardsMain extends React.Component {
   render() {
-    const inputAction = this.props.inputAction;
     return (
       <main className="cards__main">
         <div className="cards__container">
-          <CardsPreview form_name={this.props.form_name}
+          <CardsPreview 
+            form_name={this.props.form_name}
             form_career={this.props.form_career}
             photo={this.props.photo}
             email={this.props.email}
@@ -18,7 +18,8 @@ class CardsMain extends React.Component {
             github={this.props.github}
           />
           <CardsForm
-            inputAction={inputAction}
+            divAction = {this.props.divAction}
+            inputAction={this.props.inputAction}
           />
         </div>
       </main>
@@ -34,5 +35,7 @@ CardsMain.propTypes = {
   phone: PropTypes.string.isRequired,
   linkedin: PropTypes.string.isRequired,
   github: PropTypes.string.isRequired,
+  divAction : PropTypes.func.isRequired,
+  inputAction: PropTypes.func.isRequired
 }
 export default CardsMain;

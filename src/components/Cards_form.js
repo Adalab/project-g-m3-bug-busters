@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CardsFormDesign from './Cards_form-design';
 import CardsFormFill from './Cards_form-fill';
 import CardsFormShare from './Cards_form-share';
@@ -6,16 +7,18 @@ import CardsFormTwitter from './Cards_form-twitter';
 
 class CardsForm extends React.Component {
   render() {
-    const inputAction = this.props.inputAction;
+   
     return (
       <section className="cards__section-2">
         <div className="wrapper">
           <form id="form" action="" method="POST">
-            <CardsFormDesign />
+            <CardsFormDesign divAction = {this.props.divAction}/>
             <CardsFormFill 
-              inputAction = {inputAction}
+              inputAction = {this.props.inputAction}
+              divAction = {this.props.divAction}
             />
             <CardsFormShare 
+            divAction = {this.props.divAction}
             />
           </form>
           <CardsFormTwitter />  
@@ -24,5 +27,11 @@ class CardsForm extends React.Component {
     )
   }
 }
+
+CardsForm.propTypes = {
+  divAction : PropTypes.func.isRequired,
+  inputAction: PropTypes.func.isRequired
+}
+
 
 export default CardsForm;

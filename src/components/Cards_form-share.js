@@ -1,6 +1,9 @@
 import React from 'react';
 
 class CardsFormShare extends React.Component {
+  getCollasableClass(str) {
+    return str ? '' : 'collapsable-container';
+  }
   render() {
     return (
       <div className="js__submit-container collapsed">

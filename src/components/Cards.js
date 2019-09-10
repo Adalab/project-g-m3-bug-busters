@@ -9,11 +9,12 @@ import Footer from './Footer';
 class Cards extends React.Component {
 
   render() {
-    const inputAction = this.props.inputAction;
     return (
       <div className="page page-cards">
         <CardsHeader />
-        <CardsMain inputAction={inputAction}
+        <CardsMain 
+          divAction = {this.props.divAction}
+          inputAction={this.props.inputAction}
           form_name={this.props.form_name}
           form_career={this.props.form_career}
           photo={this.props.photo}
@@ -36,6 +37,8 @@ Cards.propTypes = {
   phone: PropTypes.string.isRequired,
   linkedin: PropTypes.string.isRequired,
   github: PropTypes.string.isRequired,
+  divAction : PropTypes.func.isRequired,
+  inputAction : PropTypes.func.isRequired
 }
 
 export default Cards;

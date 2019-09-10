@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class CardsFormFill extends React.Component {
+  getCollapsableClass(str) {
+    return str ? '' : 'collapsable-container';
+  }
   render() {
     const inputAction = this.props.inputAction;
     return (
@@ -9,10 +12,10 @@ class CardsFormFill extends React.Component {
         <legend className="form__fielset-legend">
           Completar información
           </legend>
-        <div className="form__fill js__collapsable">
+        <div className="form__fill js__collapsable" onClick={this.props.divAction}>
           <h2 className="form__fill-title form-title title-2">rellena</h2>
         </div>
-        <div className="form__fill-content fill-container collapsable-container">
+        <div className={`form__fill-content fill-container ${this.getCollapsableClass(this.props.collapsable)}`}>
           <div className="form__fill-input">
             <label htmlFor="form_name" className="form-label">nombre completo</label>
             <input
@@ -37,7 +40,7 @@ class CardsFormFill extends React.Component {
               onChange = {inputAction}
             />
           </div>
-          <div className="form__fill-input">
+          <div className="form__ill-input">
             <label htmlFor="form_photo" className="form-label">imagen de perfil</label>
             <input
               type="file"

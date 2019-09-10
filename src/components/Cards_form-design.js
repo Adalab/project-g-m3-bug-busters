@@ -14,6 +14,9 @@ const palette3Color3 = {backgroundColor: '#a0c0cf'};
 
 
 class CardsFormDesign extends React.Component {
+  getCollasableClass(str) {
+    return str ? '' : 'collapsable-container';
+  }
   render() {
     return (
       <fieldset className="form__fieldset">

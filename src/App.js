@@ -1,8 +1,8 @@
 import React from 'react';
 import './scss/main.scss';
-import Landing from './components/Landing';
+/* import Landing from './components/Landing'; */
 import Cards from './components/Cards';
-import PropTypes from 'prop-types';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +16,9 @@ class App extends React.Component {
       form_tel: '',
       form_linkedin: '',
       form_github: '',
+      div_design: '',
+      div_fill: 'collapsable-container',
+      div_share: 'collapsable-container',
     }
   }
 
@@ -26,10 +29,15 @@ class App extends React.Component {
     obj[targetId] = targetValue;
     this.setState(obj);
   }
-
+  getDivTargered(event){
+    const targetDiv = event.currentTarget;
+    console.log(targetDiv);
+  }
   render() {
     return (
-      <Cards inputAction={this.getInputValue}
+      <Cards 
+        divAction = {this.getDivTargered}
+        inputAction={this.getInputValue}
         form_name={this.state.form_name}
         form_career={this.state.form_career}
         photo={this.state.form_photo}
@@ -42,15 +50,4 @@ class App extends React.Component {
   }
 }
 
-/* App.propTypes = {
-  form_name: PropTypes.string.isRequired,
-  form_career: PropTypes.string.isRequired,
-  form_photo: PropTypes.string.isRequired,
-  form_email: PropTypes.string.isRequired,
-  form_tel: PropTypes.string.isRequired,
-  form_linkedin: PropTypes.string.isRequired,
-  form_github: PropTypes.string.isRequired,
-
-}
- */
 export default App;
