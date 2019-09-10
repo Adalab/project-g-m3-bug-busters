@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const palette1Color1 = {backgroundColor: '#114e4e'};
 const palette1Color2 = {backgroundColor: '#438792'};
@@ -96,11 +95,6 @@ class CardsFormDesign extends React.Component {
     </fieldset>
     )
   }
-}
-
-CardsFormDesign.propTypes ={
-  formDesignTitle: PropTypes.string.isRequired,
-  
 }
 
 export default CardsFormDesign;

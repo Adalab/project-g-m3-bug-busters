@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 class CardsFormShare extends React.Component {
   render() {
     return (
       <div className="js__submit-container collapsed">
         <div className="submit-share js__collapsable">
-          <h2 className="submit-share form-title title-3">{this.props.formShareTitle}</h2>
+          <h2 className="submit-share form-title title-3">comparte</h2>
         </div>
         <div className="submit-container collapsable-container">
           <button
@@ -14,17 +13,12 @@ class CardsFormShare extends React.Component {
             type="submit"
             id="submit"
           >
-            {this.props.createCardBtn}
+					crear tarjeta
           </button>
         </div>
       </div>
     );
   }
-}
-
-CardsFormShare.propTypes ={
-  formShareTitle: PropTypes.string.isRequired,
-  createCardBtn: PropTypes.string.isRequired,
 }
 
 export default CardsFormShare;

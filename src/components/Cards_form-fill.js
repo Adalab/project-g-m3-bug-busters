@@ -26,7 +26,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_career" className="form-label">{this.props.formLabelJob}</label>
+            <label htmlFor="form_career" className="form-label">puesto</label>
             <input
               type="text"
               className="form-text js__form-job"
@@ -38,7 +38,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_photo" className="form-label">{this.props.formLabelPhoto}</label>
+            <label htmlFor="form_photo" className="form-label">imagen de perfil</label>
             <input
               type="file"
               className="form-text form-file hidden js__profile-upload-btn"
@@ -48,12 +48,12 @@ class CardsFormFill extends React.Component {
               onChange = {inputAction}
             />
             <button className="form-photo-button button-addImage js__profile-trigger">
-              {this.props.fillImageBtn}
+              Añadir imagen
             </button>
             <div className="form-photo-preview js__profile-preview"></div>
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_email" className="form-label">{this.props.formLabelEmail}</label>
+            <label htmlFor="form_email" className="form-label">Email</label>
             <input
               type="email"
               className="form-text js__form-mail"
@@ -65,7 +65,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_tel" className="form-label">{this.props.formLabelTelephone}</label>
+            <label htmlFor="form_tel" className="form-label">Teléfono</label>
             <input
               type="tel"
               className="form-text js__form-phone"
@@ -76,7 +76,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_linkedin" className="form-label">{this.props.formLabelLinkedin}</label>
+            <label htmlFor="form_linkedin" className="form-label">linkedIn</label>
             <input
               type="text"
               className="form-text js__form-linkedin"
@@ -88,7 +88,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_github" className="form-label">{this.props.formLabelGithub}</label>
+            <label htmlFor="form_github" className="form-label">Github</label>
             <input
               type="text"
               className="form-text js__form-github"
@@ -106,15 +106,6 @@ class CardsFormFill extends React.Component {
   }
 
   CardsFormFill.propTypes ={
-    formFillTitle: PropTypes.string.isRequired,
-    formLabelName: PropTypes.string.isRequired,
-    formLabelJob: PropTypes.string.isRequired,
-    formLabelPhoto: PropTypes.string.isRequired,
-    fillImageBtn: PropTypes.string.isRequired,
-    formLabelEmail: PropTypes.string.isRequired,
-    formLabelTelephone: PropTypes.string.isRequired,
-    formLabelLinkedin: PropTypes.string.isRequired,
-    formLabelGithub: PropTypes.string.isRequired,
 		form_name: PropTypes.string.isRequired,
 		form_career: PropTypes.string.isRequired,
 		form_photo: PropTypes.string.isRequired,

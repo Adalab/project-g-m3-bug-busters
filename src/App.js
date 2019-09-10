@@ -15,15 +15,6 @@ class App extends React.Component {
 			form_tel: '',
 			form_linkedin: '',
 			form_github: '',
-      formLabelJob: 'Puesto',
-      formLabelPhoto: 'Imagen de perfil',
-      fillImageBtn:'Añadir imagen',
-      formLabelEmail:'Email',
-      formLabelTelephone: 'Teléfono',
-      formLabelLinkedin: 'Linkedin',
-      formLabelGithub:'Github',
-      formShareTitle: 'comparte',
-      createCardBtn: 'Crear tarjeta',
     }
   }
 
