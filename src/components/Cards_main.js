@@ -11,9 +11,13 @@ class CardsMain extends React.Component{
         <div className="cards__container">
             <CardsPreview form_name= {this.props.form_name}
                           form_career= {this.props.form_career}
+                          paletteValue={this.props.paletteValue}
+                          RadioValue={this.props.RadioValue}
                           />                    
             <CardsForm 
               inputAction = {inputAction}
+              paletteValue={this.props.paletteValue}
+              RadioValue={this.props.RadioValue}
             />   
         </div>
       </main>
@@ -24,6 +28,7 @@ class CardsMain extends React.Component{
 CardsMain.propTypes ={
   form_name: PropTypes.string.isRequired,
   form_career: PropTypes.string.isRequired,
+  // paletteValue: PropTypes.number,
 }
 
 export default CardsMain;

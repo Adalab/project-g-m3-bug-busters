@@ -6,7 +6,6 @@ import Cards from './components/Cards';
 class App extends React.Component {
   constructor(props){
     super(props);
-    this.getInputValue = this.getInputValue.bind(this);
     this.state = {
       form_name : 'Mariaaa de lo ooooo con paquito el chocolatero XDD',
       form_career: 'Front-End Developer',
@@ -14,8 +13,12 @@ class App extends React.Component {
 			form_email: '',
 			form_tel: '',
 			form_linkedin: '',
-			form_github: '',
-    }
+      form_github: '',
+      paletteValue: 1,
+    };
+
+    this.getInputValue = this.getInputValue.bind(this);
+    this.getRadioValue = this.getRadioValue.bind(this);
   }
 
   getInputValue(event){
@@ -28,11 +31,21 @@ class App extends React.Component {
 
     this.setState(obj);
     }
+
+    getRadioValue(event) {
+      const radioValue = parseInt(event.currentTarget.value); 
+      this.setState({
+        paletteValue: radioValue
+      });
+    }
+
   render() {
     return (
       <Cards inputAction = {this.getInputValue}
              form_name= {this.state.form_name}
              form_career= {this.state.form_career}
+             paletteValue={this.state.paletteValue}
+             RadioValue={this.getRadioValue}
       />
     );
   }

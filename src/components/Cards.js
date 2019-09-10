@@ -13,8 +13,10 @@ class Cards extends React.Component {
       <div className="page page-cards">
         <CardsHeader />
         <CardsMain inputAction = {inputAction}
-              			form_name= {this.props.form_name}
+              		 form_name= {this.props.form_name}
                    form_career= {this.props.form_career}
+                   paletteValue={this.props.paletteValue}
+                   RadioValue={this.props.RadioValue}
                    />
         <Footer />
       </div>
@@ -25,6 +27,7 @@ class Cards extends React.Component {
 Cards.propTypes ={
   form_name: PropTypes.string.isRequired,
   form_career: PropTypes.string.isRequired,
+  // paletteValue: PropTypes.number,
 }
 
 export default Cards;

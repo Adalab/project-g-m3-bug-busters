@@ -3,6 +3,7 @@ import CardsFormDesign from './Cards_form-design';
 import CardsFormFill from './Cards_form-fill';
 import CardsFormShare from './Cards_form-share';
 import CardsFormTwitter from './Cards_form-twitter';
+import PropTypes from 'prop-types';
 
 class CardsForm extends React.Component {
   render() {
@@ -11,7 +12,10 @@ class CardsForm extends React.Component {
       <section className="cards__section-2">
         <div className="wrapper">
           <form id="form" action="" method="POST">
-            <CardsFormDesign />
+            <CardsFormDesign 
+             paletteValue= {this.props.paletteValue}
+             RadioValue={this.props.RadioValue}
+            />
             <CardsFormFill 
               inputAction = {inputAction}
             />
@@ -23,6 +27,10 @@ class CardsForm extends React.Component {
       </section>
     )
   }
+}
+
+CardsForm.propTypes ={
+  paletteValue: PropTypes.number,
 }
 
 export default CardsForm;
