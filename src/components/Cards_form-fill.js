@@ -8,14 +8,14 @@ class CardsFormFill extends React.Component {
   render() {
     const inputAction = this.props.inputAction;
     return (
-      <fieldset className="form__fieldset collapsed">
+      <fieldset className="form__fieldset collapsed" onClick={this.props.divAction} id="second">
         <legend className="form__fielset-legend">
           Completar información
           </legend>
-        <div className="form__fill js__collapsable" onClick={this.props.divAction}>
+        <div className="form__fill js__collapsable" >
           <h2 className="form__fill-title form-title title-2">rellena</h2>
         </div>
-        <div className={`form__fill-content fill-container ${this.getCollapsableClass(this.props.collapsable)}`}>
+        <div className={`form__fill-content fill-container ${this.getCollapsableClass(this.props.collapsable)}`} data-id = "second">
           <div className="form__fill-input">
             <label htmlFor="form_name" className="form-label">nombre completo</label>
             <input

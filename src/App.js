@@ -8,6 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.getInputValue = this.getInputValue.bind(this);
+    this.getDivTargered = this.getDivTargered.bind(this);
     this.state = {
       form_name: 'Mariaaa de lo ooooo con paquito el chocolatero XDD',
       form_career: 'Front-End Developer',
@@ -16,9 +17,7 @@ class App extends React.Component {
       form_tel: '',
       form_linkedin: '',
       form_github: '',
-      div_design: '',
-      div_fill: 'collapsable-container',
-      div_share: 'collapsable-container',
+      id : ''
     }
   }
 
@@ -30,12 +29,16 @@ class App extends React.Component {
     this.setState(obj);
   }
   getDivTargered(event){
-    const targetDiv = event.currentTarget;
-    console.log(targetDiv);
+    const targetDiv = event.currentTarget.id;
+    const obj = {
+      id :targetDiv
+    };
+    this.setState (obj)
   }
   render() {
     return (
       <Cards 
+        id = {this.state.id}
         divAction = {this.getDivTargered}
         inputAction={this.getInputValue}
         form_name={this.state.form_name}

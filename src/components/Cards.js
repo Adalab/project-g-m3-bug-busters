@@ -13,8 +13,9 @@ class Cards extends React.Component {
       <div className="page page-cards">
         <CardsHeader />
         <CardsMain 
+          id = {this.props.id}
           divAction = {this.props.divAction}
-          inputAction={this.props.inputAction}
+          inputAction = {this.props.inputAction}
           form_name={this.props.form_name}
           form_career={this.props.form_career}
           photo={this.props.photo}

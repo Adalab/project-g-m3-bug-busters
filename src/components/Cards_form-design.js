@@ -19,12 +19,12 @@ class CardsFormDesign extends React.Component {
   }
   render() {
     return (
-      <fieldset className="form__fieldset">
+      <fieldset className="form__fieldset" id = "first"  onClick = {this.props.divAction} >
       <legend className="form__fielset-legend">Elegir tema</legend>
       <div className="form__design js__collapsable">
         <h2 className="form__design-title form-title title-1">diseña</h2>
       </div>
-      <div className="form__design-content design-container collapsable-container">
+      <div className="form__design-content design-container collapsable-container" data-id = "first">
         <h3 className="form-colors-text">Colores:</h3>
         <div className="theme-container">
           <div className="theme">

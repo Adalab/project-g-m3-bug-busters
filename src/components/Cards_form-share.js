@@ -6,11 +6,11 @@ class CardsFormShare extends React.Component {
   }
   render() {
     return (
-      <div className="js__submit-container collapsed">
+      <div className="js__submit-container collapsed" id = "third" onClick = {this.props.divAction}>
         <div className="submit-share js__collapsable">
           <h2 className="submit-share form-title title-3">comparte</h2>
         </div>
-        <div className="submit-container collapsable-container">
+        <div className="submit-container collapsable-container" data-id = "third">
           <button
             className="button-create collapsebtn js__submit"
             type="submit"
