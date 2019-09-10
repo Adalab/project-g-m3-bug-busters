@@ -5,7 +5,12 @@ const imgPreviewStyle = {
   backgroundImage: "url('https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg')"
 };
 
+
+
 class CardsPreview extends React.Component{
+  getHiddenClass(str) {
+    return str ? '' : 'hidden';
+  }
   render(){
     return(
       <section className="section1">
@@ -30,12 +35,12 @@ class CardsPreview extends React.Component{
             </div>
             <ul className="section1__links">
               <li className="section1__element">
-                <a className="section1__link js__icon-mail mail hidden">
+                <a className={`section1__link js__icon-mail mail ${this.props.email ? '' : 'hidden'}`} href={`mailto:${this.props.email}`}>
                   <i className="far fa-envelope section1__link__image"></i>
                 </a>
               </li>
               <li className="section1__element">
-                <a className="section1__link js__icon-phone hidden">
+                <a className={`section1__link js__icon-phone ${this.getHiddenClass(this.props.phone)}`} href={`tel:${this.props.phone}`}>
                   <i className="fas fa-mobile-alt section1__link__image"></i>
                 </a>
               </li>

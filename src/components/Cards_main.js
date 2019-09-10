@@ -11,6 +11,7 @@ class CardsMain extends React.Component{
         <div className="cards__container">
             <CardsPreview form_name= {this.props.form_name}
                           form_career= {this.props.form_career}
+                          email= {this.props.email}
                           />                    
             <CardsForm 
               inputAction = {inputAction}

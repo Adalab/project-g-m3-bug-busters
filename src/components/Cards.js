@@ -15,6 +15,7 @@ class Cards extends React.Component {
         <CardsMain inputAction = {inputAction}
               			form_name= {this.props.form_name}
                    form_career= {this.props.form_career}
+                   email= {this.props.email}
                    />
         <Footer />
       </div>

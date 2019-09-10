@@ -32,6 +32,7 @@ class App extends React.Component {
       <Cards inputAction = {this.getInputValue}
              form_name= {this.state.form_name}
              form_career= {this.state.form_career}
+             email={this.state.form_email}
       />
     );
   }
