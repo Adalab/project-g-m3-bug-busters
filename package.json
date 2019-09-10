@@ -2,6 +2,7 @@
   "name": "g-m3-bug-busters",
   "version": "0.1.0",
   "private": true,
+	"homepage": "./",
   "dependencies": {
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
