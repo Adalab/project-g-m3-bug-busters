@@ -30,7 +30,7 @@ class CardsPreview extends React.Component{
             </div>
             <ul className="section1__links">
               <li className="section1__element">
-                <a className="section1__link js__icon-mail hidden">
+                <a className="section1__link js__icon-mail mail hidden">
                   <i className="far fa-envelope section1__link__image"></i>
                 </a>
               </li>

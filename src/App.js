@@ -14,20 +14,19 @@ class App extends React.Component {
 			form_email: '',
 			form_tel: '',
 			form_linkedin: '',
-			form_github: '',
+      form_github: '',
     }
   }
-
+  
   getInputValue(event){
     const targetId = event.currentTarget.id;
+    const targetName = event.currentTarget.name;
     const targetValue = event.currentTarget.value;
-
     const obj= {};
-
     obj[targetId] = targetValue;
-
     this.setState(obj);
-    }
+  }
+
   render() {
     return (
       <Cards inputAction = {this.getInputValue}
