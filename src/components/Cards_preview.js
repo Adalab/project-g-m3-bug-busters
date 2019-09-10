@@ -12,7 +12,7 @@ class CardsPreview extends React.Component{
         <div className="section1__container">
           <button type="reset" className="section1__button button-reset js__button" form="form">
             <i className="far fa-trash-alt"></i> 
-            {this.props.previewResetBtn}
+            RESET
           </button>
           <div className="section1__card">
             <div className="section1__card__title">
@@ -60,7 +60,6 @@ class CardsPreview extends React.Component{
 CardsPreview.propTypes ={
   form_name: PropTypes.string.isRequired,
   form_career: PropTypes.string.isRequired,
-  previewResetBtn: PropTypes.string.isRequired,
 }
 
 export default CardsPreview;
