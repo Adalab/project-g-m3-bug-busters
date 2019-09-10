@@ -19,7 +19,7 @@ class CardsPreview extends React.Component{
             <i className="far fa-trash-alt"></i> 
             RESET
           </button>
-          <div className="section1__card">
+          <div className={`section1__card theme-colors${this.props.paletteValue}`}>
             <div className="section1__card__title">
               <p className="section1__name js__title">
                 {this.props.form_name}

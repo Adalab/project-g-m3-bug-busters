@@ -12,7 +12,11 @@ class CardsForm extends React.Component {
       <section className="cards__section-2">
         <div className="wrapper">
           <form id="form" action="" method="POST">
-            <CardsFormDesign divAction = {this.props.divAction}/>
+            <CardsFormDesign 
+					   divAction = {this.props.divAction}
+             paletteValue= {this.props.paletteValue}
+             RadioValue={this.props.RadioValue}
+            />
             <CardsFormFill 
               inputAction = {this.props.inputAction}
               divAction = {this.props.divAction}
@@ -30,8 +34,8 @@ class CardsForm extends React.Component {
 
 CardsForm.propTypes = {
   divAction : PropTypes.func.isRequired,
-  inputAction: PropTypes.func.isRequired
+  inputAction: PropTypes.func.isRequired,
+	paletteValue: PropTypes.number
 }
-
 
 export default CardsForm;

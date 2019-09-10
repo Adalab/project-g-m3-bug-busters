@@ -7,8 +7,6 @@ import Cards from './components/Cards';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.getInputValue = this.getInputValue.bind(this);
-    this.getDivTargered = this.getDivTargered.bind(this);
     this.state = {
       form_name: 'Mariaaa de lo ooooo con paquito el chocolatero XDD',
       form_career: 'Front-End Developer',
@@ -17,8 +15,14 @@ class App extends React.Component {
       form_tel: '',
       form_linkedin: '',
       form_github: '',
-      id : ''
-    }
+      id : '',
+      paletteValue: 1,
+    };
+
+    this.getInputValue = this.getInputValue.bind(this);
+    this.getRadioValue = this.getRadioValue.bind(this);
+		this.getDivTargered = this.getDivTargered.bind(this);
+
   }
 
   getInputValue(event) {
@@ -28,6 +32,14 @@ class App extends React.Component {
     obj[targetId] = targetValue;
     this.setState(obj);
   }
+
+	getRadioValue(event) {
+	const radioValue = parseInt(event.currentTarget.value); 
+	this.setState({
+		paletteValue: radioValue
+	 });
+  }
+
   getDivTargered(event){
     const targetDiv = event.currentTarget.id;
     const obj = {
@@ -48,9 +60,11 @@ class App extends React.Component {
         phone={this.state.form_tel}
         linkedin={this.state.form_linkedin}
         github={this.state.form_github}
-      />
-    );
+				paletteValue={this.state.paletteValue}
+        RadioValue={this.getRadioValue}
+				/>
+		)
   }
-}
+}	
 
 export default App;

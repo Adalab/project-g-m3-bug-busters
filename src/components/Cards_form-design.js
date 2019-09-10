@@ -35,6 +35,8 @@ class CardsFormDesign extends React.Component {
                 id="t1"
                 name="palette"
                 value="1"
+                checked={this.props.paletteValue === 1}
+                onChange={this.props.RadioValue}
               />
               <ul className="colors">
                 <li className="color" style={palette1Color1}>
@@ -57,6 +59,8 @@ class CardsFormDesign extends React.Component {
                 id="t2"
                 name="palette"
                 value="2"
+                checked={this.props.paletteValue === 2}
+                onChange={this.props.RadioValue}
               />
               <ul className="colors">
                 <li className="color" style={palette2Color1}>
@@ -79,6 +83,8 @@ class CardsFormDesign extends React.Component {
                 id="t3"
                 name="palette"
                 value="3"
+                checked={this.props.paletteValue === 3}
+                onChange={this.props.RadioValue}
               />
               <ul className="colors">
                 <li className="color" style={palette3Color1}>

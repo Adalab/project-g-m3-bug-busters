@@ -18,6 +18,8 @@ class Cards extends React.Component {
           inputAction = {this.props.inputAction}
           form_name={this.props.form_name}
           form_career={this.props.form_career}
+          paletteValue={this.props.paletteValue}
+          RadioValue={this.props.RadioValue}					
           photo={this.props.photo}
           email={this.props.email}
           phone={this.props.phone}
@@ -39,7 +41,8 @@ Cards.propTypes = {
   linkedin: PropTypes.string.isRequired,
   github: PropTypes.string.isRequired,
   divAction : PropTypes.func.isRequired,
-  inputAction : PropTypes.func.isRequired
+  inputAction : PropTypes.func.isRequired,
+  paletteValue: PropTypes.number,
 }
 
 export default Cards;
