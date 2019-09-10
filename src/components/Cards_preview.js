@@ -32,6 +32,7 @@ class CardsPreview extends React.Component{
               className="section1__image js__profile-image" style={imgPreviewStyle}
             >
               <img id="img" className="section1__image-img" alt="Nombre Apellido"/>
+              {this.props.photo}
             </div>
             <ul className="section1__links">
               <li className="section1__element">
@@ -62,9 +63,14 @@ class CardsPreview extends React.Component{
   }
 }
 
-CardsPreview.propTypes ={
+CardsPreview.propTypes = {
   form_name: PropTypes.string.isRequired,
   form_career: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  linkedin: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
 }
 
 export default CardsPreview;

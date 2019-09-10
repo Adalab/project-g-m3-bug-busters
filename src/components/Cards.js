@@ -5,6 +5,7 @@ import CardsMain from './Cards_main';
 import Footer from './Footer';
 
 
+
 class Cards extends React.Component {
 
   render() {
@@ -15,6 +16,7 @@ class Cards extends React.Component {
         <CardsMain inputAction={inputAction}
           form_name={this.props.form_name}
           form_career={this.props.form_career}
+          photo={this.props.photo}
           email={this.props.email}
           phone={this.props.phone}
           linkedin={this.props.linkedin}
@@ -29,6 +31,11 @@ class Cards extends React.Component {
 Cards.propTypes = {
   form_name: PropTypes.string.isRequired,
   form_career: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  linkedin: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
 }
 
 export default Cards;

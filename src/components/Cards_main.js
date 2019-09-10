@@ -11,6 +11,7 @@ class CardsMain extends React.Component {
         <div className="cards__container">
           <CardsPreview form_name={this.props.form_name}
             form_career={this.props.form_career}
+            photo={this.props.photo}
             email={this.props.email}
             phone={this.props.phone}
             linkedin={this.props.linkedin}
@@ -28,6 +29,10 @@ class CardsMain extends React.Component {
 CardsMain.propTypes = {
   form_name: PropTypes.string.isRequired,
   form_career: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  linkedin: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
 }
-
 export default CardsMain;
