@@ -20,7 +20,6 @@ class App extends React.Component {
 
   getInputValue(event){
     const targetId = event.currentTarget.id;
-    const targetName = event.currentTarget.name;
     const targetValue = event.currentTarget.value;
     const obj= {};
     obj[targetId] = targetValue;
@@ -33,6 +32,9 @@ class App extends React.Component {
              form_name= {this.state.form_name}
              form_career= {this.state.form_career}
              email={this.state.form_email}
+             phone={this.state.form_tel}
+             linkedin={this.state.form_linkedin}
+             github={this.state.form_github}
       />
     );
   }

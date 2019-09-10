@@ -3,26 +3,29 @@ import PropTypes from 'prop-types';
 import CardsPreview from './Cards_preview';
 import CardsForm from './Cards_form';
 
-class CardsMain extends React.Component{
-  render(){
+class CardsMain extends React.Component {
+  render() {
     const inputAction = this.props.inputAction;
-    return(
+    return (
       <main className="cards__main">
         <div className="cards__container">
-            <CardsPreview form_name= {this.props.form_name}
-                          form_career= {this.props.form_career}
-                          email= {this.props.email}
-                          />                    
-            <CardsForm 
-              inputAction = {inputAction}
-            />   
+          <CardsPreview form_name={this.props.form_name}
+            form_career={this.props.form_career}
+            email={this.props.email}
+            phone={this.props.phone}
+            linkedin={this.props.linkedin}
+            github={this.props.github}
+          />
+          <CardsForm
+            inputAction={inputAction}
+          />
         </div>
       </main>
     )
   }
 }
 
-CardsMain.propTypes ={
+CardsMain.propTypes = {
   form_name: PropTypes.string.isRequired,
   form_career: PropTypes.string.isRequired,
 }

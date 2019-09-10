@@ -45,12 +45,12 @@ class CardsPreview extends React.Component{
                 </a>
               </li>
               <li className="section1__element">
-                <a target="__blank" className="section1__link js__icon-linkedin hidden">
+                <a target="__blank" className={`section1__link js__icon-linkedin ${this.getHiddenClass(this.props.linkedin)}`} href={`https://www.linkedin.com/in/${this.props.linkedin}`}>
                   <i className="fab fa-linkedin-in section1__link__image"></i>
                 </a>
               </li>
               <li className="section1__element">
-                <a target="__blank" className="section1__link js__icon-github hidden">
+                <a target="__blank" className={`section1__link js__icon-github ${this.getHiddenClass(this.props.github)}`} href={`https://github.com/${this.props.github}`}>
                   <i className="fab fa-github-alt section1__link__image"></i>
                 </a>
               </li>

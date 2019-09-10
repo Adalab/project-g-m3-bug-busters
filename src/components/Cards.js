@@ -6,24 +6,27 @@ import Footer from './Footer';
 
 
 class Cards extends React.Component {
-  
+
   render() {
     const inputAction = this.props.inputAction;
     return (
       <div className="page page-cards">
         <CardsHeader />
-        <CardsMain inputAction = {inputAction}
-              			form_name= {this.props.form_name}
-                   form_career= {this.props.form_career}
-                   email= {this.props.email}
-                   />
+        <CardsMain inputAction={inputAction}
+          form_name={this.props.form_name}
+          form_career={this.props.form_career}
+          email={this.props.email}
+          phone={this.props.phone}
+          linkedin={this.props.linkedin}
+          github={this.props.github}
+        />
         <Footer />
       </div>
     );
   }
 }
 
-Cards.propTypes ={
+Cards.propTypes = {
   form_name: PropTypes.string.isRequired,
   form_career: PropTypes.string.isRequired,
 }
