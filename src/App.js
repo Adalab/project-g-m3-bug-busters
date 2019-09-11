@@ -49,8 +49,8 @@ class App extends React.Component {
   }
   render() {
     return (
-      
-      <Cards 
+/*       <Landing /> */      
+				<Cards 
         id = {this.state.id}
         divAction = {this.getDivTargered}
         inputAction={this.getInputValue}
