@@ -2,14 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class CardsFormFill extends React.Component {
-  getCollapsable(id, data_id) {
-    console.log(id, data_id)
-    return (id === data_id ? '' :  'collapsed')
-  }
+ 
   render() {
     const inputAction = this.props.inputAction;
     return (
-      <fieldset className={`form__fieldset ${this.getCollapsable(this.props.id, 'second')}`} onClick={this.props.divAction} id="second">
+      <fieldset className={`form__fieldset ${this.props.visible}`} onClick={this.props.divAction} id="second">
         <legend className="form__fielset-legend">
           Completar información
           </legend>
