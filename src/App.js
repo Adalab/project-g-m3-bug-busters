@@ -8,8 +8,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      form_name: 'Mariaaa de lo ooooo con paquito el chocolatero XDD',
-      form_career: 'Front-End Developer',
+      form_name: 'Horse Luis Palomino',
+      form_career: 'Front-pony Developer',
       form_photo: 'https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg',
       form_email: '',
       form_tel: '',
