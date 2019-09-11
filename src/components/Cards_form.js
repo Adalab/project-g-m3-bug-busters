@@ -12,12 +12,17 @@ class CardsForm extends React.Component {
       <section className="cards__section-2">
         <div className="wrapper">
           <form id="form" action="" method="POST">
-            <CardsFormDesign divAction = {this.props.divAction}/>
+            <CardsFormDesign 
+              divAction = {this.props.divAction}
+              id = {this.props.id}
+            />
             <CardsFormFill 
+              id = {this.props.id}
               inputAction = {this.props.inputAction}
               divAction = {this.props.divAction}
             />
             <CardsFormShare 
+            id = {this.props.id}
             divAction = {this.props.divAction}
             />
           </form>
