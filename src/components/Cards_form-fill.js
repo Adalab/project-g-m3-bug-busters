@@ -2,20 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class CardsFormFill extends React.Component {
-  getCollapsableClass(str) {
-    return str ? '' : 'collapsable-container';
+  getCollapsable(id, data_id) {
+    console.log(id, data_id)
+    return (id === data_id ? '' :  'collapsed')
   }
   render() {
     const inputAction = this.props.inputAction;
     return (
-      <fieldset className="form__fieldset collapsed" onClick={this.props.divAction} id="second">
+      <fieldset className={`form__fieldset ${this.getCollapsable(this.props.id, 'second')}`} onClick={this.props.divAction} id="second">
         <legend className="form__fielset-legend">
           Completar información
           </legend>
         <div className="form__fill js__collapsable" >
           <h2 className="form__fill-title form-title title-2">rellena</h2>
         </div>
-        <div className={`form__fill-content fill-container ${this.getCollapsableClass(this.props.collapsable)}`} data-id = "second">
+        <div className={`form__fill-content fill-container collapsable-container`} data_id = "second">
           <div className="form__fill-input">
             <label htmlFor="form_name" className="form-label">nombre completo</label>
             <input
