@@ -1,8 +1,7 @@
 import React from 'react';
 import './scss/main.scss';
-/* import Landing from './components/Landing'; */
-import Cards from './components/Cards';
-
+import Landing from './components/Landing';
+/* import Cards from './components/Cards'; */
 
 class App extends React.Component {
   constructor(props) {
@@ -49,8 +48,8 @@ class App extends React.Component {
   }
   render() {
     return (
-/*       <Landing /> */      
-				<Cards 
+        <Landing />    
+/* 				<Cards 
         id = {this.state.id}
         divAction = {this.getDivTargered}
         inputAction={this.getInputValue}
@@ -63,7 +62,7 @@ class App extends React.Component {
         github={this.state.form_github}
 				paletteValue={this.state.paletteValue}
         RadioValue={this.getRadioValue}
-				/>
+				/> */
 		)
   }
 }	
