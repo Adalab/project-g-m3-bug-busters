@@ -76,7 +76,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 39px;
-  // margin-bottom: 60px;
+  margin-bottom: 60px;
     .landing__main-start {
       text-decoration: none;
       text-transform: uppercase;
@@ -140,8 +140,17 @@
 }
 
 .page-landing{
-  height: 100vh;
+  height:100vh;
   display: flex;
   flex-direction: column;
   background-color: $grey-landing;
 }
+
+
+@media all and (max-width: 768px) and (orientation:portrait) {
+  .page-landing {                           
+      height: 90vh;                         
+  }                       
+}   
+
+
