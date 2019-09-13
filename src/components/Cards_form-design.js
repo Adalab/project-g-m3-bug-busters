@@ -14,13 +14,10 @@ const palette3Color3 = {backgroundColor: '#a0c0cf'};
 
 
 class CardsFormDesign extends React.Component {
-  getCollapsable(id, data_id) {
-    console.log(id, data_id)
-    return (id === data_id ? '' :  'collapsed')
-  }
+
   render() {
     return (
-      <fieldset className={`form__fieldset ${this.getCollapsable(this.props.id, 'first')}`} id = "first"  onClick = {this.props.divAction} >
+      <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'first')}`} id = "first"  onClick = {this.props.divAction} >
       <legend className="form__fielset-legend">Elegir tema</legend>
       <div className="form__design js__collapsable">
         <h2 className="form__design-title form-title title-1">diseña</h2>
