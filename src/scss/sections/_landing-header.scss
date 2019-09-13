@@ -15,11 +15,10 @@
   height: 1px;
   overflow: hidden;
   margin:0;
-
 }
 
-.page__flex{
-  flex-grow: 1;
+.page__flex {
+  height: 90vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;

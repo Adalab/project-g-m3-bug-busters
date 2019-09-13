@@ -1,8 +1,7 @@
 import React from 'react';
 import './scss/main.scss';
-/* import Landing from './components/Landing'; */
+/*import Landing from './components/Landing';*/
 import Cards from './components/Cards';
-
 
 class App extends React.Component {
   constructor(props) {
@@ -49,7 +48,7 @@ class App extends React.Component {
   }
   render() {
     return (
-/*       <Landing /> */      
+        /*<Landing />    */
 				<Cards 
         id = {this.state.id}
         divAction = {this.getDivTargered}
