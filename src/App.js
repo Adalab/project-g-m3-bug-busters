@@ -1,7 +1,7 @@
 import React from 'react';
 import './scss/main.scss';
-/*import Landing from './components/Landing';*/
-import Cards from './components/Cards';
+import Landing from './components/Landing';
+// import Cards from './components/Cards';
 
 class App extends React.Component {
   constructor(props) {
@@ -46,23 +46,24 @@ class App extends React.Component {
     };
     this.setState (obj)
   }
-  render() {
+  
+ render() {
     return (
-        /*<Landing />    */
-				<Cards 
-        id = {this.state.id}
-        divAction = {this.getDivTargered}
-        inputAction={this.getInputValue}
-        form_name={this.state.form_name}
-        form_career={this.state.form_career}
-        photo={this.state.form_photo}
-        email={this.state.form_email}
-        phone={this.state.form_tel}
-        linkedin={this.state.form_linkedin}
-        github={this.state.form_github}
-				paletteValue={this.state.paletteValue}
-        RadioValue={this.getRadioValue}
-				/>
+        <Landing />
+				// <Cards 
+        // id = {this.state.id}
+        // divAction = {this.getDivTargered}
+        // inputAction={this.getInputValue}
+        // form_name={this.state.form_name}
+        // form_career={this.state.form_career}
+        // photo={this.state.form_photo}
+        // email={this.state.form_email}
+        // phone={this.state.form_tel}
+        // linkedin={this.state.form_linkedin}
+        // github={this.state.form_github}
+				// paletteValue={this.state.paletteValue}
+        // RadioValue={this.getRadioValue}
+				// />
 		)
   }
 }	
