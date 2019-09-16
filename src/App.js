@@ -7,21 +7,16 @@ class App extends React.Component {
     super(props);
     this.state = {
       previewData : {
-        name: '',
-        career: '',
+        name: 'Horse Luis Palomino',
+        career: 'Front-pony Developer',
+        photo: 'https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg',
+        paletteValue: 1,
         email: '',
         tel: '',
         linkedin: '',
         github: '',        
       },
 
-      previewDefaultData:{
-        name: 'Horse Luis Palomino',
-        career: 'Front-pony Developer',
-        photo: 'https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg',
-        paletteValue: 1,
-      },
-      
       id : null
       
     };
@@ -40,10 +35,19 @@ class App extends React.Component {
   }
 
 	getRadioValue(event) {
-	const radioValue = parseInt(event.currentTarget.value); 
-	this.setState({
-		paletteValue: radioValue
-	 });
+    console.log('hola');
+
+
+  const radioValue = parseInt(event.currentTarget.value); 
+
+  this.setState(prevState => {
+    return {
+      previewData: {
+        ...prevState.previewData,
+        paletteValue: radioValue
+      }
+    };
+  });
   }
 
   addCollapsableClass(id, data_id) {
@@ -88,15 +92,16 @@ class App extends React.Component {
         id = {this.state.id}
         divAction = {this.getCollapsable}
         inputAction={this.getInputValue}
-        form_name={this.state.form_name}
+       /*  form_name={this.state.form_name}
         form_career={this.state.form_career}
         photo={this.state.form_photo}
         email={this.state.form_email}
         phone={this.state.form_tel}
         linkedin={this.state.form_linkedin}
         github={this.state.form_github}
-				paletteValue={this.state.paletteValue}
+				paletteValue={this.state.paletteValue} */
         RadioValue={this.getRadioValue}
+        previewData={this.state.previewData}
 				/>
 		)
   }

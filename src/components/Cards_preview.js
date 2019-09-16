@@ -19,13 +19,13 @@ class CardsPreview extends React.Component{
             <i className="far fa-trash-alt">&nbsp;&nbsp;</i>
             RESET
           </button>
-          <div className={`section1__card theme-colors${this.props.paletteValue}`}>
+          <div className={`section1__card theme-colors${this.props.previewData.paletteValue}`}>
             <div className="section1__card__title">
               <p className="section1__name js__title">
-                {this.props.form_name}
+                {this.props.previewData.name}
               </p>
               <p className="section1__career js__job">
-                {this.props.form_career}              
+                {this.props.previewData.career}              
               </p>
             </div>
             <div 
@@ -35,22 +35,22 @@ class CardsPreview extends React.Component{
             </div>
             <ul className="section1__links">
               <li className="section1__element">
-                <a className={`section1__link js__icon-mail mail ${this.props.email ? '' : 'hidden'}`} href={`mailto:${this.props.email}`}>
+                <a className={`section1__link js__icon-mail mail ${this.props.previewData.email ? '' : 'hidden'}`} href={`mailto:${this.props.previewData.email}`}>
                   <i className="far fa-envelope section1__link__image"></i>
                 </a>
               </li>
               <li className="section1__element">
-                <a className={`section1__link js__icon-phone ${this.getHiddenClass(this.props.phone)}`} href={`tel:${this.props.phone}`}>
+                <a className={`section1__link js__icon-phone ${this.getHiddenClass(this.props.previewData.phone)}`} href={`tel:${this.props.previewData.phone}`}>
                   <i className="fas fa-mobile-alt section1__link__image"></i>
                 </a>
               </li>
               <li className="section1__element">
-                <a target="__blank" className={`section1__link js__icon-linkedin ${this.getHiddenClass(this.props.linkedin)}`} href={`https://www.linkedin.com/in/${this.props.linkedin}`}>
+                <a target="__blank" className={`section1__link js__icon-linkedin ${this.getHiddenClass(this.props.previewData.linkedin)}`} href={`https://www.linkedin.com/in/${this.props.previewData.linkedin}`}>
                   <i className="fab fa-linkedin-in section1__link__image"></i>
                 </a>
               </li>
               <li className="section1__element">
-                <a target="__blank" className={`section1__link js__icon-github ${this.getHiddenClass(this.props.github)}`} href={`https://github.com/${this.props.github}`}>
+                <a target="__blank" className={`section1__link js__icon-github ${this.getHiddenClass(this.props.previewData.github)}`} href={`https://github.com/${this.props.previewData.github}`}>
                   <i className="fab fa-github-alt section1__link__image"></i>
                 </a>
               </li>
@@ -63,13 +63,14 @@ class CardsPreview extends React.Component{
 }
 
 CardsPreview.propTypes = {
-  form_name: PropTypes.string.isRequired,
+/*   form_name: PropTypes.string.isRequired,
   form_career: PropTypes.string.isRequired,
   photo: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
   linkedin: PropTypes.string.isRequired,
-  github: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired, */
+  previewData: PropTypes.object.isRequired
 }
 
 export default CardsPreview;
