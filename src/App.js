@@ -1,6 +1,5 @@
 import React from 'react';
 import './scss/main.scss';
-/*import Landing from './components/Landing';*/
 import Cards from './components/Cards';
 
 class App extends React.Component {
@@ -74,9 +73,9 @@ class App extends React.Component {
       }
     )
   }
-  render() {
+  
+ render() {
     return (
-        /*<Landing />    */
         <Cards 
         addClass = {this.addCollapsableClass}
         id = {this.state.id}

@@ -1,3 +1,10 @@
+.page-landing{
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $grey-landing;
+}
+
 .landing__main {
   background-color: $grey-landing;
   text-align: center;
@@ -74,9 +81,10 @@
   border: none;
   display: flex;
   justify-content: center;
+  align-self: center;
   align-items: center;
-  margin-top: 39px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+  margin-top: 30px;
     .landing__main-start {
       text-decoration: none;
       text-transform: uppercase;
@@ -92,12 +100,9 @@
 /* MEDIA QUERY TABLET */
 
 @media all and (min-width: 768px){
-  .landing__main{
-    min-height: 400px;
-  }
   .landing__main-title {
     @include Landing-Title-tablet;
-    margin-top: 31px;
+    margin-top: 15px;
   }
 
   .landing__main-text {
@@ -138,19 +143,4 @@
     height: 29px;
   }
 }
-
-.page-landing{
-  height:100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: $grey-landing;
-}
-
-
-@media all and (max-width: 768px) and (orientation:portrait) {
-  .page-landing {                           
-      height: 90vh;                         
-  }                       
-}   
-
 
