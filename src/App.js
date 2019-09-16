@@ -10,7 +10,7 @@ class App extends React.Component {
         name: '',
         career: '',
         photo: '',
-        paletteValue: null,
+        paletteValue: 1,
         email: '',
         tel: '',
         linkedin: '',
