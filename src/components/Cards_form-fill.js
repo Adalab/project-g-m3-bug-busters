@@ -5,11 +5,11 @@ class CardsFormFill extends React.Component {
   render() {
     const inputAction = this.props.inputAction;
     return (
-      <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'second')}`} onClick={this.props.divAction} id="second">
+      <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'second')}`} >
         <legend className="form__fielset-legend">
           Completar información
           </legend>
-        <div className="form__fill js__collapsable" >
+        <div className="form__fill js__collapsable" onClick={this.props.divAction} id="second">
           <h2 className="form__fill-title form-title title-2">rellena</h2>
         </div>
         <div className={`form__fill-content fill-container collapsable-container`} data_id = "second">

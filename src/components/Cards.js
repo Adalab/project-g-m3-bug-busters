@@ -4,8 +4,6 @@ import CardsHeader from './Cards_header';
 import CardsMain from './Cards_main';
 import Footer from './Footer';
 
-
-
 class Cards extends React.Component {
 
   render() {
