@@ -14,10 +14,10 @@ class CardsForm extends React.Component {
             <CardsFormDesign 
               addClass = {this.props.addClass}
 					    divAction = {this.props.divAction}
-            /*   paletteValue= {this.props.previewData.paletteValue} */
-              RadioValue={this.props.RadioValue}
+              getRadioValue={this.props.getRadioValue}
               id = {this.props.id}
               previewData = {this.props.previewData}
+            /*   paletteValue= {this.props.previewData.paletteValue} */
             />
             <CardsFormFill 
               addClass = {this.props.addClass}
@@ -42,7 +42,8 @@ CardsForm.propTypes = {
   divAction : PropTypes.func.isRequired,
   inputAction: PropTypes.func.isRequired,
 /* 	paletteValue: PropTypes.number */
-previewData: PropTypes.object.isRequired
+	previewData: PropTypes.object.isRequired,
+ 	getRadioValue: PropTypes.func
 }
 
 export default CardsForm;

@@ -35,7 +35,7 @@ class CardsFormDesign extends React.Component {
                 name="palette"
                 value="1"
                 defaultChecked={this.props.previewData.paletteValue === 1}
-                onChange={this.props.RadioValue}
+                onChange={this.props.getRadioValue}
               />
               <ul className="colors">
                 <li className="color" style={palette1Color1}>
@@ -59,7 +59,7 @@ class CardsFormDesign extends React.Component {
                 name="palette"
                 value="2"
                 defaultChecked={this.props.previewData.paletteValue === 2}
-                onChange={this.props.RadioValue}
+                onChange={this.props.getRadioValue}
               />
               <ul className="colors">
                 <li className="color" style={palette2Color1}>
@@ -83,7 +83,7 @@ class CardsFormDesign extends React.Component {
                 name="palette"
                 value="3"
                 defaultChecked={this.props.previewData.paletteValue === 3}
-                onChange={this.props.RadioValue}
+                onChange={this.props.getRadioValue}
               />
               <ul className="colors">
                 <li className="color" style={palette3Color1}>
@@ -108,6 +108,7 @@ class CardsFormDesign extends React.Component {
 CardsFormDesign.propTypes = {
   divAction : PropTypes.func,
   inputAction: PropTypes.func,
+	getRadioValue: PropTypes.func,
 	previewData: PropTypes.object.isRequired
 }
 

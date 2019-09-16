@@ -12,7 +12,6 @@ class CardsMain extends React.Component {
             /* form_name={this.props.form_name}
             form_career={this.props.form_career} */
 					/* 	paletteValue={this.props.paletteValue} */
-            RadioValue={this.props.RadioValue}
             /* photo={this.props.photo}
             email={this.props.email}
             phone={this.props.phone}
@@ -25,7 +24,7 @@ class CardsMain extends React.Component {
             id = {this.props.id}
             divAction = {this.props.divAction}
             inputAction={this.props.inputAction}
-            RadioValue={this.props.RadioValue}
+            getRadioValue={this.props.getRadioValue}
             /* paletteValue={this.props.paletteValue} */
             previewData={this.props.previewData}
           />                     
@@ -46,7 +45,8 @@ CardsMain.propTypes = {
   divAction : PropTypes.func.isRequired,
   inputAction: PropTypes.func.isRequired,
  /*  paletteValue: PropTypes.number, */
-  previewData: PropTypes.object.isRequired
+  previewData: PropTypes.object.isRequired,
+	getRadioValue: PropTypes.func
 }
 
 export default CardsMain;

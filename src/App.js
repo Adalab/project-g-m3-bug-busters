@@ -35,14 +35,13 @@ class App extends React.Component {
   }
 
 	getRadioValue(event) {
-  console.log('hola');
-  const radioValue = parseInt(event.currentTarget.value); 
+  const getRadioValue = parseInt(event.currentTarget.value); 
 
   this.setState(prevState => {
     return {
       previewData: {
         ...prevState.previewData,
-        paletteValue: radioValue
+        paletteValue: getRadioValue
       }
     };
   });
@@ -98,7 +97,7 @@ class App extends React.Component {
         linkedin={this.state.form_linkedin}
         github={this.state.form_github}
 				paletteValue={this.state.paletteValue} */
-        RadioValue={this.getRadioValue}
+        getRadioValue={this.getRadioValue}
         previewData={this.state.previewData}
 				/>
 		)
