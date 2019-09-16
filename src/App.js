@@ -7,10 +7,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       previewData : {
-        name: 'Horse Luis Palomino',
-        career: 'Front-pony Developer',
-        photo: 'https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg',
-        paletteValue: 1,
+        name: '',
+        career: '',
+        photo: '',
+        paletteValue: null,
         email: '',
         tel: '',
         linkedin: '',
@@ -35,9 +35,7 @@ class App extends React.Component {
   }
 
 	getRadioValue(event) {
-    console.log('hola');
-
-
+  console.log('hola');
   const radioValue = parseInt(event.currentTarget.value); 
 
   this.setState(prevState => {

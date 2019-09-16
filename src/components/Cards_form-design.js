@@ -33,7 +33,7 @@ class CardsFormDesign extends React.Component {
                 id="t1"
                 name="palette"
                 value="1"
-                checked={this.props.previewData.paletteValue === 1}
+                checked={this.props.previewData.paletteValue === null ? 1 :this.props.previewData.paletteValue === 1}
                 onChange={this.props.RadioValue}
               />
               <ul className="colors">
