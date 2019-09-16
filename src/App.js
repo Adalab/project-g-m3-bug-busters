@@ -2,6 +2,7 @@ import React from 'react';
 import './scss/main.scss';
 import Landing from './components/Landing';
 /* import Cards from './components/Cards'; */
+import { Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -62,7 +63,8 @@ class App extends React.Component {
         github={this.state.form_github}
 				paletteValue={this.state.paletteValue}
         RadioValue={this.getRadioValue}
-				/> */
+        /> */
+        
 		)
   }
 }	
