@@ -6,15 +6,24 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      form_name: 'Horse Luis Palomino',
-      form_career: 'Front-pony Developer',
-      form_photo: 'https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg',
-      form_email: '',
-      form_tel: '',
-      form_linkedin: '',
-      form_github: '',
-      id : null,
-      paletteValue: 1,
+      previewData : {
+        name: '',
+        career: '',
+        email: '',
+        tel: '',
+        linkedin: '',
+        github: '',        
+      },
+
+      previewDefaultData:{
+        name: 'Horse Luis Palomino',
+        career: 'Front-pony Developer',
+        photo: 'https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg',
+        paletteValue: 1,
+      },
+      
+      id : null
+      
     };
 
     this.getInputValue = this.getInputValue.bind(this);
