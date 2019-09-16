@@ -29,10 +29,18 @@ class App extends React.Component {
   getInputValue(event) {
     const targetId = event.currentTarget.id;
     const targetValue = event.currentTarget.value;
-    const obj = {};
+/* 		const obj = {};
     obj[targetId] = targetValue;
-    this.setState(obj);
-  }
+    this.setState(obj); */
+		this.setState(prevState => {
+			return {
+				previewData: {...prevState.previewData, 
+				[targetId]: targetValue
+				}
+			}	
+  	}
+	)
+}
 
 	getRadioValue(event) {
   const getRadioValue = parseInt(event.currentTarget.value); 
@@ -48,7 +56,7 @@ class App extends React.Component {
   }
 
   addCollapsableClass(id, data_id) {
-    console.log(id, data_id)
+    /* console.log(id, data_id) */
     return (id === data_id ? null :  'collapsed')
   }
 
@@ -89,13 +97,13 @@ class App extends React.Component {
         id = {this.state.id}
         divAction = {this.getCollapsable}
         inputAction={this.getInputValue}
-       /*  form_name={this.state.form_name}
-        form_career={this.state.form_career}
-        photo={this.state.form_photo}
-        email={this.state.form_email}
-        phone={this.state.form_tel}
-        linkedin={this.state.form_linkedin}
-        github={this.state.form_github}
+       /*  name={this.state.name}
+        career={this.state.career}
+        photo={this.state.photo}
+        email={this.state.email}
+        phone={this.state.tel}
+        linkedin={this.state.linkedin}
+        github={this.state.github}
 				paletteValue={this.state.paletteValue} */
         getRadioValue={this.getRadioValue}
         previewData={this.state.previewData}

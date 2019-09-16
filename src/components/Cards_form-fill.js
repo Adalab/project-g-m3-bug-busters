@@ -9,16 +9,16 @@ class CardsFormFill extends React.Component {
         <legend className="form__fielset-legend">
           Completar información
           </legend>
-        <div className="form__fill js__collapsable" onClick={this.props.divAction} id="second">
-          <h2 className="form__fill-title form-title title-2">rellena</h2>
+        <div className="form_fill js__collapsable" onClick={this.props.divAction} id="second">
+          <h2 className="form_fill-title form-title title-2">rellena</h2>
         </div>
         <div className={`form__fill-content fill-container collapsable-container`} data_id = "second">
           <div className="form__fill-input">
-            <label htmlFor="form_name" className="form-label">Nombre completo</label>
+            <label htmlFor="name" className="form-label">Nombre completo</label>
             <input
               type="text"
               className="form-text js__form-name"
-              id="form_name"
+              id="name"
               name="name"
               placeholder="Ej: Sally Jill"
               required
@@ -26,23 +26,23 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_career" className="form-label">Puesto</label>
+            <label htmlFor="career" className="form-label">Puesto</label>
             <input
               type="text"
               className="form-text js__form-job"
-              id="form_career"
+              id="career"
               name="job"
               placeholder="Ej: Front-end unicorn"
               required
               onChange = {inputAction}
             />
           </div>
-          <div className="form__ill-input">
-            <label htmlFor="form_photo" className="form-label">Imagen de perfil</label>
+          <div className="form__fill-input">
+            <label htmlFor="photo" className="form-label">Imagen de perfil</label>
             <input
               type="file"
               className="form-text form-file hidden js__profile-upload-btn"
-              id="form_photo"
+              id="photo"
               name="photo"
               required
               onChange = {inputAction}
@@ -53,11 +53,11 @@ class CardsFormFill extends React.Component {
             <div className="form-photo-preview js__profile-preview"></div>
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_email" className="form-label">Email</label>
+            <label htmlFor="email" className="form-label">Email</label>
             <input
               type="email"
               className="form-text js__form-mail"
-              id="form_email"
+              id="email"
               name="email"
               placeholder="Ej: sally.hill@gmail.com"
               required
@@ -65,22 +65,22 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_tel" className="form-label">Teléfono</label>
+            <label htmlFor="tel" className="form-label">Teléfono</label>
             <input
               type="tel"
               className="form-text js__form-phone"
-              id="form_tel"
+              id="tel"
               name="phone"
               placeholder="Ej: 555-55-55-55"
               onChange = {inputAction}
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_linkedin" className="form-label">LinkedIn</label>
+            <label htmlFor="linkedin" className="form-label">LinkedIn</label>
             <input
               type="text"
               className="form-text js__form-linkedin"
-              id="form_linkedin"
+              id="linkedin"
               name="linkedin"
               placeholder="Ej: @sally-hill"
               required
@@ -88,11 +88,11 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_github" className="form-label">Github</label>
+            <label htmlFor="github" className="form-label">Github</label>
             <input
               type="text"
               className="form-text js__form-github"
-              id="form_github"
+              id="github"
               name="github"
               placeholder="Ej: @sally-hill"
               required

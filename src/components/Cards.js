@@ -16,8 +16,8 @@ class Cards extends React.Component {
           divAction = {this.props.divAction}
           inputAction = {this.props.inputAction}
 					getRadioValue={this.props.getRadioValue}
-         /*  form_name={this.props.form_name}
-          form_career={this.props.form_career}
+         /*  name={this.props.name}
+          career={this.props.career}
           paletteValue={this.props.paletteValue}
           getRadioValue={this.props.getRadioValue}					
           photo={this.props.photo}
@@ -34,8 +34,8 @@ class Cards extends React.Component {
 }
 
 Cards.propTypes = {
-/*   form_name: PropTypes.string.isRequired,
-  form_career: PropTypes.string.isRequired,
+/*   name: PropTypes.string.isRequired,
+  career: PropTypes.string.isRequired,
   photo: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,

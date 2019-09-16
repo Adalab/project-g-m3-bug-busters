@@ -9,8 +9,8 @@ class CardsMain extends React.Component {
       <main className="cards__main">
         <div className="cards__container">
           <CardsPreview 
-            /* form_name={this.props.form_name}
-            form_career={this.props.form_career} */
+            /* name={this.props.name}
+            career={this.props.career} */
 					/* 	paletteValue={this.props.paletteValue} */
             /* photo={this.props.photo}
             email={this.props.email}
@@ -35,8 +35,8 @@ class CardsMain extends React.Component {
 }
 
 CardsMain.propTypes = {
-/*   form_name: PropTypes.string.isRequired,
-  form_career: PropTypes.string.isRequired,
+/*   name: PropTypes.string.isRequired,
+  career: PropTypes.string.isRequired,
   photo: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,

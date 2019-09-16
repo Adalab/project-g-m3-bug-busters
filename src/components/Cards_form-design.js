@@ -107,7 +107,6 @@ class CardsFormDesign extends React.Component {
 
 CardsFormDesign.propTypes = {
   divAction : PropTypes.func,
-  inputAction: PropTypes.func,
 	getRadioValue: PropTypes.func,
 	previewData: PropTypes.object.isRequired
 }
