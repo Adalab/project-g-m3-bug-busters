@@ -17,9 +17,9 @@ class CardsFormDesign extends React.Component {
 
   render() {
     return (
-      <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'first')}`} id = "first"  onClick = {this.props.divAction} >
+      <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'first')}`}  >
       <legend className="form__fielset-legend">Elegir tema</legend>
-      <div className="form__design js__collapsable">
+      <div className="form__design js__collapsable" id = "first"  onClick = {this.props.divAction}>
         <h2 className="form__design-title form-title title-1">diseña</h2>
       </div>
       <div className={`form__design-content design-container collapsable-container`} data_id = "first">

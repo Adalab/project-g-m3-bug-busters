@@ -25,12 +25,10 @@ class App extends React.Component {
       id : null
       
     };
-
     this.getInputValue = this.getInputValue.bind(this);
     this.getRadioValue = this.getRadioValue.bind(this);
     this.getCollapsable = this.getCollapsable.bind(this);
     this.addCollapsableClass = this.addCollapsableClass.bind(this);
-
   }
 
   getInputValue(event) {
