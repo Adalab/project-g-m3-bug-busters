@@ -1,6 +1,7 @@
 import React from 'react';
 import './scss/main.scss';
 import Cards from './components/Cards';
+import GetAvatar from './components/GetAvatar';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,7 +22,6 @@ class App extends React.Component {
     this.getRadioValue = this.getRadioValue.bind(this);
     this.getCollapsable = this.getCollapsable.bind(this);
     this.addCollapsableClass = this.addCollapsableClass.bind(this);
-
   }
 
   getInputValue(event) {
@@ -30,6 +30,16 @@ class App extends React.Component {
     const obj = {};
     obj[targetId] = targetValue;
     this.setState(obj);
+  }
+  updateAvatar(img) {
+    const {profile} = this.state;
+    this.setState(prevState => {
+      const newProfile = {...profile, avatar: img};
+      return {
+        profile: newProfile,
+        isAvatarDefault: false
+      }
+    });
   }
 
 	getRadioValue(event) {
@@ -77,6 +87,9 @@ class App extends React.Component {
  render() {
     return (
         <Cards 
+        updateAvatar = {this.updateAvatar}
+        isAvatarDefault = {}
+        avatar={}
         addClass = {this.addCollapsableClass}
         id = {this.state.id}
         divAction = {this.getCollapsable}
