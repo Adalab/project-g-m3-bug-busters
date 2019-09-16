@@ -40,7 +40,7 @@ class CardsPreview extends React.Component{
                 </a>
               </li>
               <li className="section1__element">
-                <a className={`section1__link js__icon-phone ${this.getHiddenClass(this.props.previewData.tel)}`} href={`tel:${this.props.previewData.phone}`}>
+                <a className={`section1__link js__icon-phone ${this.getHiddenClass(this.props.previewData.phone)}`} href={`tel:${this.props.previewData.phone}`}>
                   <i className="fas fa-mobile-alt section1__link__image"></i>
                 </a>
               </li>
