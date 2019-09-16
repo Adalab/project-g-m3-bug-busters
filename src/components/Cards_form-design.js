@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const palette1Color1 = {backgroundColor: '#114e4e'};
 const palette1Color2 = {backgroundColor: '#438792'};
@@ -33,7 +34,7 @@ class CardsFormDesign extends React.Component {
                 id="t1"
                 name="palette"
                 value="1"
-                checked={this.props.previewData.paletteValue === 1}
+                defaultChecked={this.props.previewData.paletteValue === 1}
                 onChange={this.props.RadioValue}
               />
               <ul className="colors">
@@ -57,7 +58,7 @@ class CardsFormDesign extends React.Component {
                 id="t2"
                 name="palette"
                 value="2"
-                checked={this.props.previewData.paletteValue === 2}
+                defaultChecked={this.props.previewData.paletteValue === 2}
                 onChange={this.props.RadioValue}
               />
               <ul className="colors">
@@ -81,7 +82,7 @@ class CardsFormDesign extends React.Component {
                 id="t3"
                 name="palette"
                 value="3"
-                checked={this.props.previewData.paletteValue === 3}
+                defaultChecked={this.props.previewData.paletteValue === 3}
                 onChange={this.props.RadioValue}
               />
               <ul className="colors">
@@ -102,6 +103,12 @@ class CardsFormDesign extends React.Component {
     </fieldset>
     )
   }
+}
+
+CardsFormDesign.propTypes = {
+  divAction : PropTypes.func,
+  inputAction: PropTypes.func,
+	previewData: PropTypes.object.isRequired
 }
 
 export default CardsFormDesign;
