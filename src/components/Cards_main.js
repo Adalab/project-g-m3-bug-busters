@@ -20,6 +20,7 @@ class CardsMain extends React.Component {
             github={this.props.github}
           />
           <CardsForm
+            addClass = {this.props.addClass}
             id = {this.props.id}
             divAction = {this.props.divAction}
             inputAction={this.props.inputAction}

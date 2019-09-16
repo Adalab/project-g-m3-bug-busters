@@ -13,6 +13,7 @@ class Cards extends React.Component {
       <div className="page page-cards">
         <CardsHeader />
         <CardsMain 
+          addClass = {this.props.addClass}
           id = {this.props.id}
           divAction = {this.props.divAction}
           inputAction = {this.props.inputAction}

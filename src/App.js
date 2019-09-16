@@ -1,8 +1,7 @@
 import React from 'react';
 import './scss/main.scss';
-/* import Landing from './components/Landing'; */
+/*import Landing from './components/Landing';*/
 import Cards from './components/Cards';
-
 
 class App extends React.Component {
   constructor(props) {
@@ -15,13 +14,14 @@ class App extends React.Component {
       form_tel: '',
       form_linkedin: '',
       form_github: '',
-      id : '',
+      id : null,
       paletteValue: 1,
     };
 
     this.getInputValue = this.getInputValue.bind(this);
     this.getRadioValue = this.getRadioValue.bind(this);
-		this.getDivTargered = this.getDivTargered.bind(this);
+    this.getCollapsable = this.getCollapsable.bind(this);
+    this.addCollapsableClass = this.addCollapsableClass.bind(this);
 
   }
 
@@ -40,19 +40,47 @@ class App extends React.Component {
 	 });
   }
 
-  getDivTargered(event){
-    const targetDiv = event.currentTarget.id;
-    const obj = {
-      id :targetDiv
-    };
-    this.setState (obj)
+  addCollapsableClass(id, data_id) {
+    console.log(id, data_id)
+    return (id === data_id ? null :  'collapsed')
+  }
+
+  getCollapsable(event){
+    const targetCollapsableID = event.currentTarget.id;
+ 
+    this.setState (
+      prevState => {
+      if (prevState.id === null) {
+        return(
+          {
+            id: targetCollapsableID 
+          }
+        )
+      }
+      else if (
+        prevState.id === targetCollapsableID 
+      ) {
+        return (
+          {
+            id: null
+          }
+        )
+      }
+      else{
+        return {
+          id: targetCollapsableID
+        }
+      }
+      }
+    )
   }
   render() {
     return (
-/*       <Landing /> */      
-				<Cards 
+        /*<Landing />    */
+        <Cards 
+        addClass = {this.addCollapsableClass}
         id = {this.state.id}
-        divAction = {this.getDivTargered}
+        divAction = {this.getCollapsable}
         inputAction={this.getInputValue}
         form_name={this.state.form_name}
         form_career={this.state.form_career}

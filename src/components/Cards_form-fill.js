@@ -2,14 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class CardsFormFill extends React.Component {
-  getCollapsable(id, data_id) {
-    console.log(id, data_id)
-    return (id === data_id ? '' :  'collapsed')
-  }
   render() {
     const inputAction = this.props.inputAction;
     return (
-      <fieldset className={`form__fieldset ${this.getCollapsable(this.props.id, 'second')}`} onClick={this.props.divAction} id="second">
+      <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'second')}`} onClick={this.props.divAction} id="second">
         <legend className="form__fielset-legend">
           Completar información
           </legend>
@@ -18,7 +14,7 @@ class CardsFormFill extends React.Component {
         </div>
         <div className={`form__fill-content fill-container collapsable-container`} data_id = "second">
           <div className="form__fill-input">
-            <label htmlFor="form_name" className="form-label">nombre completo</label>
+            <label htmlFor="form_name" className="form-label">Nombre completo</label>
             <input
               type="text"
               className="form-text js__form-name"
@@ -30,7 +26,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_career" className="form-label">puesto</label>
+            <label htmlFor="form_career" className="form-label">Puesto</label>
             <input
               type="text"
               className="form-text js__form-job"
@@ -42,7 +38,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__ill-input">
-            <label htmlFor="form_photo" className="form-label">imagen de perfil</label>
+            <label htmlFor="form_photo" className="form-label">Imagen de perfil</label>
             <input
               type="file"
               className="form-text form-file hidden js__profile-upload-btn"
@@ -80,7 +76,7 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="form_linkedin" className="form-label">linkedIn</label>
+            <label htmlFor="form_linkedin" className="form-label">LinkedIn</label>
             <input
               type="text"
               className="form-text js__form-linkedin"

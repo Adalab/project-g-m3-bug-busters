@@ -12,17 +12,20 @@ class CardsForm extends React.Component {
         <div className="wrapper">
           <form id="form" action="" method="POST">
             <CardsFormDesign 
+              addClass = {this.props.addClass}
 					    divAction = {this.props.divAction}
               paletteValue= {this.props.paletteValue}
               RadioValue={this.props.RadioValue}
               id = {this.props.id}
             />
             <CardsFormFill 
+              addClass = {this.props.addClass}
               id = {this.props.id}
               inputAction = {this.props.inputAction}
               divAction = {this.props.divAction}
             />
             <CardsFormShare 
+              addClass = {this.props.addClass}
               id = {this.props.id}
               divAction = {this.props.divAction}
             />
