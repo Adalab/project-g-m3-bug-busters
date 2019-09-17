@@ -9,23 +9,25 @@ class CardsMain extends React.Component {
       <main className="cards__main">
         <div className="cards__container">
           <CardsPreview 
-            form_name={this.props.form_name}
-            form_career={this.props.form_career}
-						paletteValue={this.props.paletteValue}
-            RadioValue={this.props.RadioValue}
-            photo={this.props.photo}
+            /* name={this.props.name}
+            career={this.props.career} */
+					/* 	paletteValue={this.props.paletteValue} */
+            /* photo={this.props.photo}
             email={this.props.email}
             phone={this.props.phone}
             linkedin={this.props.linkedin}
-            github={this.props.github}
+            github={this.props.github} */
+            previewData={this.props.previewData}
+						cleanData={this.props.cleanData} 
           />
           <CardsForm
             addClass = {this.props.addClass}
             id = {this.props.id}
             divAction = {this.props.divAction}
             inputAction={this.props.inputAction}
-            RadioValue={this.props.RadioValue}
-            paletteValue={this.props.paletteValue}
+            getRadioValue={this.props.getRadioValue}
+            /* paletteValue={this.props.paletteValue} */
+            previewData={this.props.previewData}
           />                     
         </div>
       </main>
@@ -34,16 +36,11 @@ class CardsMain extends React.Component {
 }
 
 CardsMain.propTypes = {
-  form_name: PropTypes.string.isRequired,
-  form_career: PropTypes.string.isRequired,
-  photo: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  linkedin: PropTypes.string.isRequired,
-  github: PropTypes.string.isRequired,
   divAction : PropTypes.func.isRequired,
   inputAction: PropTypes.func.isRequired,
-  paletteValue: PropTypes.number,
+  previewData: PropTypes.object.isRequired,
+	getRadioValue: PropTypes.func,
+	cleanData: PropTypes.func.isRequired,
 }
 
 export default CardsMain;

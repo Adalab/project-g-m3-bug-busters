@@ -8,39 +8,69 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      form_name: 'Horse Luis Palomino',
-      form_career: 'Front-pony Developer',
-      form_photo: 'https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg',
-      form_email: '',
-      form_tel: '',
-      form_linkedin: '',
-      form_github: '',
-      id : null,
-      paletteValue: 1,
+      previewData : {
+        name: '',
+        career: '',
+        photo: '',
+        paletteValue: 1,
+        email: '',
+        tel: '',
+        linkedin: '',
+        github: ''        
+      },
+      id : 'first'
     };
+		 this.defaultData = {
+			name: 'Horse Luis Palomino',
+			career: 'Front-pony developer',
+			photo: '',
+			paletteValue: 1,
+			email: '',
+			tel: '',
+			linkedin: '',
+			github: '' 
+		};	
+
     this.getInputValue = this.getInputValue.bind(this);
     this.getRadioValue = this.getRadioValue.bind(this);
     this.getCollapsable = this.getCollapsable.bind(this);
     this.addCollapsableClass = this.addCollapsableClass.bind(this);
+		this.cleanData = this.cleanData.bind(this);
   }
+
+	cleanData(){
+  this.setState({previewData: this.defaultData});
+		localStorage.clear()
+	} 
 
   getInputValue(event) {
     const targetId = event.currentTarget.id;
     const targetValue = event.currentTarget.value;
-    const obj = {};
-    obj[targetId] = targetValue;
-    this.setState(obj);
-  }
+		this.setState(prevState => {
+			return {
+				previewData: {...prevState.previewData, 
+				[targetId]: targetValue
+				}
+			}	
+  	}
+	)
+}
 
 	getRadioValue(event) {
-	const radioValue = parseInt(event.currentTarget.value); 
-	this.setState({
-		paletteValue: radioValue
-	 });
+  const getRadioValue = parseInt(event.currentTarget.value); 
+
+  this.setState(prevState => {
+    return {
+      previewData: {
+        ...prevState.previewData,
+        paletteValue: getRadioValue
+      }
+    };
+  });
   }
 
   addCollapsableClass(id, data_id) {
-    console.log(id, data_id)
+    /* console.log(id, data_id) */
     return (id === data_id ? null :  'collapsed')
   }
 
@@ -80,19 +110,13 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/Cards" render={()=> <Cards 
-                addClass = {this.addCollapsableClass}
-                id = {this.state.id}
-                divAction = {this.getCollapsable}
-                inputAction={this.getInputValue}
-                form_name={this.state.form_name}
-                form_career={this.state.form_career}
-                photo={this.state.form_photo}
-                email={this.state.form_email}
-                phone={this.state.form_tel}
-                linkedin={this.state.form_linkedin}
-                github={this.state.form_github}
-                paletteValue={this.state.paletteValue}
-                RadioValue={this.getRadioValue}
+              addClass = {this.addCollapsableClass}
+              id = {this.state.id}
+              divAction = {this.getCollapsable}
+              inputAction={this.getInputValue}
+              getRadioValue={this.getRadioValue}
+              previewData={this.state.previewData}
+              cleanData={this.cleanData} 
 				      />
           } />
         </Switch>
