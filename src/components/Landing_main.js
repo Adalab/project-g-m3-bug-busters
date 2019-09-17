@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 class LandingMain extends React.Component{
   render(){
@@ -33,9 +35,9 @@ class LandingMain extends React.Component{
           </ul>
         </div>
         <div className="landing__main-startButton"> 
-          <a href="cards.html" className="landing__main-start">
+          <Link to="/Cards" className="landing__main-start">
             Comenzar
-          </a>
+          </Link>
         </div>
     </main>
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import './scss/main.scss';
+import Landing from './components/Landing'
 import Cards from './components/Cards';
 import {Route, Switch } from 'react-router-dom';
 
@@ -75,21 +76,27 @@ class App extends React.Component {
   
  render() {
     return (
-        <Cards 
-        addClass = {this.addCollapsableClass}
-        id = {this.state.id}
-        divAction = {this.getCollapsable}
-        inputAction={this.getInputValue}
-        form_name={this.state.form_name}
-        form_career={this.state.form_career}
-        photo={this.state.form_photo}
-        email={this.state.form_email}
-        phone={this.state.form_tel}
-        linkedin={this.state.form_linkedin}
-        github={this.state.form_github}
-				paletteValue={this.state.paletteValue}
-        RadioValue={this.getRadioValue}
-				/>
+      <React.Fragment>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/Cards" render={()=> <Cards 
+                addClass = {this.addCollapsableClass}
+                id = {this.state.id}
+                divAction = {this.getCollapsable}
+                inputAction={this.getInputValue}
+                form_name={this.state.form_name}
+                form_career={this.state.form_career}
+                photo={this.state.form_photo}
+                email={this.state.form_email}
+                phone={this.state.form_tel}
+                linkedin={this.state.form_linkedin}
+                github={this.state.form_github}
+                paletteValue={this.state.paletteValue}
+                RadioValue={this.getRadioValue}
+				      />
+          } />
+        </Switch>
+        </React.Fragment>
 		)
   }
 }	
