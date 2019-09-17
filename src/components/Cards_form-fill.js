@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import GetAvatar from './GetAvatar';
-// import Profile from './Profile';
 import defaultImage from './defaultImage';
 
 class CardsFormFill extends React.Component {

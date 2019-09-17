@@ -3,6 +3,7 @@ import './scss/main.scss';
 import Landing from './components/Landing'
 import Cards from './components/Cards';
 import {Route, Switch } from 'react-router-dom';
+import defaultImage from './components/defaultImage';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +19,8 @@ class App extends React.Component {
         linkedin: '',
         github: ''        
       },
-      id : 'first'
+      id : 'first',
+      previewImage: defaultImage,
     };
 
 		 this.defaultData = {
@@ -36,7 +38,14 @@ class App extends React.Component {
     this.getRadioValue = this.getRadioValue.bind(this);
     this.getCollapsable = this.getCollapsable.bind(this);
     this.addCollapsableClass = this.addCollapsableClass.bind(this);
-		this.cleanData = this.cleanData.bind(this);
+    this.cleanData = this.cleanData.bind(this);
+    this.setNewImage = this.setNewImage.bind(this);
+  }
+
+  setNewImage(newUserImage){
+    this.setState({
+      previewImage: newUserImage
+    })
   }
 
 	getLocalStorage(){
@@ -132,6 +141,8 @@ class App extends React.Component {
               getRadioValue={this.getRadioValue}
               previewData={this.state.previewData}
               cleanData={this.cleanData} 
+              previewImage={this.state.previewImage}
+              onChangeImage={this.setNewImage}
 				      />
           } />
         </Switch>

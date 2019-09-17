@@ -8,9 +8,8 @@ class CardsPreview extends React.Component{
 
   render(){
     const imgPreviewStyle = {
-      backgroundImage: `url(${this.props.previewData})`
+      backgroundImage: `url(${this.props.previewImage})`
     };
-    console.log(imgPreviewStyle);
     return(
       <section className="section1">
         <div className="section1__container">

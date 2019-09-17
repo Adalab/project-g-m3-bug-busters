@@ -2,23 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CardsPreview from './Cards_preview';
 import CardsForm from './Cards_form';
-import defaultImage from './defaultImage';
 
 class CardsMain extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      previewImage: defaultImage
-    }
-    this.setNewImage = this.setNewImage.bind(this);
-  }
-
-  setNewImage(newUserImage){
-    this.setState({
-      previewImage: newUserImage
-    })
-  }
-
   render() {
     return (
       <main className="cards__main">
@@ -32,7 +17,8 @@ class CardsMain extends React.Component {
             phone={this.props.phone}
             linkedin={this.props.linkedin}
             github={this.props.github} */
-            previewData={this.state.previewImage}
+            previewData={this.props.previewData}
+            previewImage={this.props.previewImage}
 						cleanData={this.props.cleanData} 
           />
           <CardsForm
@@ -43,7 +29,7 @@ class CardsMain extends React.Component {
             getRadioValue={this.props.getRadioValue}
             /* paletteValue={this.props.paletteValue} */
             previewData={this.props.previewData}
-            onChangeImage={this.setNewImage}
+            onChangeImage={this.props.onChangeImage}
             
           />                     
         </div>

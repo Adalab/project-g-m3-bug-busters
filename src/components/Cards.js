@@ -17,7 +17,9 @@ class Cards extends React.Component {
           inputAction = {this.props.inputAction}
 					getRadioValue={this.props.getRadioValue}
           previewData={this.props.previewData}
-					cleanData={this.props.cleanData} 
+          cleanData={this.props.cleanData}
+          previewImage={this.props.previewImage}
+          onChangeImage={this.props.onChangeImage}
         />
         <Footer />
       </div>
