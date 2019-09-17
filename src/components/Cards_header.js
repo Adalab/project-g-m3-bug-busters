@@ -5,7 +5,7 @@ class CardsHeader extends React.Component{
     return(
       <header className="cards__header">
         <h1>
-        <a href="landing.html" title="Mi enlace" className="cards__title">Awesome profile cards</a>
+        <a href="landing.html" title="Mi enlace" className="cards__title"><Link to ="/App">Awesome profile cards</Link></a>
         </h1>
       </header>
     );<Landing />   
