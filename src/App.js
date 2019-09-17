@@ -1,6 +1,7 @@
 import React from 'react';
 import './scss/main.scss';
 import Cards from './components/Cards';
+import {Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
