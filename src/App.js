@@ -38,7 +38,7 @@ class App extends React.Component {
 
 	cleanData(){
   this.setState({previewData: this.defaultData});
-		localStorage.clear()
+		localStorage.clear('state');
 	} 
 
   getInputValue(event) {
@@ -50,7 +50,7 @@ class App extends React.Component {
 				[targetId]: targetValue
 				}
 			}	
-  	}
+  	}, () => {localStorage.setItem('state', JSON.stringify(this.state.previewData))}
 	)
 }
 
@@ -58,17 +58,18 @@ class App extends React.Component {
   const getRadioValue = parseInt(event.currentTarget.value); 
 
   this.setState(prevState => {
+		localStorage.setItem('state', JSON.stringify(this.state));
     return {
       previewData: {
         ...prevState.previewData,
         paletteValue: getRadioValue
       }
     };
-  });
+  }, () => {localStorage.setItem('state', JSON.stringify(this.state.previewData));}
+	);
   }
 
   addCollapsableClass(id, data_id) {
-    /* console.log(id, data_id) */
     return (id === data_id ? null :  'collapsed')
   }
 
@@ -98,7 +99,7 @@ class App extends React.Component {
           id: targetCollapsableID
         }
       }
-      }
+      }, () => {localStorage.setItem('state', JSON.stringify(this.state.previewData));}
     )
   }
   
