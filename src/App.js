@@ -35,7 +35,18 @@ class App extends React.Component {
     this.addCollapsableClass = this.addCollapsableClass.bind(this);
 		this.cleanData = this.cleanData.bind(this);
   }
+/* 	setLocalStorage() {
+		localStorage.setItem('state', JSON.stringify(this.state.previewData))
+	} */
 
+	getLocalStorage(){
+	const lsState = JSON.parse(localStorage.getItem('state'));
+	console.log(lsState);
+	}
+	componentDidMount(){
+		this.getLocalStorage();
+	}
+	
 	cleanData(){
   this.setState({previewData: this.defaultData});
 		localStorage.clear('state');
@@ -58,7 +69,6 @@ class App extends React.Component {
   const getRadioValue = parseInt(event.currentTarget.value); 
 
   this.setState(prevState => {
-		localStorage.setItem('state', JSON.stringify(this.state));
     return {
       previewData: {
         ...prevState.previewData,
