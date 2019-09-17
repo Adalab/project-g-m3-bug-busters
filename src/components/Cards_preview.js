@@ -22,7 +22,7 @@ class CardsPreview extends React.Component{
           <div className={`section1__card theme-colors${this.props.previewData.paletteValue}`}>
             <div className="section1__card__title">
               <p className="section1__name js__title">
-                {this.props.previewData.name === '' ? 'Horse Luis Palomino' : this.props.previewData.name}
+                {(this.props.previewData.name) ? this.props.previewData.name : 'Horse Luis Palomino'}
               </p>
               <p className="section1__career js__job">
                 {this.props.previewData.career === '' ? 'Front-pony developer' : this.props.previewData.career}              

@@ -16,9 +16,7 @@ class App extends React.Component {
         linkedin: '',
         github: '',        
       },
-
-      id : null
-      
+      id : 'first'
     };
     this.getInputValue = this.getInputValue.bind(this);
     this.getRadioValue = this.getRadioValue.bind(this);
