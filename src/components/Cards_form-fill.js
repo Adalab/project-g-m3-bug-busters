@@ -18,6 +18,7 @@ class CardsFormFill extends React.Component {
 
   updateAvatar(img) {
     console.log(img);
+    this.props.onChangeImage(img);
     const {profile} = this.state;
     this.setState(() => {
       const newProfile = {...profile, avatar: img};
@@ -77,7 +78,7 @@ class CardsFormFill extends React.Component {
             <GetAvatar 
               avatar={this.state.profile.avatar} 
               isAvatarDefault={this.state.isAvatarDefault} 
-              updateAvatar={this.updateAvatar} 
+              updateAvatar={this.updateAvatar}
             />
 
 

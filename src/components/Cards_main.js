@@ -10,6 +10,13 @@ class CardsMain extends React.Component {
     this.state={
       previewImage: defaultImage
     }
+    this.setNewImage = this.setNewImage.bind(this);
+  }
+
+  setNewImage(newUserImage){
+    this.setState({
+      previewImage: newUserImage
+    })
   }
 
   render() {
@@ -36,6 +43,8 @@ class CardsMain extends React.Component {
             getRadioValue={this.props.getRadioValue}
             /* paletteValue={this.props.paletteValue} */
             previewData={this.props.previewData}
+            onChangeImage={this.setNewImage}
+            
           />                     
         </div>
       </main>
