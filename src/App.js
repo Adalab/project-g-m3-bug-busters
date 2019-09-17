@@ -42,7 +42,11 @@ class App extends React.Component {
 	getLocalStorage(){
 	const lsState = JSON.parse(localStorage.getItem('state'));
 	console.log(lsState);
+		if(lsState === null) {
+		this.cleanData();
+		} else {this.setState({previewData: lsState})}
 	}
+	
 	componentDidMount(){
 		this.getLocalStorage();
 	}
