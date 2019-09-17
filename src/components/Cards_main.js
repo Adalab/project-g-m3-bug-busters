@@ -2,8 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CardsPreview from './Cards_preview';
 import CardsForm from './Cards_form';
+import defaultImage from './defaultImage';
 
 class CardsMain extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      previewImage: defaultImage
+    }
+  }
+
   render() {
     return (
       <main className="cards__main">
@@ -17,7 +25,7 @@ class CardsMain extends React.Component {
             phone={this.props.phone}
             linkedin={this.props.linkedin}
             github={this.props.github} */
-            previewData={this.props.previewData}
+            previewData={this.state.previewImage}
 						cleanData={this.props.cleanData} 
           />
           <CardsForm

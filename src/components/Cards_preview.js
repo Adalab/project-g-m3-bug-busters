@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const imgPreviewStyle = {
-  backgroundImage: "url('https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg')"
-};
-
-
 class CardsPreview extends React.Component{
   getHiddenClass(str) {
     return str ? '' : 'hidden';
   }
 
   render(){
+    const imgPreviewStyle = {
+      backgroundImage: `url(${this.props.previewData})`
+    };
+    console.log(imgPreviewStyle);
     return(
       <section className="section1">
         <div className="section1__container">

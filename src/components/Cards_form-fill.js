@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import GetAvatar from './GetAvatar';
-import Profile from './Profile';
+// import Profile from './Profile';
 import defaultImage from './defaultImage';
 
 class CardsFormFill extends React.Component {
@@ -17,8 +17,9 @@ class CardsFormFill extends React.Component {
   }
 
   updateAvatar(img) {
+    console.log(img);
     const {profile} = this.state;
-    this.setState(prevState => {
+    this.setState(() => {
       const newProfile = {...profile, avatar: img};
       return {
         profile: newProfile,
@@ -28,7 +29,7 @@ class CardsFormFill extends React.Component {
   }
 
   render() {
-    const {profile, isAvatarDefault} = this.state;
+    
     const inputAction = this.props.inputAction;
     return (
       <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'second')}`} >
@@ -72,15 +73,13 @@ class CardsFormFill extends React.Component {
               className="form-label">Imagen de perfil
             </label>
 
+
             <GetAvatar 
-              avatar={profile.avatar} 
-              isAvatarDefault={isAvatarDefault} 
+              avatar={this.state.profile.avatar} 
+              isAvatarDefault={this.state.isAvatarDefault} 
               updateAvatar={this.updateAvatar} 
             />
 
-            <Profile avatar={profile.avatar} />
-
-            
 
             <input
               type="file"
