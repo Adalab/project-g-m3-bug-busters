@@ -1,8 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import GetAvatar from './GetAvatar';
+import Profile from './Profile';
+import defaultImage from './defaultImage';
 
 class CardsFormFill extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isAvatarDefault: true,
+      profile: {
+        avatar: defaultImage
+      }
+    };
+    this.updateAvatar = this.updateAvatar.bind(this);
+  }
+
+  updateAvatar(img) {
+    const {profile} = this.state;
+    this.setState(prevState => {
+      const newProfile = {...profile, avatar: img};
+      return {
+        profile: newProfile,
+        isAvatarDefault: false
+      }
+    });
+  }
+
   render() {
+    const {profile, isAvatarDefault} = this.state;
     const inputAction = this.props.inputAction;
     return (
       <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'second')}`} >
@@ -39,8 +65,23 @@ class CardsFormFill extends React.Component {
 							value = {this.props.previewData.career}
             />
           </div>
+
           <div className="form__fill-input">
-            <label htmlFor="photo" className="form-label">Imagen de perfil</label>
+            <label 
+              htmlFor="photo" 
+              className="form-label">Imagen de perfil
+            </label>
+
+            <GetAvatar 
+              avatar={profile.avatar} 
+              isAvatarDefault={isAvatarDefault} 
+              updateAvatar={this.updateAvatar} 
+            />
+
+            <Profile avatar={profile.avatar} />
+
+            
+
             <input
               type="file"
               className="form-text form-file hidden js__profile-upload-btn"
@@ -55,6 +96,7 @@ class CardsFormFill extends React.Component {
             </button>
             <div className="form-photo-preview js__profile-preview"></div>
           </div>
+
           <div className="form__fill-input">
             <label htmlFor="email" className="form-label">Email</label>
             <input
