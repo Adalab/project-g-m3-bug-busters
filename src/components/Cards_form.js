@@ -24,6 +24,7 @@ class CardsForm extends React.Component {
               id = {this.props.id}
               inputAction = {this.props.inputAction}
               divAction = {this.props.divAction}
+							previewData = {this.props.previewData}
             />
             <CardsFormShare 
               addClass = {this.props.addClass}

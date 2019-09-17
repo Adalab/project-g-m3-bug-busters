@@ -18,9 +18,10 @@ class App extends React.Component {
       },
       id : 'first'
     };
+
 		 this.defaultData = {
-			name: 'Horse Luis Palomino',
-			career: 'Front-pony developer',
+			name: '',
+			career: '',
 			photo: '',
 			paletteValue: 1,
 			email: '',
@@ -35,18 +36,17 @@ class App extends React.Component {
     this.addCollapsableClass = this.addCollapsableClass.bind(this);
 		this.cleanData = this.cleanData.bind(this);
   }
-/* 	setLocalStorage() {
-		localStorage.setItem('state', JSON.stringify(this.state.previewData))
-	} */
 
 	getLocalStorage(){
 	const lsState = JSON.parse(localStorage.getItem('state'));
 	console.log(lsState);
 		if(lsState === null) {
 		this.cleanData();
-		} else {this.setState({previewData: lsState})}
+		} else {
+			this.setState({previewData: lsState})
+			}
 	}
-	
+
 	componentDidMount(){
 		this.getLocalStorage();
 	}

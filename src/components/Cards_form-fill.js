@@ -23,6 +23,7 @@ class CardsFormFill extends React.Component {
               placeholder="Ej: Sally Jill"
               required
               onChange = {inputAction}
+							value = {this.props.previewData.name}
             />
           </div>
           <div className="form__fill-input">
@@ -35,6 +36,7 @@ class CardsFormFill extends React.Component {
               placeholder="Ej: Front-end unicorn"
               required
               onChange = {inputAction}
+							value = {this.props.previewData.career}
             />
           </div>
           <div className="form__fill-input">
@@ -46,6 +48,7 @@ class CardsFormFill extends React.Component {
               name="photo"
               required
               onChange = {inputAction}
+							value = {this.props.previewData.photo}
             />
             <button className="form-photo-button button-addImage js__profile-trigger">
               Añadir imagen
@@ -62,6 +65,7 @@ class CardsFormFill extends React.Component {
               placeholder="Ej: sally.hill@gmail.com"
               required
               onChange = {inputAction}
+							value = {this.props.previewData.email}
             />
           </div>
           <div className="form__fill-input">
@@ -73,6 +77,7 @@ class CardsFormFill extends React.Component {
               name="phone"
               placeholder="Ej: 555-55-55-55"
               onChange = {inputAction}
+							value = {this.props.previewData.tel}
             />
           </div>
           <div className="form__fill-input">
@@ -85,6 +90,7 @@ class CardsFormFill extends React.Component {
               placeholder="Ej: @sally-hill"
               required
               onChange = {inputAction}
+							value = {this.props.previewData.linkedin}
             />
           </div>
           <div className="form__fill-input">
@@ -97,6 +103,7 @@ class CardsFormFill extends React.Component {
               placeholder="Ej: @sally-hill"
               required
               onChange = {inputAction}
+							value = {this.props.previewData.github}
             />
           </div>
         </div>
@@ -107,6 +114,7 @@ class CardsFormFill extends React.Component {
 
   CardsFormFill.propTypes ={
 		inputAction : PropTypes.func.isRequired,
+		previewData: PropTypes.object.isRequired
   }
   
   export default CardsFormFill;
