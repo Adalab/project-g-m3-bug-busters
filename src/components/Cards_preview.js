@@ -6,16 +6,17 @@ const imgPreviewStyle = {
 };
 
 
-
 class CardsPreview extends React.Component{
   getHiddenClass(str) {
     return str ? '' : 'hidden';
   }
+
   render(){
     return(
       <section className="section1">
         <div className="section1__container">
-          <button type="reset" className="section1__button button-reset js__button" form="form">
+          <button type="reset" className="section1__button button-reset js__button" form="form"
+						onClick={this.props.cleanData}>
             <i className="far fa-trash-alt">&nbsp;&nbsp;</i>
             RESET
           </button>
@@ -40,7 +41,7 @@ class CardsPreview extends React.Component{
                 </a>
               </li>
               <li className="section1__element">
-                <a className={`section1__link js__icon-phone ${this.getHiddenClass(this.props.previewData.phone)}`} href={`tel:${this.props.previewData.phone}`}>
+                <a className={`section1__link js__icon-phone ${this.getHiddenClass(this.props.previewData.tel)}`} href={`tel:${this.props.previewData.tel}`}>
                   <i className="fas fa-mobile-alt section1__link__image"></i>
                 </a>
               </li>
@@ -63,14 +64,8 @@ class CardsPreview extends React.Component{
 }
 
 CardsPreview.propTypes = {
-/*   name: PropTypes.string.isRequired,
-  career: PropTypes.string.isRequired,
-  photo: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  linkedin: PropTypes.string.isRequired,
-  github: PropTypes.string.isRequired, */
-  previewData: PropTypes.object.isRequired
+	cleanData: PropTypes.func.isRequired,
+  previewData: PropTypes.object.isRequired,
 }
 
 export default CardsPreview;

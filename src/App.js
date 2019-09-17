@@ -14,22 +14,36 @@ class App extends React.Component {
         email: '',
         tel: '',
         linkedin: '',
-        github: '',        
+        github: ''        
       },
       id : 'first'
     };
+		 this.defaultData = {
+			name: 'Horse Luis Palomino',
+			career: 'Front-pony developer',
+			photo: '',
+			paletteValue: 1,
+			email: '',
+			tel: '',
+			linkedin: '',
+			github: '' 
+		};	
+
     this.getInputValue = this.getInputValue.bind(this);
     this.getRadioValue = this.getRadioValue.bind(this);
     this.getCollapsable = this.getCollapsable.bind(this);
     this.addCollapsableClass = this.addCollapsableClass.bind(this);
+		this.cleanData = this.cleanData.bind(this);
   }
+
+	cleanData(){
+  this.setState({previewData: this.defaultData});
+		localStorage.clear()
+	} 
 
   getInputValue(event) {
     const targetId = event.currentTarget.id;
     const targetValue = event.currentTarget.value;
-/* 		const obj = {};
-    obj[targetId] = targetValue;
-    this.setState(obj); */
 		this.setState(prevState => {
 			return {
 				previewData: {...prevState.previewData, 
@@ -95,16 +109,9 @@ class App extends React.Component {
         id = {this.state.id}
         divAction = {this.getCollapsable}
         inputAction={this.getInputValue}
-       /*  name={this.state.name}
-        career={this.state.career}
-        photo={this.state.photo}
-        email={this.state.email}
-        phone={this.state.tel}
-        linkedin={this.state.linkedin}
-        github={this.state.github}
-				paletteValue={this.state.paletteValue} */
         getRadioValue={this.getRadioValue}
         previewData={this.state.previewData}
+				cleanData={this.cleanData} 
 				/>
 		)
   }

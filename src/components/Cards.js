@@ -16,16 +16,8 @@ class Cards extends React.Component {
           divAction = {this.props.divAction}
           inputAction = {this.props.inputAction}
 					getRadioValue={this.props.getRadioValue}
-         /*  name={this.props.name}
-          career={this.props.career}
-          paletteValue={this.props.paletteValue}
-          getRadioValue={this.props.getRadioValue}					
-          photo={this.props.photo}
-          email={this.props.email}
-          phone={this.props.phone}
-          linkedin={this.props.linkedin}
-          github={this.props.github} */
           previewData={this.props.previewData}
+					cleanData={this.props.cleanData} 
         />
         <Footer />
       </div>
@@ -34,19 +26,11 @@ class Cards extends React.Component {
 }
 
 Cards.propTypes = {
-/*   name: PropTypes.string.isRequired,
-  career: PropTypes.string.isRequired,
-  photo: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  linkedin: PropTypes.string.isRequired,
-  github: PropTypes.string.isRequired, */
-  divAction : PropTypes.func.isRequired,
-  inputAction : PropTypes.func.isRequired,
- /*  paletteValue: PropTypes.number, */
+	cleanData: PropTypes.func.isRequired,
+  divAction: PropTypes.func.isRequired,
+  inputAction: PropTypes.func.isRequired,
  	previewData: PropTypes.object.isRequired,
- 	getRadioValue: PropTypes.func
-
+ 	getRadioValue: PropTypes.func,
 }
 
 export default Cards;
