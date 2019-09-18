@@ -18,7 +18,6 @@ class Cards extends React.Component {
 					getRadioValue={this.props.getRadioValue}
           previewData={this.props.previewData}
           cleanData={this.props.cleanData}
-          userPhoto={this.props.userPhoto}
           onChangeImage={this.props.onChangeImage}
         />
         <Footer />
@@ -33,7 +32,6 @@ Cards.propTypes = {
   inputAction: PropTypes.func.isRequired,
  	previewData: PropTypes.object.isRequired,
   getRadioValue: PropTypes.func,
-  userPhoto: PropTypes.string,
 }
 
 export default Cards;

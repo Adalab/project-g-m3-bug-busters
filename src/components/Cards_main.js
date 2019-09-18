@@ -10,7 +10,6 @@ class CardsMain extends React.Component {
         <div className="cards__container">
           <CardsPreview 
             previewData={this.props.previewData}
-            userPhoto={this.props.userPhoto}
 						cleanData={this.props.cleanData} 
           />
           <CardsForm
@@ -35,7 +34,6 @@ CardsMain.propTypes = {
   previewData: PropTypes.object.isRequired,
 	getRadioValue: PropTypes.func,
   cleanData: PropTypes.func.isRequired,
-  userPhoto: PropTypes.string,
 }
 
 export default CardsMain;

@@ -20,13 +20,12 @@ class App extends React.Component {
         github: ''        
       },
       id : 'first',
-      userPhoto: defaultImage,
     };
 
 		 this.defaultData = {
 			name: '',
 			career: '',
-			photo: '',
+			photo: defaultImage,
 			paletteValue: 1,
 			email: '',
 			tel: '',
@@ -43,9 +42,14 @@ class App extends React.Component {
   }
 
   setNewImage(newUserImage){
-    this.setState({
-      userPhoto: newUserImage
-    })
+      this.setState(prevState => {
+        return {
+          previewData: {...prevState.previewData, 
+          photo: newUserImage
+          }
+        }	
+      }, () => {localStorage.setItem('state', JSON.stringify(this.state.previewData))}
+    )
   }
 
 	getLocalStorage(){
@@ -140,7 +144,6 @@ class App extends React.Component {
               getRadioValue={this.getRadioValue}
               previewData={this.state.previewData}
               cleanData={this.cleanData} 
-              userPhoto={this.state.userPhoto}
               onChangeImage={this.setNewImage}
 				      />
           } />
