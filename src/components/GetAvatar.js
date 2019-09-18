@@ -40,7 +40,7 @@ class GetAvatar extends Component {
         
         <input type="file" ref={this.myFileField} className="get-avatar__upload-field hidden" onChange={this.uploadImage} />
         
-        <div className="get-avatar__preview" style={this.getPreview(isAvatarDefault, avatar)}></div>
+        <div className="form-photo-preview get-avatar__preview" style={this.getPreview(isAvatarDefault, avatar)}></div>
       </div>
     );
   }

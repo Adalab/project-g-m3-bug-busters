@@ -83,7 +83,7 @@ class CardsFormFill extends React.Component {
 
             <Profile avatar={this.state.profile.avatar} />
 
-            {/* <input
+{/*             <input
               type="file"
               className="form-text form-file js__profile-upload-btn"
               id="photo"
@@ -93,10 +93,10 @@ class CardsFormFill extends React.Component {
             />
             <button className="form-photo-button button-addImage js__profile-trigger">
               Añadir imagen
-            </button> */}
+            </button> 
             
-            <div className="form-photo-preview js__profile-preview"></div>
-          </div>
+            <div className="form-photo-preview js__profile-preview"></div> */}
+          </div> 
 
           <div className="form__fill-input">
             <label htmlFor="email" className="form-label">Email</label>
@@ -155,10 +155,10 @@ class CardsFormFill extends React.Component {
     }
   }
 
-  CardsFormFill.propTypes ={
-		inputAction : PropTypes.func.isRequired,
+	CardsFormFill.propTypes = {
+		inputAction: PropTypes.func.isRequired,
     previewData: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
-  }
+	}
   
   export default CardsFormFill;
