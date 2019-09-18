@@ -3,6 +3,7 @@ import './scss/main.scss';
 import Landing from './components/Landing'
 import Cards from './components/Cards';
 import {Route, Switch } from 'react-router-dom';
+import defaultImage from './components/defaultImage';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends React.Component {
       previewData : {
         name: '',
         career: '',
-        photo: '',
+        photo: defaultImage,
         paletteValue: 1,
         email: '',
         tel: '',
@@ -25,7 +26,7 @@ class App extends React.Component {
 		 this.defaultData = {
 			name: '',
 			career: '',
-			photo: '',
+			photo: defaultImage,
 			paletteValue: 1,
 			email: '',
 			tel: '',
@@ -42,7 +43,6 @@ class App extends React.Component {
 
 	getLocalStorage(){
 	const lsState = JSON.parse(localStorage.getItem('state'));
-	console.log(lsState);
 		if(lsState === null) {
 		this.cleanData();
 		} else {

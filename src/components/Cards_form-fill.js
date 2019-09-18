@@ -48,7 +48,8 @@ class CardsFormFill extends React.Component {
               name="photo"
               required
               onChange = {inputAction}
-							value = {this.props.previewData.photo}
+              value = ""
+              // {this.props.previewData.photo}
             />
             <button className="form-photo-button button-addImage js__profile-trigger">
               Añadir imagen

@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const imgPreviewStyle = {
-  backgroundImage: "url('https://image.shutterstock.com/image-photo/palomino-horse-avelignese-haflinger-breed-260nw-1456529102.jpg')"
-};
+
 
 
 class CardsPreview extends React.Component{
+  constructor(props) {
+    super(props);
+    this.imgPreviewStyle = {
+      backgroundImage: `url(${this.props.previewData.photo})`
+    };
+  }
   getHiddenClass(str) {
     return str ? '' : 'hidden';
   }
@@ -30,7 +34,7 @@ class CardsPreview extends React.Component{
               </p>
             </div>
             <div 
-              className="section1__image js__profile-image" style={imgPreviewStyle}
+              className="section1__image js__profile-image" style={this.imgPreviewStyle}
             >
               <img id="img" className="section1__image-img" alt="Nombre Apellido"/>
             </div>
