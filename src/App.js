@@ -49,6 +49,7 @@ class App extends React.Component {
   }
   render() {
     return (
+        
         <Landing />   
 			/* 	<Cards 
         id = {this.state.id}
