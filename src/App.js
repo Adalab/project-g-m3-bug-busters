@@ -38,7 +38,8 @@ class App extends React.Component {
     this.getRadioValue = this.getRadioValue.bind(this);
     this.getCollapsable = this.getCollapsable.bind(this);
     this.addCollapsableClass = this.addCollapsableClass.bind(this);
-		this.cleanData = this.cleanData.bind(this);
+    this.cleanData = this.cleanData.bind(this);
+    this.sendRequest=this.sendRequest.bind(this);
   }
 
 	getLocalStorage(){
@@ -51,7 +52,8 @@ class App extends React.Component {
 	}
 
 	componentDidMount(){
-		this.getLocalStorage();
+    this.getLocalStorage();
+    this.sendRequest();
   }
   
   sendRequest(){
@@ -153,6 +155,7 @@ class App extends React.Component {
               previewData={this.state.previewData}
               cleanData={this.cleanData} 
               cardUrl={this.state.cardUrl}
+              sendRequest={this.sendRequest}
 				      />
           } />
         </Switch>

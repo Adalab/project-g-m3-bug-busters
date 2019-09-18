@@ -29,6 +29,7 @@ class CardsMain extends React.Component {
             /* paletteValue={this.props.paletteValue} */
             previewData={this.props.previewData}
             cardUrl={this.props.cardUrl}
+            sendRequest={this.props.sendRequest}
           />                     
         </div>
       </main>

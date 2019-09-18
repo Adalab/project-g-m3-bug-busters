@@ -19,6 +19,7 @@ class Cards extends React.Component {
           previewData={this.props.previewData}
           cleanData={this.props.cleanData} 
           cardUrl={this.props.cardUrl}
+          sendRequest={this.props.sendRequest}
         />
         <Footer />
       </div>

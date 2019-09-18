@@ -46,7 +46,7 @@ class CardsFormFill extends React.Component {
               className="form-text form-file hidden js__profile-upload-btn"
               id="photo"
               name="photo"
-              required
+              // required
               onChange = {inputAction}
               value = ""
               // {this.props.previewData.photo}
