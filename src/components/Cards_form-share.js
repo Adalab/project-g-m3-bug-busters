@@ -16,6 +16,7 @@ class CardsFormShare extends React.Component {
             className="button-create collapsebtn js__submit"
             type="submit"
             id="submit"
+            disabled = {this.props.cardUrl}
           >
 					crear tarjeta
           </button>

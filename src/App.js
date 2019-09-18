@@ -20,7 +20,7 @@ class App extends React.Component {
         photo: defaultImage
       },
       id : 'first',
-      cardUrl:''
+      cardUrl: ''
     };
 
 		this.defaultData = {

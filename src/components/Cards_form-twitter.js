@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class CardsFormTwitter extends React.Component {
   render() {
     return (
-      <div className="share-container collapsable-container hidden">
+      <div className={`share-container collapsable-container ${this.props.cardUrl !== ''? '' : 'hidden'}`}>
         <p className="card-success">
           La tarjeta ha sido creada:
         </p>
