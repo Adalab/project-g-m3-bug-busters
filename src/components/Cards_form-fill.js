@@ -48,7 +48,7 @@ class CardsFormFill extends React.Component {
               name="photo"
               // required
               onChange = {inputAction}
-              value = ""
+              // value = ""
               // {this.props.previewData.photo}
             />
             <button className="form-photo-button button-addImage js__profile-trigger">
@@ -115,7 +115,8 @@ class CardsFormFill extends React.Component {
 
   CardsFormFill.propTypes ={
 		inputAction : PropTypes.func.isRequired,
-		previewData: PropTypes.object.isRequired
+    previewData: PropTypes.object.isRequired,
+    id: PropTypes.string.isRequired,
   }
   
   export default CardsFormFill;

@@ -43,12 +43,15 @@ class CardsForm extends React.Component {
 }
 
 CardsForm.propTypes = {
+  addClass: PropTypes.func.isRequired,
   divAction : PropTypes.func.isRequired,
+  getRadioValue: PropTypes.func,
   inputAction: PropTypes.func.isRequired,
   sendRequest: PropTypes.func.isRequired,
 	previewData: PropTypes.object.isRequired,
-  getRadioValue: PropTypes.func,
   cardUrl:PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 }
+
 
 export default CardsForm;

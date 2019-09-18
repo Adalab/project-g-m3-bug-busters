@@ -12,14 +12,14 @@ class Cards extends React.Component {
         <CardsHeader />
         <CardsMain 
           addClass = {this.props.addClass}
-          id = {this.props.id}
-          divAction = {this.props.divAction}
-          inputAction = {this.props.inputAction}
-					getRadioValue={this.props.getRadioValue}
-          previewData={this.props.previewData}
           cleanData={this.props.cleanData} 
-          cardUrl={this.props.cardUrl}
+					getRadioValue={this.props.getRadioValue}
+          inputAction = {this.props.inputAction}
+          divAction = {this.props.divAction}
           sendRequest={this.props.sendRequest}
+          id = {this.props.id}
+          previewData={this.props.previewData}
+          cardUrl={this.props.cardUrl}
         />
         <Footer />
       </div>
@@ -28,11 +28,14 @@ class Cards extends React.Component {
 }
 
 Cards.propTypes = {
+  addClass: PropTypes.func.isRequired,
 	cleanData: PropTypes.func.isRequired,
-  divAction: PropTypes.func.isRequired,
-  inputAction: PropTypes.func.isRequired,
- 	previewData: PropTypes.object.isRequired,
   getRadioValue: PropTypes.func,
+  inputAction: PropTypes.func.isRequired,
+  divAction: PropTypes.func.isRequired,
+  sendRequest: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+ 	previewData: PropTypes.object.isRequired,
   cardUrl:PropTypes.string.isRequired,
 }
 

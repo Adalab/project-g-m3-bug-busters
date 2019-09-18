@@ -30,7 +30,7 @@ class CardsPreview extends React.Component{
                 {(this.props.previewData.name) ? this.props.previewData.name : 'Horse Luis Palomino'}
               </p>
               <p className="section1__career js__job">
-                {this.props.previewData.career === '' ? 'Front-pony developer' : this.props.previewData.career}              
+                {this.props.previewData.job === '' ? 'Front-pony developer' : this.props.previewData.job}              
               </p>
             </div>
             <div 
@@ -45,7 +45,7 @@ class CardsPreview extends React.Component{
                 </a>
               </li>
               <li className="section1__element">
-                <a className={`section1__link js__icon-phone ${this.getHiddenClass(this.props.previewData.tel)}`} href={`tel:${this.props.previewData.tel}`}>
+                <a className={`section1__link js__icon-phone ${this.getHiddenClass(this.props.previewData.phone)}`} href={`tel:${this.props.previewData.tel}`}>
                   <i className="fas fa-mobile-alt section1__link__image"></i>
                 </a>
               </li>
