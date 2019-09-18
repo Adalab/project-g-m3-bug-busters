@@ -14,10 +14,8 @@ class CardsFormShare extends React.Component {
         <div className= {`submit-container collapsable-container`} data-id = "third">
           <button
             className="button-create collapsebtn js__submit"
-            type="button"
+            type="submit"
             id="submit"
-            onClick={this.props.sendRequest}
-
           >
 					crear tarjeta
           </button>

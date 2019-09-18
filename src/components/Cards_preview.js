@@ -24,7 +24,7 @@ class CardsPreview extends React.Component{
             <i className="far fa-trash-alt">&nbsp;&nbsp;</i>
             RESET
           </button>
-          <div className={`section1__card theme-colors${this.props.previewData.paletteValue}`}>
+          <div className={`section1__card theme-colors${this.props.previewData.palette}`}>
             <div className="section1__card__title">
               <p className="section1__name js__title">
                 {(this.props.previewData.name) ? this.props.previewData.name : 'Horse Luis Palomino'}

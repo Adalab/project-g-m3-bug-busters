@@ -10,14 +10,14 @@ class CardsForm extends React.Component {
     return (
       <section className="cards__section-2">
         <div className="wrapper">
-          <form id="form" action="" method="POST">
+          <form id="form" action="" method="POST" onSubmit={this.props.sendRequest}>
             <CardsFormDesign 
               addClass = {this.props.addClass}
 					    divAction = {this.props.divAction}
               getRadioValue={this.props.getRadioValue}
               id = {this.props.id}
               previewData = {this.props.previewData}
-            /*   paletteValue= {this.props.previewData.paletteValue} */
+            /*   palette={this.props.previewData.palette} */
             />
             <CardsFormFill 
               addClass = {this.props.addClass}
@@ -45,7 +45,7 @@ class CardsForm extends React.Component {
 CardsForm.propTypes = {
   divAction : PropTypes.func.isRequired,
   inputAction: PropTypes.func.isRequired,
-/* 	paletteValue: PropTypes.number */
+  sendRequest: PropTypes.func.isRequired,
 	previewData: PropTypes.object.isRequired,
   getRadioValue: PropTypes.func,
   cardUrl:PropTypes.string.isRequired,

@@ -27,16 +27,16 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="career" className="form-label">Puesto</label>
+            <label htmlFor="job" className="form-label">Puesto</label>
             <input
               type="text"
               className="form-text js__form-job"
-              id="career"
+              id="job"
               name="job"
               placeholder="Ej: Front-end unicorn"
               required
               onChange = {inputAction}
-							value = {this.props.previewData.career}
+							value = {this.props.previewData.job}
             />
           </div>
           <div className="form__fill-input">
@@ -70,15 +70,15 @@ class CardsFormFill extends React.Component {
             />
           </div>
           <div className="form__fill-input">
-            <label htmlFor="tel" className="form-label">Teléfono</label>
+            <label htmlFor="phone" className="form-label">Teléfono</label>
             <input
               type="tel"
               className="form-text js__form-phone"
-              id="tel"
+              id="phone"
               name="phone"
               placeholder="Ej: 555-55-55-55"
               onChange = {inputAction}
-							value = {this.props.previewData.tel}
+							value = {this.props.previewData.phone}
             />
           </div>
           <div className="form__fill-input">

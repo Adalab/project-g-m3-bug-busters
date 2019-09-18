@@ -10,28 +10,28 @@ class App extends React.Component {
     super(props);
     this.state = {
       previewData : {
+        palette: 1,
         name: '',
-        career: '',
-        photo: defaultImage,
-        paletteValue: 1,
+        job: '',
+        phone: '',
         email: '',
-        tel: '',
         linkedin: '',
-        github: ''        
+        github: '' ,       
+        photo: defaultImage
       },
       id : 'first',
       cardUrl:''
     };
 
-		 this.defaultData = {
+		this.defaultData = {
+      palette: 1,
 			name: '',
-			career: '',
-			photo: defaultImage,
-			paletteValue: 1,
+			job: '',
+			phone: '',
 			email: '',
-			tel: '',
 			linkedin: '',
-			github: '' 
+			github: '' ,
+			photo: defaultImage
 		};	
 
     this.getInputValue = this.getInputValue.bind(this);
@@ -53,10 +53,10 @@ class App extends React.Component {
 
 	componentDidMount(){
     this.getLocalStorage();
-    this.sendRequest();
   }
   
-  sendRequest(){
+  sendRequest(event){
+    event.preventDefault();
     fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
       method: 'POST',
       body: JSON.stringify(this.state.previewData),
@@ -67,7 +67,6 @@ class App extends React.Component {
       .then(function(resp) { return resp.json(); })
       .then(data => {
         const dataUrl = data.cardURL;
-        // shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + cardUrl + '>' + cardUrl + '</a>';
         this.setState({
           cardUrl:dataUrl
         })
@@ -100,7 +99,7 @@ class App extends React.Component {
     return {
       previewData: {
         ...prevState.previewData,
-        paletteValue: getRadioValue
+        palette: getRadioValue
       }
     };
   }, () => {localStorage.setItem('state', JSON.stringify(this.state.previewData));}
