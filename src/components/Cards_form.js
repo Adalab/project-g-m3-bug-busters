@@ -17,14 +17,14 @@ class CardsForm extends React.Component {
               getRadioValue={this.props.getRadioValue}
               id = {this.props.id}
               previewData = {this.props.previewData}
-            /*   palette={this.props.previewData.palette} */
             />
             <CardsFormFill 
               addClass = {this.props.addClass}
               id = {this.props.id}
               inputAction = {this.props.inputAction}
               divAction = {this.props.divAction}
-							previewData = {this.props.previewData}
+              previewData = {this.props.previewData}
+              onChangeImage={this.props.onChangeImage}
             />
             <CardsFormShare 
               addClass = {this.props.addClass}

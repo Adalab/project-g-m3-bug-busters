@@ -1,8 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import GetAvatar from './GetAvatar';
+import defaultImage from './defaultImage';
 
 class CardsFormFill extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isAvatarDefault: true,
+      profile: {
+        avatar: defaultImage
+      }
+    };
+    this.updateAvatar = this.updateAvatar.bind(this);
+  }
+
+  updateAvatar(img) {
+    console.log(img);
+    this.props.onChangeImage(img);
+    const {profile} = this.state;
+    this.setState(() => {
+      const newProfile = {...profile, avatar: img};
+      return {
+        profile: newProfile,
+        isAvatarDefault: false
+      }
+    });
+  }
+
   render() {
+    
     const inputAction = this.props.inputAction;
     return (
       <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'second')}`} >
@@ -39,8 +66,21 @@ class CardsFormFill extends React.Component {
 							value = {this.props.previewData.job}
             />
           </div>
+
           <div className="form__fill-input">
-            <label htmlFor="photo" className="form-label">Imagen de perfil</label>
+            <label 
+              htmlFor="photo" 
+              className="form-label">Imagen de perfil
+            </label>
+
+
+            <GetAvatar 
+              avatar={this.state.profile.avatar} 
+              isAvatarDefault={this.state.isAvatarDefault} 
+              updateAvatar={this.updateAvatar}
+            />
+
+
             <input
               type="file"
               className="form-text form-file hidden js__profile-upload-btn"
@@ -48,14 +88,13 @@ class CardsFormFill extends React.Component {
               name="photo"
               // required
               onChange = {inputAction}
-              // value = ""
-              // {this.props.previewData.photo}
             />
             <button className="form-photo-button button-addImage js__profile-trigger">
               Añadir imagen
             </button>
             <div className="form-photo-preview js__profile-preview"></div>
           </div>
+
           <div className="form__fill-input">
             <label htmlFor="email" className="form-label">Email</label>
             <input

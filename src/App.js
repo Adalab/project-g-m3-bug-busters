@@ -40,6 +40,18 @@ class App extends React.Component {
     this.addCollapsableClass = this.addCollapsableClass.bind(this);
     this.cleanData = this.cleanData.bind(this);
     this.sendRequest=this.sendRequest.bind(this);
+    this.setNewImage = this.setNewImage.bind(this);
+  }
+
+  setNewImage(newUserImage){
+      this.setState(prevState => {
+        return {
+          previewData: {...prevState.previewData, 
+          photo: newUserImage
+          }
+        }	
+      }, () => {localStorage.setItem('state', JSON.stringify(this.state.previewData))}
+    )
   }
 
 	getLocalStorage(){
@@ -155,6 +167,7 @@ class App extends React.Component {
               cleanData={this.cleanData} 
               cardUrl={this.state.cardUrl}
               sendRequest={this.sendRequest}
+              onChangeImage={this.setNewImage}
 				      />
           } />
         </Switch>

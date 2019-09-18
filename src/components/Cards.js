@@ -20,6 +20,7 @@ class Cards extends React.Component {
           id = {this.props.id}
           previewData={this.props.previewData}
           cardUrl={this.props.cardUrl}
+          onChangeImage={this.props.onChangeImage}
         />
         <Footer />
       </div>

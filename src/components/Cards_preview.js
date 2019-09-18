@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-
-
 class CardsPreview extends React.Component{
   constructor(props) {
     super(props);
@@ -16,6 +13,9 @@ class CardsPreview extends React.Component{
   }
 
   render(){
+    const imgPreviewStyle = {
+      backgroundImage: `url(${this.props.previewData.photo})`
+    };
     return(
       <section className="section1">
         <div className="section1__container">
@@ -34,7 +34,7 @@ class CardsPreview extends React.Component{
               </p>
             </div>
             <div 
-              className="section1__image js__profile-image" style={this.imgPreviewStyle}
+              className="section1__image js__profile-image" style={imgPreviewStyle}
             >
               <img id="img" className="section1__image-img" alt="Nombre Apellido"/>
             </div>
