@@ -28,6 +28,7 @@ class CardsMain extends React.Component {
             getRadioValue={this.props.getRadioValue}
             /* paletteValue={this.props.paletteValue} */
             previewData={this.props.previewData}
+            cardUrl={this.props.cardUrl}
           />                     
         </div>
       </main>
@@ -40,7 +41,8 @@ CardsMain.propTypes = {
   inputAction: PropTypes.func.isRequired,
   previewData: PropTypes.object.isRequired,
 	getRadioValue: PropTypes.func,
-	cleanData: PropTypes.func.isRequired,
+  cleanData: PropTypes.func.isRequired,
+  cardUrl:PropTypes.string.isRequired,
 }
 
 export default CardsMain;

@@ -18,7 +18,8 @@ class App extends React.Component {
         linkedin: '',
         github: ''        
       },
-      id : 'first'
+      id : 'first',
+      cardUrl:''
     };
 
 		 this.defaultData = {
@@ -51,7 +52,26 @@ class App extends React.Component {
 
 	componentDidMount(){
 		this.getLocalStorage();
-	}
+  }
+  
+  sendRequest(){
+    fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+      method: 'POST',
+      body: JSON.stringify(this.state.previewData),
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+      .then(function(resp) { return resp.json(); })
+      .then(data => {
+        const dataUrl = data.cardURL;
+        // shareUrl.innerHTML = '<a class="share-link-url" target="__blank" href=' + cardUrl + '>' + cardUrl + '</a>';
+        this.setState({
+          cardUrl:dataUrl
+        })
+      });
+    
+  }
 	
 	cleanData(){
   this.setState({previewData: this.defaultData});
@@ -132,6 +152,7 @@ class App extends React.Component {
               getRadioValue={this.getRadioValue}
               previewData={this.state.previewData}
               cleanData={this.cleanData} 
+              cardUrl={this.state.cardUrl}
 				      />
           } />
         </Switch>

@@ -32,7 +32,9 @@ class CardsForm extends React.Component {
               divAction = {this.props.divAction}
             />
           </form>
-          <CardsFormTwitter />  
+          <CardsFormTwitter 
+            cardUrl={this.props.cardUrl}          
+          />  
         </div>
       </section>
     )
@@ -44,7 +46,8 @@ CardsForm.propTypes = {
   inputAction: PropTypes.func.isRequired,
 /* 	paletteValue: PropTypes.number */
 	previewData: PropTypes.object.isRequired,
- 	getRadioValue: PropTypes.func
+  getRadioValue: PropTypes.func,
+  cardUrl:PropTypes.string.isRequired,
 }
 
 export default CardsForm;

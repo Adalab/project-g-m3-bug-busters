@@ -17,7 +17,8 @@ class Cards extends React.Component {
           inputAction = {this.props.inputAction}
 					getRadioValue={this.props.getRadioValue}
           previewData={this.props.previewData}
-					cleanData={this.props.cleanData} 
+          cleanData={this.props.cleanData} 
+          cardUrl={this.props.cardUrl}
         />
         <Footer />
       </div>
@@ -30,7 +31,8 @@ Cards.propTypes = {
   divAction: PropTypes.func.isRequired,
   inputAction: PropTypes.func.isRequired,
  	previewData: PropTypes.object.isRequired,
- 	getRadioValue: PropTypes.func,
+  getRadioValue: PropTypes.func,
+  cardUrl:PropTypes.string.isRequired,
 }
 
 export default Cards;
