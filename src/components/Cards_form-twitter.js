@@ -9,7 +9,7 @@ class CardsFormTwitter extends React.Component {
           La tarjeta ha sido creada:
         </p>
         <p className="share-link js__response">
-        {this.props.cardUrl}
+        <a  className = "share-link"href={this.props.cardUrl} target="__blank">{this.props.cardUrl}</a>
         </p>
         <a className="link-twitter js__link-twitter"
         href="" target="_blank">
