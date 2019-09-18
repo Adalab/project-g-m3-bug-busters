@@ -17,7 +17,6 @@ class CardsForm extends React.Component {
               getRadioValue={this.props.getRadioValue}
               id = {this.props.id}
               previewData = {this.props.previewData}
-            /*   paletteValue= {this.props.previewData.paletteValue} */
             />
             <CardsFormFill 
               addClass = {this.props.addClass}
@@ -43,7 +42,6 @@ class CardsForm extends React.Component {
 CardsForm.propTypes = {
   divAction : PropTypes.func.isRequired,
   inputAction: PropTypes.func.isRequired,
-/* 	paletteValue: PropTypes.number */
 	previewData: PropTypes.object.isRequired,
  	getRadioValue: PropTypes.func
 }

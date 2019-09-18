@@ -8,7 +8,7 @@ class CardsPreview extends React.Component{
 
   render(){
     const imgPreviewStyle = {
-      backgroundImage: `url(${this.props.previewImage})`
+      backgroundImage: `url(${this.props.userPhoto})`
     };
     return(
       <section className="section1">
@@ -64,6 +64,7 @@ class CardsPreview extends React.Component{
 CardsPreview.propTypes = {
 	cleanData: PropTypes.func.isRequired,
   previewData: PropTypes.object.isRequired,
+  userPhoto: PropTypes.string,
 }
 
 export default CardsPreview;

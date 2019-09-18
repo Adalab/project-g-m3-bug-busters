@@ -18,7 +18,7 @@ class CardsMain extends React.Component {
             linkedin={this.props.linkedin}
             github={this.props.github} */
             previewData={this.props.previewData}
-            previewImage={this.props.previewImage}
+            userPhoto={this.props.userPhoto}
 						cleanData={this.props.cleanData} 
           />
           <CardsForm
@@ -43,7 +43,8 @@ CardsMain.propTypes = {
   inputAction: PropTypes.func.isRequired,
   previewData: PropTypes.object.isRequired,
 	getRadioValue: PropTypes.func,
-	cleanData: PropTypes.func.isRequired,
+  cleanData: PropTypes.func.isRequired,
+  userPhoto: PropTypes.string,
 }
 
 export default CardsMain;

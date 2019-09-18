@@ -20,7 +20,7 @@ class App extends React.Component {
         github: ''        
       },
       id : 'first',
-      previewImage: defaultImage,
+      userPhoto: defaultImage,
     };
 
 		 this.defaultData = {
@@ -44,7 +44,7 @@ class App extends React.Component {
 
   setNewImage(newUserImage){
     this.setState({
-      previewImage: newUserImage
+      userPhoto: newUserImage
     })
   }
 
@@ -141,7 +141,7 @@ class App extends React.Component {
               getRadioValue={this.getRadioValue}
               previewData={this.state.previewData}
               cleanData={this.cleanData} 
-              previewImage={this.state.previewImage}
+              userPhoto={this.state.userPhoto}
               onChangeImage={this.setNewImage}
 				      />
           } />
