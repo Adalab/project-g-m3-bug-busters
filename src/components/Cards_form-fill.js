@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import GetAvatar from './GetAvatar';
 import defaultImage from './defaultImage';
+import Profile from './Profile';
 
 class CardsFormFill extends React.Component {
   constructor(props) {
@@ -80,10 +81,11 @@ class CardsFormFill extends React.Component {
               updateAvatar={this.updateAvatar}
             />
 
+            <Profile avatar={this.state.profile.avatar} />
 
-            <input
+            {/* <input
               type="file"
-              className="form-text form-file hidden js__profile-upload-btn"
+              className="form-text form-file js__profile-upload-btn"
               id="photo"
               name="photo"
               // required
@@ -91,7 +93,8 @@ class CardsFormFill extends React.Component {
             />
             <button className="form-photo-button button-addImage js__profile-trigger">
               Añadir imagen
-            </button>
+            </button> */}
+            
             <div className="form-photo-preview js__profile-preview"></div>
           </div>
 

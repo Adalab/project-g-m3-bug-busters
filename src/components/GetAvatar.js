@@ -36,9 +36,9 @@ class GetAvatar extends Component {
     const {isAvatarDefault, avatar} = this.props;
     return (
       <div className="get-avatar">
-        <button className="get-avatar__trigger" type="button" onClick={this.handleFilePicker}>Get IMAGE!</button>
+        <button className="get-avatar__trigger button-addImage" type="button" onClick={this.handleFilePicker}>Get IMAGE!</button>
         
-        <input type="file" ref={this.myFileField} className="get-avatar__upload-field" onChange={this.uploadImage} />
+        <input type="file" ref={this.myFileField} className="get-avatar__upload-field hidden" onChange={this.uploadImage} />
         
         <div className="get-avatar__preview" style={this.getPreview(isAvatarDefault, avatar)}></div>
       </div>
