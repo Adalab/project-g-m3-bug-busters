@@ -9,14 +9,6 @@ class CardsMain extends React.Component {
       <main className="cards__main">
         <div className="cards__container">
           <CardsPreview 
-            /* name={this.props.name}
-            career={this.props.career} */
-					/* 	paletteValue={this.props.paletteValue} */
-            /* photo={this.props.photo}
-            email={this.props.email}
-            phone={this.props.phone}
-            linkedin={this.props.linkedin}
-            github={this.props.github} */
             previewData={this.props.previewData}
             userPhoto={this.props.userPhoto}
 						cleanData={this.props.cleanData} 
@@ -27,7 +19,6 @@ class CardsMain extends React.Component {
             divAction = {this.props.divAction}
             inputAction={this.props.inputAction}
             getRadioValue={this.props.getRadioValue}
-            /* paletteValue={this.props.paletteValue} */
             previewData={this.props.previewData}
             onChangeImage={this.props.onChangeImage}
             
