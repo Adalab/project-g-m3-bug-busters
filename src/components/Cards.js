@@ -8,7 +8,7 @@ class Cards extends React.Component {
 
   render() {
     return (
-      <div className="page page-cards">
+      <div className="page-cards">
         <CardsHeader />
         <CardsMain 
           addClass = {this.props.addClass}

@@ -8,11 +8,10 @@ class Footer extends React.Component{
         <p className="footer__copyright">
           Awesome profile-cards @2018
         </p>
-        <div className="footer__logo">
+        <div>
           <a 
             href="https://adalab.es/" 
             target="__blank" 
-            className="footer__logo"
           >
             <img src= {logo} alt="Logo Adalab" className="footer__logo-adalab"/>
           </a>

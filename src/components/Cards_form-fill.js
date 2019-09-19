@@ -37,15 +37,15 @@ class CardsFormFill extends React.Component {
         <legend className="form__fielset-legend">
           Completar información
           </legend>
-        <div className="form_fill js__collapsable" onClick={this.props.divAction} id="second">
-          <h2 className="form_fill-title form-title title-2">rellena</h2>
+        <div className="form_fill" onClick={this.props.divAction} id="second">
+          <h2 className="form-title title-2">rellena</h2>
         </div>
-        <div className={`form__fill-content fill-container collapsable-container`} data_id = "second">
-          <div className="form__fill-input">
+        <div className="fill-container collapsable-container" data_id = "second">
+          <div>
             <label htmlFor="name" className="form-label">Nombre completo</label>
             <input
               type="text"
-              className="form-text js__form-name"
+              className="form-text"
               id="name"
               name="name"
               placeholder="Ej: Sally Jill"
@@ -58,7 +58,7 @@ class CardsFormFill extends React.Component {
             <label htmlFor="job" className="form-label">Puesto</label>
             <input
               type="text"
-              className="form-text js__form-job"
+              className="form-text"
               id="job"
               name="job"
               placeholder="Ej: Front-end unicorn"
@@ -82,27 +82,13 @@ class CardsFormFill extends React.Component {
             />
 
             <Profile avatar={this.state.profile.avatar} />
-
-{/*             <input
-              type="file"
-              className="form-text form-file js__profile-upload-btn"
-              id="photo"
-              name="photo"
-              // required
-              onChange = {inputAction}
-            />
-            <button className="form-photo-button button-addImage js__profile-trigger">
-              Añadir imagen
-            </button> 
-            
-            <div className="form-photo-preview js__profile-preview"></div> */}
           </div> 
 
           <div className="form__fill-input">
             <label htmlFor="email" className="form-label">Email</label>
             <input
               type="email"
-              className="form-text js__form-mail"
+              className="form-text"
               id="email"
               name="email"
               placeholder="Ej: sally.hill@gmail.com"
@@ -115,7 +101,7 @@ class CardsFormFill extends React.Component {
             <label htmlFor="phone" className="form-label">Teléfono</label>
             <input
               type="tel"
-              className="form-text js__form-phone"
+              className="form-text"
               id="phone"
               name="phone"
               placeholder="Ej: 555-55-55-55"
@@ -127,7 +113,7 @@ class CardsFormFill extends React.Component {
             <label htmlFor="linkedin" className="form-label">LinkedIn</label>
             <input
               type="text"
-              className="form-text js__form-linkedin"
+              className="form-text"
               id="linkedin"
               name="linkedin"
               placeholder="Ej: @sally-hill"
@@ -140,7 +126,7 @@ class CardsFormFill extends React.Component {
             <label htmlFor="github" className="form-label">Github</label>
             <input
               type="text"
-              className="form-text js__form-github"
+              className="form-text"
               id="github"
               name="github"
               placeholder="Ej: @sally-hill"

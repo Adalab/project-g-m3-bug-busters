@@ -13,24 +13,22 @@ const palette3Color1 = {backgroundColor: '#3e5b65'};
 const palette3Color2 = {backgroundColor: '#eab052'};
 const palette3Color3 = {backgroundColor: '#a0c0cf'};
 
-
 class CardsFormDesign extends React.Component {
 
   render() {
     return (
       <fieldset className={`form__fieldset ${this.props.addClass(this.props.id, 'first')}`}  >
       <legend className="form__fielset-legend">Elegir tema</legend>
-      <div className="form__design js__collapsable" id = "first"  onClick = {this.props.divAction}>
+      <div className="form__design" id = "first"  onClick = {this.props.divAction}>
         <h2 className="form__design-title form-title title-1">diseña</h2>
       </div>
-      <div className={`form__design-content design-container collapsable-container`} data_id = "first">
+      <div className={`design-container collapsable-container`} data_id = "first">
         <h3 className="form-colors-text">Colores:</h3>
         <div className="theme-container">
           <div className="theme">
             <label htmlFor="t1" className="theme__row">
               <input
                 type="radio"
-                className="theme__radio theme__radio1 js__theme__radio"
                 id="t1"
                 name="palette"
                 value="1"
@@ -54,7 +52,6 @@ class CardsFormDesign extends React.Component {
             <label htmlFor="t2" className="theme__row">
               <input
                 type="radio"
-                className="theme__radio theme__radio2 js__theme__radio"
                 id="t2"
                 name="palette"
                 value="2"
@@ -78,7 +75,6 @@ class CardsFormDesign extends React.Component {
             <label htmlFor="t3" className="theme__row">
               <input
                 type="radio"
-                className="theme__radio theme__radio3 js__theme__radio"
                 id="t3"
                 name="palette"
                 value="3"
