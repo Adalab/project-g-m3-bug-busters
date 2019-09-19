@@ -119,17 +119,26 @@ margin: 0;
   background-color: salmon;
 }
 
+.get-avatar{
+  position: relative;
+}
+
 .form-photo-preview{
-  display: inline-block;
   width: 30px;
   height: 30px;
   border: solid 1px $hospital-green;
-  right: 90px;
+  right: 35%;
   background-repeat:no-repeat;
   background-position: center;
   background-size:cover;
   position: absolute;
-  top:248px;
+  bottom: 19px; 
+}
+
+@media all and (min-width:700px) {
+  .form-photo-preview {
+    right: 38%;
+  }
 }
 
 .submit-container{
