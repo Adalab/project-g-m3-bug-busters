@@ -12,13 +12,14 @@ class CardsFormTwitter extends React.Component {
 }
 
   render() {
+		const error = 'Por favor, completa correctamente los campos del formulario';
     return (
       <div className={`share-container collapsable-container ${this.props.cardUrl !== ''? '' : 'hidden'}`}>
         <p className="card-success">
           La tarjeta ha sido creada:
         </p>
         <p className="share-link">
-        <a  className = "share-link"href={this.props.cardUrl} target="__blank">{this.props.cardUrl}</a>
+        <a  className = "share-link"href={this.props.cardUrl || error} target="__blank">{this.props.cardUrl}</a>
         </p>
         <a className="link-twitter"
         href={this.openTwitter()} target="__blank">

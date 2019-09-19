@@ -10,14 +10,21 @@ class CardsFormFill extends React.Component {
     this.state = {
       isAvatarDefault: true,
       profile: {
-        avatar: defaultImage
+        avatar: defaultImage,
       }
     };
     this.updateAvatar = this.updateAvatar.bind(this);
   }
+  componentDidMount(){
+    const smallPic = JSON.parse(localStorage.getItem('smallPreview'));
+    if(smallPic) {
+      this.setState(prevState => {prevState.profile.avatar = smallPic;
+        return{profile : prevState.profile, isAvatarDefault:false}
+      });
+    }
+  }
 
   updateAvatar(img) {
-    console.log(img);
     this.props.onChangeImage(img);
     const {profile} = this.state;
     this.setState(() => {
@@ -26,8 +33,11 @@ class CardsFormFill extends React.Component {
         profile: newProfile,
         isAvatarDefault: false
       }
-    });
+    },
+    () => {localStorage.setItem('smallPreview', JSON.stringify(this.state.profile.avatar))}
+    );
   }
+
 
   render() {
     
@@ -96,6 +106,7 @@ class CardsFormFill extends React.Component {
               onChange = {inputAction}
               value = {this.props.previewData.email}
               noValidate = {true}
+							tabIndex="-1"
             />
           </div>
           <div className="form__fill-input">
