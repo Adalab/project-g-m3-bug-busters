@@ -78,6 +78,14 @@
   margin: 12px 0 20px;
 }
 
+.collapsed {
+  .design-container{
+    margin: 0;
+  }
+}
+
+
+
 .theme-container{
   display: flex;
   flex-direction: column;
@@ -115,8 +123,8 @@ margin: 0;
   @include Cards-Form-Placeholders;
 }
 .required_input:invalid {
-  border-color: salmon;
-  background-color: rgb(236, 168, 160);
+  border-color: tomato;
+  background-color: rgba(255, 99, 71, 0.185);
 }
 
 .get-avatar{

@@ -85,6 +85,16 @@
   align-items: center;
   margin-bottom: 30px;
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include landing-link-font;
+}
+
+
+.landing__main-startButton {
+-webkit-animation: mover 1s infinite  alternate;
+animation: mover 1s infinite  alternate;
     .landing__main-start {
       text-decoration: none;
       text-transform: uppercase;
@@ -95,6 +105,15 @@
       align-items: center;
       @include landing-link-font;
     }
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
 
 /* MEDIA QUERY TABLET */
