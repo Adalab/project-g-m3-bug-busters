@@ -3,7 +3,9 @@
     transform: none;
   }
   .collapsable-container{
-    display: none;
+    // display: none;
+    opacity:0;
+    height:1px;
   }
 }
 
