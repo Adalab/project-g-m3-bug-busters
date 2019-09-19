@@ -10,10 +10,18 @@ class CardsFormFill extends React.Component {
     this.state = {
       isAvatarDefault: true,
       profile: {
-        avatar: defaultImage
+        avatar: defaultImage,
       }
     };
     this.updateAvatar = this.updateAvatar.bind(this);
+  }
+  componentDidMount(){
+    const smallPic = JSON.parse(localStorage.getItem('smallPreview'));
+    if(smallPic) {
+      this.setState(prevState => {prevState.profile.avatar = smallPic;
+        return{profile : prevState.profile, isAvatarDefault:false}
+      });
+    }
   }
 
   updateAvatar(img) {
@@ -25,8 +33,11 @@ class CardsFormFill extends React.Component {
         profile: newProfile,
         isAvatarDefault: false
       }
-    });
+    },
+    () => {localStorage.setItem('smallPreview', JSON.stringify(this.state.profile.avatar))}
+    );
   }
+
 
   render() {
     
