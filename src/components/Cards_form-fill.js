@@ -17,7 +17,6 @@ class CardsFormFill extends React.Component {
   }
 
   updateAvatar(img) {
-    console.log(img);
     this.props.onChangeImage(img);
     const {profile} = this.state;
     this.setState(() => {
@@ -96,6 +95,7 @@ class CardsFormFill extends React.Component {
               onChange = {inputAction}
               value = {this.props.previewData.email}
               noValidate = {true}
+							tabIndex="-1"
             />
           </div>
           <div className="form__fill-input">

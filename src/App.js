@@ -78,6 +78,7 @@ class App extends React.Component {
     })
       .then(function(resp) { return resp.json(); })
       .then(data => {
+				console.log(data);
         const dataUrl = data.cardURL;
         this.setState({
           cardUrl:dataUrl
