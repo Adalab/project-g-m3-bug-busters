@@ -6,6 +6,12 @@
   background-color: transparent;
   box-sizing: border-box;
   @include Cards-Card-ResetButton;
+  transition: all 1s;
+  &:hover {
+    color:#1D4E4E;
+    border: solid 1.3px #1D4E4E;
+    transform: scale(1.2);
+  }
 }
 
 .button-addImage{
@@ -20,6 +26,11 @@
   box-sizing: border-box;
   vertical-align: top;
   @include Cards-Form-ImageButton;
+    transition: all 1s;
+   &:hover {
+    border: solid 1.3px red;
+    transform: scale(1.1);
+  }
 }
 
 .button-create{
@@ -32,7 +43,19 @@
   padding: 13px 17px 13px 49px;
   @include Cards-Form-CreateButton;
   position: relative;
+  animation: shadow-pulse 1s infinite;
 }
+
+@keyframes shadow-pulse
+{
+  0% {
+      box-shadow: 0 0 0 0px rgba(224, 153, 15, 0.5);
+  }
+  100% {
+      box-shadow: 0 0 0 35px rgba(224, 153, 15, 0);
+  }
+}
+
 
 .button-create:before{
   content: "\f2bb";
