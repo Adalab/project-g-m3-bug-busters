@@ -88,13 +88,14 @@ class CardsFormFill extends React.Component {
             <label htmlFor="email" className="form-label">Email</label>
             <input
               type="email"
-              className="form-text"
+              className="form-text mail_input"
               id="email"
               name="email"
               placeholder="Ej: sally.hill@gmail.com"
               required
               onChange = {inputAction}
-							value = {this.props.previewData.email}
+              value = {this.props.previewData.email}
+              noValidate = {true}
             />
           </div>
           <div className="form__fill-input">

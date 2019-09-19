@@ -114,6 +114,10 @@ margin: 0;
 .form-text:placeholder{
   @include Cards-Form-Placeholders;
 }
+.mail_input:invalid {
+  border-color: salmon;
+  background-color: salmon;
+}
 
 .form-photo-preview{
   display: inline-block;
