@@ -5,8 +5,8 @@ class CardsFormTwitter extends React.Component {
 
  openTwitter ()  {
  const userUrl = this.props.cardUrl;
- const twitterText = '¡Hola! Aquí tienes mi tarjeta de contacto. No te olvides de llamarme. Saludos!';
- const hashtags = 'adalab,the-scripters,js';
+ const twitterText = '¡Hola! Aquí tienes mi tarjeta de contacto. No te olvides de llamarme. ¡Saludos!';
+ const hashtags = 'adalab,bugBusters,react';
  const buttonTwitter_href = 'https://twitter.com/intent/tweet?url='+encodeURIComponent(userUrl)+'&text='+encodeURIComponent(twitterText)+'&hashtags='+encodeURIComponent(hashtags);
  return buttonTwitter_href
 }
