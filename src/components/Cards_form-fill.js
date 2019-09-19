@@ -55,7 +55,7 @@ class CardsFormFill extends React.Component {
             <label htmlFor="name" className="form-label">Nombre completo</label>
             <input
               type="text"
-              className="form-text"
+              className="form-text required_input"
               id="name"
               name="name"
               placeholder="Ej: Sally Jill"
@@ -68,7 +68,7 @@ class CardsFormFill extends React.Component {
             <label htmlFor="job" className="form-label">Puesto</label>
             <input
               type="text"
-              className="form-text"
+              className="form-text required_input"
               id="job"
               name="job"
               placeholder="Ej: Front-end unicorn"
@@ -81,7 +81,7 @@ class CardsFormFill extends React.Component {
           <div className="form__fill-input">
             <label 
               htmlFor="photo" 
-              className="form-label">Imagen de perfil
+              className="form-label required_input">Imagen de perfil
             </label>
 
 
@@ -98,15 +98,13 @@ class CardsFormFill extends React.Component {
             <label htmlFor="email" className="form-label">Email</label>
             <input
               type="email"
-              className="form-text mail_input"
+              className="form-text required_input"
               id="email"
               name="email"
               placeholder="Ej: sally.hill@gmail.com"
               required
               onChange = {inputAction}
               value = {this.props.previewData.email}
-              noValidate = {true}
-							tabIndex="-1"
             />
           </div>
           <div className="form__fill-input">
@@ -125,7 +123,7 @@ class CardsFormFill extends React.Component {
             <label htmlFor="linkedin" className="form-label">LinkedIn</label>
             <input
               type="text"
-              className="form-text"
+              className="form-text required_input"
               id="linkedin"
               name="linkedin"
               placeholder="Ej: @sally-hill"
@@ -138,7 +136,7 @@ class CardsFormFill extends React.Component {
             <label htmlFor="github" className="form-label">Github</label>
             <input
               type="text"
-              className="form-text"
+              className="form-text required_input"
               id="github"
               name="github"
               placeholder="Ej: @sally-hill"
