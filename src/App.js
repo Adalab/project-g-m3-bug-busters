@@ -88,7 +88,7 @@ class App extends React.Component {
   }
 	
 	cleanData(){
-  this.setState({previewData: this.defaultData});
+  this.setState({previewData: this.defaultData, cardUrl : ''});
 		localStorage.clear('state');
 	} 
 
