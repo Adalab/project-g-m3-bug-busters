@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class CardsFormShare extends React.Component {
   getCollapsable(id, data_id) {
@@ -13,9 +14,10 @@ class CardsFormShare extends React.Component {
         </div>
         <div className= {`submit-container collapsable-container`} data-id = "third">
           <button
-            className="button-create"
+            className={`button-create ${this.props.cardUrl ? 'disabled' : ''}`}
             type="submit"
             id="submit"
+            disabled= {this.props.cardUrl}
           >
 					crear tarjeta
           </button>
@@ -23,6 +25,9 @@ class CardsFormShare extends React.Component {
       </div>
     );
   }
+}
+CardsFormShare.propTypes = {
+cardUrl:PropTypes.string.isRequired
 }
 
 export default CardsFormShare;

@@ -31,6 +31,7 @@ class CardsForm extends React.Component {
               id = {this.props.id}
               divAction = {this.props.divAction}
               sendRequest={this.props.sendRequest}
+              cardUrl={this.props.cardUrl} 
             />
           </form>
           <CardsFormTwitter 
