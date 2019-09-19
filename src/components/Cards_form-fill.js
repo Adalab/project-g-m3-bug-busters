@@ -87,7 +87,7 @@ class CardsFormFill extends React.Component {
 
             <GetAvatar 
               avatar={this.state.profile.avatar} 
-              isAvatarDefault={this.state.isAvatarDefault} 
+              isAvatarDefault={this.props.defaultMiniAvatar}
               updateAvatar={this.updateAvatar}
             />
 
