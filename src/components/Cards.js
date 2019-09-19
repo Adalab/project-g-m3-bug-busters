@@ -21,6 +21,7 @@ class Cards extends React.Component {
           previewData={this.props.previewData}
           cardUrl={this.props.cardUrl}
           onChangeImage={this.props.onChangeImage}
+          defaultMiniAvatar={this.props.defaultMiniAvatar}
         />
         <Footer />
       </div>

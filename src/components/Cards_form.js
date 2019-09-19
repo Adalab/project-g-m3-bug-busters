@@ -25,6 +25,7 @@ class CardsForm extends React.Component {
               divAction = {this.props.divAction}
               previewData = {this.props.previewData}
               onChangeImage={this.props.onChangeImage}
+              defaultMiniAvatar={this.props.defaultMiniAvatar}
             />
             <CardsFormShare 
               addClass = {this.props.addClass}

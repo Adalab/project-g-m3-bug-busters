@@ -20,7 +20,8 @@ class App extends React.Component {
         photo: defaultImage
       },
       id : 'first',
-      cardUrl: ''
+      cardUrl: '',
+      defaultMiniAvatar:true
     };
 
 		this.defaultData = {
@@ -47,21 +48,29 @@ class App extends React.Component {
       this.setState(prevState => {
         return {
           previewData: {...prevState.previewData, 
-          photo: newUserImage
-          }
+            photo: newUserImage
+          },
+          defaultMiniAvatar:false
         }	
-      }, () => {localStorage.setItem('state', JSON.stringify(this.state.previewData))}
+      }, () => {
+        localStorage.setItem('state', JSON.stringify(this.state.previewData));
+        localStorage.setItem('miniAvatar', this.state.defaultMiniAvatar)
+      }
     )
   }
 
 	getLocalStorage(){
-	const lsState = JSON.parse(localStorage.getItem('state'));
-		if(lsState === null) {
-		this.cleanData();
-		} else {
-			this.setState({previewData: lsState})
-			}
-	}
+    const lsState = JSON.parse(localStorage.getItem('state'));
+    const defaultMiniAvatar = JSON.parse(localStorage.getItem('miniAvatar'));
+    if(lsState === null) {
+      this.cleanData();
+    } else {
+        this.setState({
+          previewData: lsState,
+          defaultMiniAvatar: defaultMiniAvatar,
+        })
+    }
+  }
 
 	componentDidMount(){
     this.getLocalStorage();
@@ -88,8 +97,13 @@ class App extends React.Component {
   }
 	
 	cleanData(){
-  this.setState({previewData: this.defaultData, cardUrl : ''});
-		localStorage.clear('state');
+  this.setState({
+    previewData: this.defaultData,
+    cardUrl : '',
+    defaultMiniAvatar:true,
+  });
+    localStorage.clear('state');
+    localStorage.clear('miniAvatar');
 	} 
 
   getInputValue(event) {
@@ -169,6 +183,7 @@ class App extends React.Component {
               cardUrl={this.state.cardUrl}
               sendRequest={this.sendRequest}
               onChangeImage={this.setNewImage}
+              defaultMiniAvatar={this.state.defaultMiniAvatar}
 				      />
           } />
         </Switch>
