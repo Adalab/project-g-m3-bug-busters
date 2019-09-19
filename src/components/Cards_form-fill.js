@@ -15,9 +15,16 @@ class CardsFormFill extends React.Component {
     };
     this.updateAvatar = this.updateAvatar.bind(this);
   }
+  componentDidMount(){
+    const smallPic = JSON.parse(localStorage.getItem('smallPreview'));
+    if(smallPic) {
+      this.setState(prevState => {prevState.profile.avatar = smallPic;
+        return{profile : prevState.profile, isAvatarDefault:false}
+      });
+    }
+  }
 
   updateAvatar(img) {
-    console.log(img);
     this.props.onChangeImage(img);
     const {profile} = this.state;
     this.setState(() => {
@@ -27,17 +34,10 @@ class CardsFormFill extends React.Component {
         isAvatarDefault: false
       }
     },
-    () => {localStorage.setItem('smallPreview', JSON.stringify(this.state.profile))}
+    () => {localStorage.setItem('smallPreview', JSON.stringify(this.state.profile.avatar))}
     );
-
-    const smallPic = JSON.parse(localStorage.getItem('smallPreview'));
-
-    if(localStorage.getItem('smallPreview')) {
-      let smallPhotoooo = 'smallPreview';
-      console.log(smallPhotoooo);
-    }
-    else{}
   }
+
 
   render() {
     
