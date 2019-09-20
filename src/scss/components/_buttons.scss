@@ -43,6 +43,9 @@
   padding: 13px 17px 13px 49px;
   @include Cards-Form-CreateButton;
   position: relative;
+}
+
+.btn-animation{
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover 1s infinite  alternate;
 }

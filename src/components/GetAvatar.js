@@ -29,7 +29,13 @@ class GetAvatar extends Component {
   }
 
   getPreview(isDefault, image) {
-    return (!isDefault) ? {backgroundImage: `url(${image})`} : {};
+    if (!isDefault) {
+      this.myFileField.current.removeAttribute('required');
+      return {backgroundImage: `url(${image})`};
+    }
+    else {
+      return {}
+    }
   }
 
   render() {
