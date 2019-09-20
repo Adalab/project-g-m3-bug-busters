@@ -43,17 +43,20 @@
   padding: 13px 17px 13px 49px;
   @include Cards-Form-CreateButton;
   position: relative;
-  animation: shadow-pulse 1s infinite;
 }
 
-@keyframes shadow-pulse
-{
-  0% {
-      box-shadow: 0 0 0 0px rgba(224, 153, 15, 0.5);
-  }
-  100% {
-      box-shadow: 0 0 0 35px rgba(224, 153, 15, 0);
-  }
+.btn-animation{
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
 
 

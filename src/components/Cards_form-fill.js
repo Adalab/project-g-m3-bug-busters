@@ -58,7 +58,7 @@ class CardsFormFill extends React.Component {
               className="form-text required_input"
               id="name"
               name="name"
-              placeholder="Ej: Sally Jill"
+              placeholder="Ej: Bug Busters super team"
               required
               onChange = {inputAction}
 							value = {this.props.previewData.name}
@@ -71,7 +71,7 @@ class CardsFormFill extends React.Component {
               className="form-text required_input"
               id="job"
               name="job"
-              placeholder="Ej: Front-end unicorn"
+              placeholder="Ej: Bug Busters front-end member"
               required
               onChange = {inputAction}
 							value = {this.props.previewData.job}
@@ -101,7 +101,7 @@ class CardsFormFill extends React.Component {
               className="form-text required_input"
               id="email"
               name="email"
-              placeholder="Ej: sally.hill@gmail.com"
+              placeholder="Ej: bug-busters@gmail.com"
               required
               onChange = {inputAction}
               value = {this.props.previewData.email}
@@ -126,7 +126,7 @@ class CardsFormFill extends React.Component {
               className="form-text required_input"
               id="linkedin"
               name="linkedin"
-              placeholder="Ej: @sally-hill"
+              placeholder="Ej: @bug-buster-company"
               required
               onChange = {inputAction}
 							value = {this.props.previewData.linkedin}
@@ -139,7 +139,7 @@ class CardsFormFill extends React.Component {
               className="form-text required_input"
               id="github"
               name="github"
-              placeholder="Ej: @sally-hill"
+              placeholder="Ej: @bug-buster-projects"
               required
               onChange = {inputAction}
 							value = {this.props.previewData.github}
