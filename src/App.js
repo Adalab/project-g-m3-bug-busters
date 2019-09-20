@@ -54,7 +54,8 @@ class App extends React.Component {
         }	
       }, () => {
         localStorage.setItem('state', JSON.stringify(this.state.previewData));
-        localStorage.setItem('miniAvatar', this.state.defaultMiniAvatar)
+        localStorage.setItem('miniAvatar', this.state.defaultMiniAvatar);
+				/* localStorage.setItem('cacheImg', this.state.cardUrl); */
       }
     )
   }
@@ -62,12 +63,14 @@ class App extends React.Component {
 	getLocalStorage(){
     const lsState = JSON.parse(localStorage.getItem('state'));
     const defaultMiniAvatar = JSON.parse(localStorage.getItem('miniAvatar'));
+		const cacheImg = JSON.parse(localStorage.getItem('cacheImg'));
     if(lsState === null) {
       this.cleanData();
     } else {
         this.setState({
           previewData: lsState,
           defaultMiniAvatar: defaultMiniAvatar,
+					cardUrl: cacheImg
         })
     }
   }
