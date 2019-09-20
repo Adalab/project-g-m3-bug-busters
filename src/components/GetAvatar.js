@@ -30,10 +30,16 @@ class GetAvatar extends Component {
 
   getPreview(isDefault, image) {
     if (!isDefault) {
-      this.myFileField.current.removeAttribute('required');
+      if(this.myFileField.current){
+        this.myFileField.current.removeAttribute('required');
+      }
+      
       return {backgroundImage: `url(${image})`};
     }
     else {
+      if(this.myFileField.current){
+        this.myFileField.current.setAttribute('required', '');
+      }
       return {}
     }
   }
