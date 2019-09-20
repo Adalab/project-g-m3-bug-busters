@@ -14,7 +14,7 @@ class CardsFormShare extends React.Component {
         </div>
         <div className= {`submit-container collapsable-container`} data-id = "third">
           <button
-            className={`button-create ${this.props.cardUrl ? 'disabled' : ''}`}
+            className={`button-create ${this.props.cardUrl ? 'disabled' : ' btn-animation'}`}
             type="submit"
             id="submit"
             disabled= {this.props.cardUrl}

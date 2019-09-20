@@ -21,23 +21,23 @@ The project consists of two pages:
 - Finally, simply create your card by clicking on the "crear tarjeta" button and, *volià!* There's your customized visit card to share with your contacts. To ease that process, you'll find another button below that enables you to directly share it on twitter. 
 *** 
 ## Technologies we used 🛠
--React
+- React
 
--JavaScript
+- JavaScript
 
--Sass
+- Sass
 
--React router
+- React router
 
--Git for version control
+- Git for version control
 
--Mediaqueries - Mobile First Design
+- Mediaqueries - Mobile First Design
 
--use of LocalStorage
+- Use of LocalStorage
 
--use of API
+- Use of APIs
 
-We're happy if you give us your opinion in order to improve this project. Thank you su much to read this.🚩
+We'll be happy to receive any suggestions in order to improve this project. Thanks for reading this!🚩
 
 
 

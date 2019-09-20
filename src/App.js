@@ -54,14 +54,20 @@ class App extends React.Component {
         }	
       }, () => {
         localStorage.setItem('state', JSON.stringify(this.state.previewData));
-        localStorage.setItem('miniAvatar', this.state.defaultMiniAvatar)
+        localStorage.setItem('miniAvatar', this.state.defaultMiniAvatar);
+				/* localStorage.setItem('cacheImg', this.state.cardUrl); */
       }
     )
   }
 
 	getLocalStorage(){
     const lsState = JSON.parse(localStorage.getItem('state'));
-    const defaultMiniAvatar = JSON.parse(localStorage.getItem('miniAvatar'));
+
+    let defaultMiniAvatar = JSON.parse(localStorage.getItem('miniAvatar'));
+    if(defaultMiniAvatar == null){
+      defaultMiniAvatar = true;
+    }
+    
     if(lsState === null) {
       this.cleanData();
     } else {
