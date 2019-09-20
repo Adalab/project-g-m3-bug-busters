@@ -16,7 +16,7 @@ The project consists of two pages:
 ## How it works. ⚙️
 
 - First, you can add a personal touch to your future card by choosing a colour palette from the options pannel.
-- Then, fill your personal information in the given fields and add your best picture. On the right side of the page, you will see the preview of your card as you are generating it. 
+- Then, fill your personal information in the given fields and add your best picture. On the right side of the page, top side on mobile version, you will see the preview of your card as you are generating it. 
 - If you are not that convinced by what you see, clicking on the "reset" button will delete the process of creating the card so you can start over again! 
 - Finally, simply create your card by clicking on the "crear tarjeta" button and, *volià!* There's your customized visit card to share with your contacts. To ease that process, you'll find another button below that enables you to directly share it on twitter. 
 *** 
